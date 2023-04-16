@@ -42,52 +42,54 @@ export default function Home() {
 
       <div
         id={homepageContent.heroSection.sectionId}
-        className="relative w-full flex flex-col place-items-center px-12 bg-hero-img bg-no-repeat bg-cover bg-center py-24 tablet:py-32"
+        className="relative w-full  bg-hero-img bg-no-repeat bg-cover bg-center py-24 tablet:py-32 desktop:h-[664px]"
       >
-        {/* <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-          src={homepageContent.heroSection.content.logo.src}
-          alt={homepageContent.heroSection.content.logo.alt}
-          width={223}
-          height={64}
-          priority
-        /> */}
+        <div className="w-full max-w-7xl mx-auto flex flex-col place-items-center tablet:place-items-end px-12 tablet:px-0">
+          {/* <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+            src={homepageContent.heroSection.content.logo.src}
+            alt={homepageContent.heroSection.content.logo.alt}
+            width={223}
+            height={64}
+            priority
+          /> */}
 
-        <Logo />
+          <Logo />
 
-        <div className="pt-10">
-          {homepageContent.heroSection.content.title.map((titleText, index) => (
-            <h4
-              key={`${homepageContent.heroSection.sectionId}-title-${index}`}
-              className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-sm text-center`}
-            >
-              {titleText}
-            </h4>
-          ))}
-        </div>
+          <div className="pt-10">
+            {homepageContent.heroSection.content.title.map((titleText, index) => (
+              <h4
+                key={`${homepageContent.heroSection.sectionId}-title-${index}`}
+                className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-sm tablet:text-base desktop:text-xl text-center tablet:text-right`}
+              >
+                {titleText}
+              </h4>
+            ))}
+          </div>
 
-        <div className="pt-10 flex place-items-center">
-          <a href={homepageContent.heroSection.playStoreLink} target={'_blank'}>
-            <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-              src={'/images/play_store.svg'}
-              alt={'Download on Google Play'}
-              width={150}
-              height={45}
-              priority
-            />
-          </a>
-          <div className="h-5 w-5"></div>
-          <a href={homepageContent.heroSection.appleStoreLink} target={'_blank'}>
-            <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-              src={'/images/app_store.svg'}
-              alt={'Download on Apple Store'}
-              width={150}
-              height={45}
-              priority
-            />
-          </a>
+          <div className="pt-10 flex place-items-center">
+            <a href={homepageContent.heroSection.playStoreLink} target={'_blank'}>
+              <Image
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+                src={'/images/play_store.svg'}
+                alt={'Download on Google Play'}
+                width={150}
+                height={45}
+                priority
+              />
+            </a>
+            <div className="h-5 w-5"></div>
+            <a href={homepageContent.heroSection.appleStoreLink} target={'_blank'}>
+              <Image
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+                src={'/images/app_store.svg'}
+                alt={'Download on Apple Store'}
+                width={150}
+                height={45}
+                priority
+              />
+            </a>
+          </div>
         </div>
       </div>
 
