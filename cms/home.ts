@@ -27,7 +27,7 @@ const homepageContent = {
     sectionId: 'hero',
     content: {
       logo: {
-        src: '/images/hero_logo.svg',
+        src: '/images/logo_desktop.png',
         alt: 'Calyx Chronicles'
       },
       title: ['A Heart pounding, Arcade style','multiplayer sensation'],

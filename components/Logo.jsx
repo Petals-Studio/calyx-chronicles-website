@@ -23,7 +23,7 @@ const Logo = (props) => (
     </g>
     <defs>
       <filter id="filter0_d_376_1697" x="32.3564" y="0" width="157.475" height="72.5837" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feFlood floodOpacity="0" result="BackgroundImageFix"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
       <feOffset dy="6"/>
       <feGaussianBlur stdDeviation="1.25"/>

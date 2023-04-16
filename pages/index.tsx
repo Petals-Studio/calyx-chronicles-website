@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { albertusNova, inter } from 'components/fonts'
 import Logo from 'components/components/Logo'
+import Navbar from 'components/components/Navbar'
+import Sidebar from 'components/components/Sidebar'
 import FloatingHeader from 'components/components/FloatingHeader'
 import homepageContent from 'components/cms/home'
 
@@ -8,53 +10,24 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <FloatingHeader />
-      <div className="z-10 w-full flex items-center justify-between px-2.5 tablet:px-5 fixed left-0 top-0 pt-6">
-        <div className="w-full max-w-7xl mx-auto flex justify-between items-center">
-          <a href="#">
-            <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] tablet:w-[48px]"
-              src={'/images/petals_studio_logo.svg'}
-              alt={'Petals Studio'}
-              width={32}
-              height={39}
-              priority
-            />
-          </a>
-          <div className="hidden tablet:flex flex-0 items-center space-x-6 justify-self-center">
-            {homepageContent.menu.links.map((link, idx) => (
-              <a key={`menu-link-${idx}`} href={link.url} className={`${inter.variable} font-inter font-bold text-white uppercase`}>
-                {link.label}
-              </a>
-            ))}
-          </div>
-          <a href="#" className='tablet:hidden'>
-            <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-              src={'/images/hamburger.svg'}
-              alt={'Menu'}
-              width={27}
-              height={34}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+      <Navbar />
+      <Sidebar />
 
       <div
         id={homepageContent.heroSection.sectionId}
-        className="relative w-full  bg-hero-img bg-no-repeat bg-cover bg-center py-24 tablet:py-32 desktop:h-[664px]"
+        className="relative w-full bg-hero-img desktop:bg-hero-img-desktop bg-no-repeat bg-cover bg-center py-24 tablet:py-32 desktop:h-[664px]"
       >
-        <div className="w-full max-w-7xl mx-auto flex flex-col place-items-center tablet:place-items-end px-12 tablet:px-0">
-          {/* <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+        <div className="w-full max-w-7xl mx-auto flex flex-col place-items-center tablet:place-items-end px-12 desktop:px-0">
+
+          <Logo className={'tablet:hidden'} />
+          <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] hidden tablet:block"
             src={homepageContent.heroSection.content.logo.src}
             alt={homepageContent.heroSection.content.logo.alt}
             width={223}
             height={64}
             priority
-          /> */}
-
-          <Logo />
+          />
 
           <div className="pt-10">
             {homepageContent.heroSection.content.title.map((titleText, index) => (
@@ -164,7 +137,7 @@ export default function Home() {
             </picture>
           </figure>
           {homepageContent.newsSection.content.text.map((text, idx) => (
-            <h4 key={`news-section-text-${idx}`} className={`${albertusNova.variable} font-albertus-nova font-bold text-white uppercase mb-8 text-center`}>
+            <h4 key={`news-section-text-${idx}`} className={`${albertusNova.variable} font-albertus-nova font-bold text-white desktop:text-xl uppercase mb-8 text-center`}>
               {text}
             </h4>)
           )}
@@ -190,14 +163,16 @@ export default function Home() {
           </h1>
         ))}
 
-        <div className='bg-coming-soon-img bg-cover bg-no-repeat bg-center h-[245px] flex items-end justify-center'>
-          <a href={homepageContent.comingSoonSection.readMoreUrl} className={`${inter.variable} font-inter text-black inline-block mx-auto rounded-md py-1 px-4 bg-gray-100 rounded-[9px] mb-8 opacity-70`} style={{ boxShadow: '0px 4px 1.75px rgba(126, 124, 124, 0.45)'}}>
-            READ MORE
-          </a>
+        <div className="max-w-7xl mx-auto ">
+          <div className='bg-coming-soon-img bg-cover bg-no-repeat bg-center h-[245px] tablet:h-[600px] flex items-end justify-center w-full'>
+            <a href={homepageContent.comingSoonSection.readMoreUrl} className={`${inter.variable} font-inter text-black inline-block mx-auto rounded-md py-1 px-4 bg-gray-100 rounded-[9px] mb-8 opacity-70`} style={{ boxShadow: '0px 4px 1.75px rgba(126, 124, 124, 0.45)'}}>
+              READ MORE
+            </a>
+          </div>
         </div>
       </div>
 
-      <footer className='pb-28 pt-20 w-full overflow-x-hidden flex flex-col place-items-center bg-footer-img bg-no-repeat bg-cover bg-center'>
+      <footer className='pb-28 pt-20 w-full overflow-x-hidden flex flex-col place-items-center bg-footer-img desktop:bg-footer-img-desktop bg-no-repeat bg-cover bg-center'>
 
         <Logo width={223} height={64} />
 
