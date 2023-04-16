@@ -1,4 +1,28 @@
 const homepageContent = {
+  menu: {
+    links: [
+      {
+        label: 'Game',
+        url: '#hero'
+      },
+      {
+        label: 'News',
+        url: '#news'
+      },
+      {
+        label: 'Community',
+        url: '#showcase'
+      },
+      {
+        label: 'Coming Soon',
+        url: '#coming-soon'
+      },
+      {
+        label: 'About',
+        url: '#'
+      },
+    ]
+  },
   heroSection: {
     sectionId: 'hero',
     content: {
@@ -33,11 +57,16 @@ const homepageContent = {
   },
   newsSection: {
     sectionId: 'news',
-    title: ['stay up-to date with us']
+    title: ['stay up-to date with us'],
+    img: '/images/characters.svg',
+    content: {
+      text: ['customize your character']
+    }
   },
   comingSoonSection: {
     sectionId: 'coming-soon',
-    title: ['Coming Soon']
+    title: ['Coming Soon'],
+    readMoreUrl: '#'
   },
   footer: {
     content: {
