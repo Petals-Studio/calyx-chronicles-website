@@ -1,122 +1,231 @@
 import Image from 'next/image'
-import { inter } from 'components/fonts'
+import { albertusNova, inter } from 'components/fonts'
+import Logo from 'components/components/Logo'
+import FloatingHeader from 'components/components/FloatingHeader'
+import homepageContent from 'components/cms/home'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <main className="flex min-h-screen flex-col items-center">
+      <FloatingHeader />
+      <div className="z-10 w-full flex items-center justify-between px-2.5 fixed left-0 top-0 pt-6">
+        <a href="#">
+          <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+            src={'/images/petals_studio_logo.svg'}
+            alt={'Petals Studio'}
+            width={32}
+            height={39}
+            priority
+          />
+        </a>
+        <a href="#">
+          <Image
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+            src={'/images/hamburger.svg'}
+            alt={'Menu'}
+            width={27}
+            height={34}
+            priority
+          />
+        </a>
+      </div>
+
+      <div
+        id={homepageContent.heroSection.sectionId}
+        className="relative w-full flex flex-col place-items-center px-12 bg-hero-img bg-no-repeat bg-cover bg-center py-24"
+      >
+        {/* <Image
+          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+          src={homepageContent.heroSection.content.logo.src}
+          alt={homepageContent.heroSection.content.logo.alt}
+          width={223}
+          height={64}
+          priority
+        /> */}
+
+        <Logo />
+
+        <div className="pt-10">
+          {homepageContent.heroSection.content.title.map((titleText, index) => (
+            <h4
+              key={`${homepageContent.heroSection.sectionId}-title-${index}`}
+              className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-sm text-center`}
+            >
+              {titleText}
+            </h4>
+          ))}
+        </div>
+
+        <div className="pt-10 flex place-items-center">
+          <a href={homepageContent.heroSection.playStoreLink} target={'_blank'}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+              src={'/images/play_store.svg'}
+              alt={'Download on Google Play'}
+              width={150}
+              height={45}
+              priority
+            />
+          </a>
+          <div className="h-5 w-5"></div>
+          <a href={homepageContent.heroSection.appleStoreLink} target={'_blank'}>
+            <Image
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+              src={'/images/app_store.svg'}
+              alt={'Download on Apple Store'}
+              width={150}
+              height={45}
               priority
             />
           </a>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+      <div id={homepageContent.showcaseSection.sectionId} className="pb-32 w-full">
+        {homepageContent.showcaseSection.title.map((titleText, index) => (
+          <h1
+            key={`${homepageContent.showcaseSection.sectionId}-title-${index}`}
+            className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-center text-2xl`}
+          >
+            {titleText}
+          </h1>
+        ))}
+
+        <div className='bg-showcase-img bg-cover bg-no-repeat bg-center pb-32 mt-10 w-full'>
+          <div className="w-full max-w-7xl mx-auto">
+            <div className="grid grid-flow-col auto-cols-[150px] tablet:auto-cols-[1fr] overflow-x-auto snap-x snap-proximity scroll-pl-[150px] overscroll-contain gap-10 horizontal-media-scroller px-10">
+              {homepageContent.showcaseSection.content.items.map((item, idx) => (
+                <figure
+                  className='snap-start relative'
+                  key={`showcase-item-${idx}`}
+                >
+                  <>
+                    <div className="absolute z-10 h-[90px] w-full bg-linear-gradient bg-gradient-to-b from-transparent to-black bottom-0">
+                    </div>
+                    <picture>
+                      <Image
+                        className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+                        src={item.img}
+                        alt={item.caption.join(' ')}
+                        width={500}
+                        height={500}
+                        priority
+                      />
+                    </picture>
+                    <figcaption className='flex flex-col place-items-center absolute z-10 bottom-0 w-full pb-6'>
+                      {item.caption.map((caption) => (
+                        <p
+                          key={caption}
+                          className={`${albertusNova.variable} font-albertus-nova text-white font-bold text-xs tablet:text-base mb-0 uppercase`}
+                        >
+                          {caption}
+                        </p>
+                      ))}
+                    </figcaption>
+                  </>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id={homepageContent.newsSection.sectionId} className="w-full">
+        {homepageContent.newsSection.title.map((titleText, index) => (
+          <h1
+            key={`${homepageContent.newsSection.sectionId}-title-${index}`}
+            className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-center text-2xl`}
+          >
+            {titleText}
+          </h1>
+        ))}
+
+        <div className="bg-news-img max-w-7xl w-full mx-auto min-h-[227px] mt-6 flex justify-center items-end">
+          {/* TODO: characters */}
+          <h4 className={`${albertusNova.variable} font-albertus-nova font-bold text-white uppercase mb-8`}>
+            customize your character
+          </h4>
+        </div>
+
+        {/* <Image
+          className="relative w-full dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+          src={'/images/play_store.svg'}
+          alt={'Download on Google Play'}
+          width={350}
+          height={227}
           priority
-        />
+        /> */}
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
+      <div id={homepageContent.comingSoonSection.sectionId} className="pb-16 mt-24 w-full">
+        {homepageContent.comingSoonSection.title.map((titleText, index) => (
+          <h1
+            key={`${homepageContent.comingSoonSection.sectionId}-title-${index}`}
+            className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-center text-2xl`}
           >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            {titleText}
+          </h1>
+        ))}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <div className='bg-coming-soon-img bg-cover bg-no-repeat bg-center h-[245px] flex items-end justify-center'>
+          <a href="#" className={`${inter.variable} font-inter text-black inline-block mx-auto rounded-md py-1 px-4 bg-gray-100 rounded-[9px] mb-8 opacity-70`} style={{ boxShadow: '0px 4px 1.75px rgba(126, 124, 124, 0.45)'}}>
+            READ MORE
+          </a>
+        </div>
       </div>
+
+      <footer className='pb-28 pt-20 w-full overflow-x-hidden flex flex-col place-items-center bg-footer-img bg-no-repeat bg-cover bg-center'>
+
+        <Logo width={223} height={64} />
+
+        <h4 className={`${albertusNova.variable} font-albertus-nova text-white text-center uppercase py-5`} style={{ letterSpacing: '0.35em' }}>
+          {homepageContent.footer.content.title}
+        </h4>
+
+        <div className="flex place-items-center">
+          <a href={homepageContent.heroSection.playStoreLink} target={'_blank'}>
+            <Image
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+              src={'/images/play_store.svg'}
+              alt={'Download on Google Play'}
+              width={130}
+              height={45}
+              priority
+            />
+          </a>
+          <div className="h-5 w-5"></div>
+          <a href={homepageContent.heroSection.appleStoreLink} target={'_blank'}>
+            <Image
+              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+              src={'/images/app_store.svg'}
+              alt={'Download on Apple Store'}
+              width={130}
+              height={45}
+              priority
+            />
+          </a>
+        </div>
+
+        <p className={`${inter.className} text-xs text-center text-muted mt-8 mb-3 font-bold`}>
+          {homepageContent.footer.copyrightText}
+        </p>
+        
+        <div className="flex place-items-center">
+          {homepageContent.footer.sitemap.links.map((link, idx) => {
+            const classList = 'border-l border-1 border-muted';
+            const commonClasses = 'px-2';
+            return (
+              <div key={`sitemap-link-${idx}`} className={idx > 0 ? [commonClasses, classList].join(' ') : commonClasses}>
+                <a href={link.url} className={`$${inter.variable} font-inter font-bold text-2xs text-muted whitespace-nowrap`}>
+                  {link.title}
+                </a>
+              </div>
+            )
+          })}
+        </div>
+      </footer>
+      
     </main>
   )
 }

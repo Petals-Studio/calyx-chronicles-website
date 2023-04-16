@@ -11,9 +11,25 @@ const homepageContent = {
     playStoreLink: '#',
     appleStoreLink: '#',
   },
-  aboutSection: {
-    sectionId: 'about',
+  showcaseSection: {
+    sectionId: 'showcase',
     title: ['Play your part to evolve',  'the story of calyx'],
+    content: {
+      items: [
+        {
+          img: '/images/showcase_item_1.png',
+          caption: ['Play with friends', 'online'],
+        },
+        {
+          img: '/images/showcase_item_2.png',
+          caption: ['See what’s', 'in the store'],
+        },
+        {
+          img: '/images/showcase_item_3.png',
+          caption: ['Fight back with', 'your mechs'],
+        },
+      ]
+    }
   },
   newsSection: {
     sectionId: 'news',
