@@ -25,3 +25,26 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* For ToS and Privacy Policy */
+.dangerous-content p { margin-bottom: 20px; }
+.dangerous-content h2 { margin-bottom: 10px; }
+.dangerous-content ul {
+  margin-left: 16px;
+  margin-bottom: 20px;
+}
+.dangerous-content ul li {
+  list-style-type: circle;
+  margin-bottom: 16px;
+}
+.dangerous-content ol {
+  margin-left: 16px;
+  margin-bottom: 20px;
+}
+.dangerous-content ul li {
+  /* list-style-type: decimal; */
+  margin-bottom: 16px;
+}
+.dangerous-content a {
+  text-decoration: underline;
+}

@@ -7,6 +7,7 @@ import FloatingHeader from '@/components/FloatingHeader'
 import RegisterModal from '@/components/RegisterModal'
 import homepageContent from '@/cms/home'
 import EventBus from '@/EventBus'
+import Link from 'next/link'
 
 export const ShowRegisterModalEvent = 'ShowRegisterModal';
 
@@ -233,9 +234,9 @@ export default function Home() {
             const commonClasses = 'px-2';
             return (
               <div key={`sitemap-link-${idx}`} className={idx > 0 ? [commonClasses, classList].join(' ') : commonClasses}>
-                <a href={link.url} className={`$${inter.variable} font-inter font-bold text-2xs desktop:text-xs text-muted whitespace-nowrap`}>
+                <Link href={link.url} className={`$${inter.variable} font-inter font-bold text-2xs desktop:text-xs text-muted whitespace-nowrap`}>
                   {link.title}
-                </a>
+                </Link>
               </div>
             )
           })}

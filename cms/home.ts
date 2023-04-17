@@ -78,11 +78,11 @@ const homepageContent = {
       links: [
         {
           title: 'PRIVACY POLICY',
-          url: '#',
+          url: '/privacy-policy',
         },
         {
           title: 'TERMS OF SERVICE',
-          url: '#',
+          url: '/terms-of-service',
         },
         // {
         //   title: 'RULES OF CONDUCT',

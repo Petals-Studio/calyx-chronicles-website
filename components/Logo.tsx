@@ -1,8 +1,9 @@
 import React from 'react';
 
 interface LogoProps {
-  left: Boolean;
+  left?: Boolean;
   className: string;
+  [k: string]: any;
 };
 
 const Logo = (props: LogoProps) => {
