@@ -2,6 +2,7 @@ import React from 'react';
 
 interface LogoProps {
   left: Boolean;
+  className: string;
 };
 
 const Logo = (props: LogoProps) => {
