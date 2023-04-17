@@ -29,7 +29,11 @@ module.exports = {
         muted: '#8e8e8e'
       },
       fontSize: {
-        '2xs': ['0.5rem', '0.6rem']
+        '2xs': ['0.5rem', '0.6rem'],
+        '4xl': ['2.25rem', '3.5rem']
+      },
+      maxWidth: {
+        '8xl': '88rem'
       }
     },
     fontFamily: {

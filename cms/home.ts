@@ -1,4 +1,5 @@
 const homepageContent = {
+  registerModalMessage: 'Subscribe for updates and releases',
   menu: {
     links: [
       {
@@ -13,10 +14,10 @@ const homepageContent = {
         label: 'Community',
         url: '#showcase'
       },
-      {
-        label: 'Coming Soon',
-        url: '#coming-soon'
-      },
+      // {
+      //   label: 'Coming Soon',
+      //   url: '#coming-soon'
+      // },
       {
         label: 'About',
         url: '#'
@@ -72,7 +73,7 @@ const homepageContent = {
     content: {
       title: 'Watch the story unfold'
     },
-    copyrightText: '© 2023 PETALS STUDIO.  All rights reserved.',
+    copyrightText: 'Copyright © 2023 Petals World Incorporated Pte. Ltd. All rights reserved.',
     sitemap: {
       links: [
         {
@@ -83,14 +84,14 @@ const homepageContent = {
           title: 'TERMS OF SERVICE',
           url: '#',
         },
-        {
-          title: 'RULES OF CONDUCT',
-          url: '#',
-        },
-        {
-          title: 'OFFICIAL COMMUNITY POLICY',
-          url: '#',
-        },
+        // {
+        //   title: 'RULES OF CONDUCT',
+        //   url: '#',
+        // },
+        // {
+        //   title: 'OFFICIAL COMMUNITY POLICY',
+        //   url: '#',
+        // },
       ]
     }
   }

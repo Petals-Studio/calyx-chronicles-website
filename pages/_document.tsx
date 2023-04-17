@@ -1,4 +1,4 @@
-import { albertusNova } from 'components/fonts'
+import { albertusNova } from '@/fonts'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
