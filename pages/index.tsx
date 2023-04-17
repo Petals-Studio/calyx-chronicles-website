@@ -2,13 +2,14 @@ import Image from 'next/image'
 import { albertusNova, inter } from 'components/fonts'
 import Logo from 'components/components/Logo'
 import Navbar from 'components/components/Navbar'
-import Sidebar from 'components/components/Sidebar'
+import Sidebar, { SidebarCloseEvent } from 'components/components/Sidebar'
 import FloatingHeader from 'components/components/FloatingHeader'
 import homepageContent from 'components/cms/home'
+import EventBus from 'components/EventBus'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center">
+    <main className="flex min-h-screen flex-col items-center bg-black text-white" onClick={() => { EventBus.getInstance().fireEvent(SidebarCloseEvent); }}>
       <FloatingHeader />
       <Navbar />
       <Sidebar />

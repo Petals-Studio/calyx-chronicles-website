@@ -26,7 +26,8 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <button className='tablet:hidden' onClick={() => {
+        <button className='tablet:hidden' onClick={(e) => {
+          e.stopPropagation();
           EventBus.getInstance().fireEvent(SidebarToggleEvent);
         }}>
           <Image

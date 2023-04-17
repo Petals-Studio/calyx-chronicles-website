@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import Logo from './Logo'
 
 export const SidebarToggleEvent = 'ToggleSidebar';
+export const SidebarCloseEvent = 'CloseSidebar';
 
 export default function Sidebar() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -14,10 +15,16 @@ export default function Sidebar() {
       setShowSidebar(val => !val);
     };
 
+    const closeSidebar = () => {
+      setShowSidebar(false);
+    };
+
     EventBus.getInstance().addListener(SidebarToggleEvent, toggleSidebar);
+    EventBus.getInstance().addListener(SidebarCloseEvent, closeSidebar);
 
     return () => {
       EventBus.getInstance().removeListener(toggleSidebar);
+      EventBus.getInstance().removeListener(closeSidebar);
     };
   }, []);
 
