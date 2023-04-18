@@ -116,7 +116,7 @@ export default function PrivacyPolicy() {
     <main className="w-full flex min-h-screen flex-col items-center bg-black text-white" onClick={() => { EventBus.getInstance().fireEvent(SidebarCloseEvent); }}>
       <Navbar noItems noFixed />
       <div className="relative py-8 tablet:py-12 w-full">
-        <div className="w-full max-w-7xl mx-auto flex flex-col px-2.5">
+        <div className="w-full max-w-8xl mx-auto flex flex-col px-2.5 tablet:pl-5 tablet:pr-12">
           <h1 className={`${inter.variable} font-inter tablet:text-lg uppercase font-bold tracking-wide mb-4`}>Terms of services</h1>
           <div className={`${inter.variable} font-inter dangerous-content`} dangerouslySetInnerHTML={{__html: data}}></div>
         </div>

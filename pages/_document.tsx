@@ -5,7 +5,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="shortcut icon" href="/icon.png" />
+        <link id="light-scheme-icon" rel="shortcut icon" href="/petals-favicon.png" />
+        {/* <link id="dark-scheme-icon" rel="shortcut icon" href="/petals-favicon-black.png" /> */}
       </Head>
       <body className={`${albertusNova.variable} font-albertus-nova`}>
         <Main />
