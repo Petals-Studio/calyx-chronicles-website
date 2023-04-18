@@ -8,6 +8,7 @@ import Link from 'next/link'
 interface NavbarProps {
   noItems?: boolean;
   noFixed?: boolean;
+  noMenu?: boolean;
 }
 
 export default function Navbar(props: NavbarProps) {
@@ -47,7 +48,7 @@ export default function Navbar(props: NavbarProps) {
 
         <div className="hidden tablet:block tablet:w-[48px]"></div>
 
-        <button className='tablet:hidden ml-auto' onClick={(e) => {
+        {!props.noMenu && (<button className='tablet:hidden' onClick={(e) => {
           e.stopPropagation();
           EventBus.getInstance().fireEvent(SidebarToggleEvent);
         }}>
@@ -59,7 +60,7 @@ export default function Navbar(props: NavbarProps) {
             height={34}
             priority
           />
-        </button>
+        </button>)}
       </div>
     </div>
   )

@@ -1,13 +1,7 @@
-import Image from 'next/image'
-import { albertusNova, inter } from '@/fonts'
-import Logo from '@/components/Logo'
+import { inter } from '@/fonts'
 import Navbar from '@/components/Navbar'
-import Sidebar, { SidebarCloseEvent } from '@/components/Sidebar'
-import FloatingHeader from '@/components/FloatingHeader'
-import RegisterModal from '@/components/RegisterModal'
-import homepageContent from '@/cms/home'
+import { SidebarCloseEvent } from '@/components/Sidebar'
 import EventBus from '@/EventBus'
-import Link from 'next/link'
 
 export default function PrivacyPolicy() {
   const data = `
@@ -114,7 +108,7 @@ export default function PrivacyPolicy() {
 
   return (
     <main className="w-full flex min-h-screen flex-col items-center bg-black text-white" onClick={() => { EventBus.getInstance().fireEvent(SidebarCloseEvent); }}>
-      <Navbar noItems noFixed />
+      <Navbar noItems noFixed noMenu />
       <div className="relative py-8 tablet:py-12 w-full">
         <div className="w-full max-w-8xl mx-auto flex flex-col px-2.5 tablet:pl-5 tablet:pr-12">
           <h1 className={`${inter.variable} font-inter tablet:text-lg uppercase font-bold tracking-wide mb-4`}>Terms of services</h1>
