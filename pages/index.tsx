@@ -28,7 +28,7 @@ export default function Home() {
 
           <Logo className={'tablet:hidden'} />
           <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] hidden tablet:block"
+            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] hidden tablet:block desktop:w-[382px] desktop:h-[160px]"
             src={homepageContent.heroSection.content.logo.src}
             alt={homepageContent.heroSection.content.logo.alt}
             width={223}
@@ -36,11 +36,11 @@ export default function Home() {
             priority
           />
 
-          <div className="pt-10">
+          <div className="pt-10 desktop:pt-14">
             {homepageContent.heroSection.content.title.map((titleText, index) => (
               <h4
                 key={`${homepageContent.heroSection.sectionId}-title-${index}`}
-                className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-sm tablet:text-xl desktop:text-2xl text-center tablet:text-right mb-2`}
+                className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-sm tablet:text-xl desktop:text-3xl text-center tablet:text-right mb-2`}
               >
                 {titleText}
               </h4>
@@ -50,7 +50,7 @@ export default function Home() {
           <div className="h-px hidden tablet:block bg-gray-300 w-[540px] mt-6"></div>
 
           <div className="pt-10 flex place-items-center">
-            <button onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }} className={`${inter.variable} font-inter font-bold text-[#9E9E9E] uppercase items-center mr-5 cursor-pointer hidden tablet:flex`}>
+            <button onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }} className={`${inter.variable} font-inter font-bold desktop:text-lg text-[#9E9E9E] uppercase items-center mr-5 cursor-pointer hidden tablet:flex`}>
               <span className='mr-2'>
                 <svg width="33" height="21" viewBox="0 0 33 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0.756334 9.82688C0.2337 10.3495 0.2337 11.1969 0.756334 11.7195L9.27316 20.2363C9.79579 20.759 10.6432 20.759 11.1658 20.2363C11.6884 19.7137 11.6884 18.8663 11.1658 18.3437L3.59528 10.7732L11.1658 3.20268C11.6884 2.68005 11.6884 1.83269 11.1658 1.31005C10.6432 0.787417 9.79579 0.787417 9.27316 1.31005L0.756334 9.82688ZM32.751 9.4349L1.70265 9.4349L1.70265 12.1115L32.751 12.1115L32.751 9.4349Z" fill="currentColor"/>
