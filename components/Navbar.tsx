@@ -47,7 +47,7 @@ export default function Navbar(props: NavbarProps) {
 
         <div className="hidden tablet:block tablet:w-[48px]"></div>
 
-        <button className='tablet:hidden' onClick={(e) => {
+        <button className='tablet:hidden ml-auto' onClick={(e) => {
           e.stopPropagation();
           EventBus.getInstance().fireEvent(SidebarToggleEvent);
         }}>
