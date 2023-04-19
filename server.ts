@@ -3,7 +3,7 @@ import express, { Express, Request, Response } from 'express';
 const app: Express = express();
 
 const path = __dirname + '/out';
-const port = 4200;
+const port = 8080;
 app.use(express.static(path));
 app.get('/privacy-policy', (req: Request, res: Response) => {
     res.sendFile(path + '/privacy-policy.html');
