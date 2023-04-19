@@ -54,8 +54,10 @@ export default function RegisterModal() {
             </span>
           </button>
         </div>
-        <Logo left={'true'} className="tablet:hidden my-12" />
+        <Logo left={'true'} className="tablet:hidden mt-12" />
         <Logo className="hidden tablet:block" />
+
+        <h4 className={`${inter.variable} font-inter text-muted font-bold uppercase my-2 tracking-wide`}>Coming soon</h4>
 
         <h2 className={`${albertusNova.variable} font-albertus-nova text-[rgba(255,255,255,0.65)] tablet:text-2xl uppercase tracking-wide mt-6`}>
           {homepageContent.registerModalMessage}

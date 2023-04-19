@@ -58,7 +58,7 @@ export default function Home() {
               </span>
               REGISTER NOW
             </button>
-            <a href={homepageContent.heroSection.playStoreLink} target={'_blank'}>
+            <a href={homepageContent.heroSection.playStoreLink} onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }}>
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
                 src={'/images/play_store.svg'}
@@ -69,7 +69,7 @@ export default function Home() {
               />
             </a>
             <div className="h-5 w-5"></div>
-            <a href={homepageContent.heroSection.appleStoreLink} target={'_blank'}>
+            <a href={homepageContent.heroSection.appleStoreLink} onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }}>
               <Image
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
                 src={'/images/app_store.svg'}
@@ -201,7 +201,7 @@ export default function Home() {
         </h4>
 
         <div className="flex place-items-center">
-          <a href={homepageContent.heroSection.playStoreLink} target={'_blank'}>
+          <a href={homepageContent.heroSection.playStoreLink} onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }}>
             <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
               src={'/images/play_store.svg'}
@@ -212,7 +212,7 @@ export default function Home() {
             />
           </a>
           <div className="h-5 w-5"></div>
-          <a href={homepageContent.heroSection.appleStoreLink} target={'_blank'}>
+          <a href={homepageContent.heroSection.appleStoreLink} onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }}>
             <Image
               className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
               src={'/images/app_store.svg'}
