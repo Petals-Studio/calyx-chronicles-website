@@ -1,29 +1,12 @@
 const homepageContent = {
-  registerModalMessage: 'Subscribe for updates and releases',
-  menu: {
-    links: [
-      {
-        label: 'Game',
-        url: '#hero'
-      },
-      {
-        label: 'News',
-        url: '#news'
-      },
-      {
-        label: 'Community',
-        url: '#showcase'
-      },
-      // {
-      //   label: 'Coming Soon',
-      //   url: '#coming-soon'
-      // },
-      {
-        label: 'About',
-        url: '#'
-      },
-    ]
+  registerModalMessage: {
+    lines: {
+      line1: 'and we’ll add you to our confidential list of favourite users',
+      line2: 'We only save your name and number to tell you first..',
+    }
   },
+  monogramUrl: '/images/monogram.png',
+  menu: { links: [] as { label: string, url: string }[] },
   heroSection: {
     sectionId: 'hero',
     content: {
@@ -96,5 +79,28 @@ const homepageContent = {
     }
   }
 };
+
+homepageContent.menu.links = [
+  {
+    label: 'Get App',
+    url: '#' + homepageContent.heroSection.sectionId,
+  },
+  {
+    label: 'Seasons',
+    url: '#' + homepageContent.showcaseSection.sectionId,
+  },
+  {
+    label: 'Join us backstage',
+    url: '#' + homepageContent.newsSection.sectionId,
+  },
+  {
+    label: 'Bunch of us',
+    url: '#' + homepageContent.comingSoonSection.sectionId,
+  },
+  {
+    label: 'Address and contact',
+    url: '#' + homepageContent.comingSoonSection.sectionId,
+  },
+];
 
 export default homepageContent;

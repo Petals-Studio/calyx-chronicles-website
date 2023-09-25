@@ -13,6 +13,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
+        'season1-gradient': 'linear-gradient(180deg, rgba(4, 14, 22, 0.55) 25.7%, rgba(233, 62, 207, 0.55) 63.55%)',
+        'season2-gradient': 'linear-gradient(180deg, rgba(4, 14, 22, 0.75) 12.81%, rgba(21, 7, 24, 0.75) 100%)',
+        'dimblue-gradient': 'url("/videos/about_section.mp4"), linear-gradient(180deg, rgba(170, 209, 240, 0.75) 0%, rgba(35, 127, 201, 0.75) 71.73%)',
+        'blue-gradient': 'linear-gradient(180deg, rgba(39, 177, 255, 1) 0%, rgba(117, 74, 240, 1) 71.73%)',
+        'button-gradient': 'linear-gradient(180deg, #FFF 21.5%, #DAF0F1 66.53%, #FFF 118.22%)',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -26,10 +31,13 @@ module.exports = {
         'footer-img-desktop': "linear-gradient(rgba(28,28,28,0.8), rgba(28,28,28,0.8)), url('/images/hero_bg_desktop.png')",
       },
       colors: {
-        muted: '#8e8e8e'
+        muted: '#8e8e8e',
+        'input-outline': 'rgba(83, 225, 234, 0.24)',
+        'havelock-blue': "#4399DE",
       },
       fontSize: {
         '2xs': ['0.5rem', '0.6rem'],
+        'xxs': ['0.75rem', '1rem'],
         '4xl': ['2.25rem', '3.5rem']
       },
       maxWidth: {
@@ -37,8 +45,10 @@ module.exports = {
       }
     },
     fontFamily: {
+      'open-sans': ['var(--font-open-sans)'],
       'albertus-nova': ['var(--font-albertus-nova)'],
-      inter: ['var(--font-inter)']
+      inter: ['var(--font-inter)'],
+      poppins: [`var(--font-poppins)`],
     },
   },
   plugins: [],
