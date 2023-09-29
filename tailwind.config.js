@@ -29,11 +29,13 @@ module.exports = {
         'news-img': "linear-gradient(to bottom, transparent, rgba(0,0,0,0.8) 150%), linear-gradient(to right, black, #0A5560 15%, #0A5560 85%, rgb(0,0,0)), url('/images/coming_soon_bg.png')",
         'footer-img': "linear-gradient(rgba(28,28,28,0.8), rgba(28,28,28,0.8)), url('/images/hero_bg.png')",
         'footer-img-desktop': "linear-gradient(rgba(28,28,28,0.8), rgba(28,28,28,0.8)), url('/images/hero_bg_desktop.png')",
+        'carousel-section': "url('/images/carouselsectionbg.png')"
       },
       colors: {
         muted: '#8e8e8e',
         'input-outline': 'rgba(83, 225, 234, 0.24)',
         'havelock-blue': "#4399DE",
+        'overlay-pink': 'rgba(202, 124, 216, 0.85)',
       },
       fontSize: {
         '2xs': ['0.5rem', '0.6rem'],

@@ -10,6 +10,7 @@
     "serve": "TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' ts-node server.ts"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "@types/node": "18.15.11",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",

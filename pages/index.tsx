@@ -13,6 +13,18 @@ import FooterAnimation from '@/components/FooterAnimation'
 
 export const ShowRegisterModalEvent = 'ShowRegisterModal';
 
+const socialCards = [
+  {
+    src: '/images/discord_card.png'
+  },
+  {
+    src: '/images/reddit_card.png'
+  },
+  {
+    src: '/images/instagram_card.png'
+  },
+];
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center bg-black text-white" onClick={() => { EventBus.getInstance().fireEvent(SidebarCloseEvent); }}>
@@ -24,82 +36,50 @@ export default function Home() {
 
       <div
         id={homepageContent.heroSection.sectionId}
-        className="relative w-full bg-white bg-no-repeat bg-cover bg-center py-24 tablet:py-32 overflow-hidden h-screen"
+        className="relative w-full bg-white bg-no-repeat bg-cover bg-center py-24 tablet:py-32 overflow-hidden h-[344px] tablet:h-[834px]"
       >
         <div className="absolute top-0 left-0 w-full h-full bg-season1-gradient opacity-[0.45]"></div>
-        <div className="absolute top-0 left-0 w-full h-1/2 tablet:h-full flex flex-col justify-end">
+        <div className="absolute bottom-0 left-0 w-full h-1/2 tablet:h-full flex flex-col justify-end">
           <HeroAnimation />
         </div>
-        {/* <div className="w-full max-w-8xl mx-auto flex flex-col place-items-center tablet:place-items-end px-12 desktop:px-0">
-
-          <Logo className={'tablet:hidden'} />
-          <Image
-            className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] hidden tablet:block desktop:w-[382px] desktop:h-[160px]"
-            src={homepageContent.heroSection.content.logo.src}
-            alt={homepageContent.heroSection.content.logo.alt}
-            width={223}
-            height={64}
-            priority
-          />
-
-          <div className="pt-10 desktop:pt-14">
-            {homepageContent.heroSection.content.title.map((titleText, index) => (
-              <h4
-                key={`${homepageContent.heroSection.sectionId}-title-${index}`}
-                className={`${albertusNova.variable} font-albertus-nova font-bold uppercase text-sm tablet:text-xl desktop:text-3xl text-center tablet:text-right mb-2`}
-              >
-                {titleText}
-              </h4>
-            ))}
+      </div>
+      <div className="relative w-full h-[370px] tablet:h-[940px] bg-carousel-section bg-overlay-pink bg-blend-soft-light bg-no-repeat bg-cover">
+        <div className="absolute -translate-y-1/2 w-full z-10">
+          <div
+            className="w-full h-[94px] desktop:h-[115px]"
+            style={{
+              background: "linear-gradient(0deg, #C58BCA 16.67%, rgba(196, 139, 202, 0.00) 64.58%)"
+            }}
+          >
           </div>
-
-          <div className="h-px hidden tablet:block bg-gray-300 w-[540px] mt-6"></div>
-
-          <div className="pt-10 flex place-items-center">
-            <button onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }} className={`${inter.variable} font-inter font-bold desktop:text-lg text-[#9E9E9E] uppercase items-center mr-5 cursor-pointer hidden tablet:flex`}>
-              <span className='mr-2'>
-                <svg width="33" height="21" viewBox="0 0 33 21" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.756334 9.82688C0.2337 10.3495 0.2337 11.1969 0.756334 11.7195L9.27316 20.2363C9.79579 20.759 10.6432 20.759 11.1658 20.2363C11.6884 19.7137 11.6884 18.8663 11.1658 18.3437L3.59528 10.7732L11.1658 3.20268C11.6884 2.68005 11.6884 1.83269 11.1658 1.31005C10.6432 0.787417 9.79579 0.787417 9.27316 1.31005L0.756334 9.82688ZM32.751 9.4349L1.70265 9.4349L1.70265 12.1115L32.751 12.1115L32.751 9.4349Z" fill="currentColor"/>
-                </svg>
-              </span>
-              REGISTER NOW
-            </button>
-            <a href={homepageContent.heroSection.playStoreLink} onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }}>
-              <Image
-                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src={'/images/play_store.svg'}
-                alt={'Download on Google Play'}
-                width={150}
-                height={45}
-                priority
-              />
-            </a>
-            <div className="h-5 w-5"></div>
-            <a href={homepageContent.heroSection.appleStoreLink} onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }}>
-              <Image
-                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src={'/images/app_store.svg'}
-                alt={'Download on Apple Store'}
-                width={150}
-                height={45}
-                priority
-              />
-            </a>
+          <div
+            className="w-full h-[94px] desktop:h-[115px]"
+            style={{
+              background: "linear-gradient(180deg, #C58BCA 16.67%, rgba(196, 139, 202, 0.00) 64.58%)"
+            }}
+          >
           </div>
-          <button onClick={() => { EventBus.getInstance().fireEvent(ShowRegisterModalEvent); }} className={`${inter.variable} font-inter font-bold text-[rgba(255,255,255,0.75)] uppercase items-center cursor-pointer tablet:hidden mt-4`}>
-            REGISTER NOW
-          </button>
-        </div> */}
+        </div>
+        <div className="absolute -translate-y-1/2 w-full z-10 flex justify-center">
+          <div className="flex gap-x-8">
+            <span>
+              <img className="h-16" src="/images/get_it_on_google_play.svg" alt="Get it on Google Play" />
+            </span>
+            <span>
+              <img className="h-16" src="/images/download_on_app_store.svg" alt="Download on the App Store" />
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div className="w-full tablet:min-h-[214px] px-8 pt-4 tablet:px-[72px] tablet:py-[52px] pb-2 relative">
+      <div className="w-full tablet:min-h-[214px] desktop:h-[735px] desktop:flex desktop:items-center px-8 pt-4 tablet:px-[72px] tablet:pt-[52px] relative">
         <div className="absolute top-0 left-0 w-full min-h-full overflow-hidden">
           <video autoPlay muted loop className="absolute top-0 left-0 w-full h-full object-cover" src="/videos/community_section.mp4">
           </video>
         </div>
         <div className="absolute top-0 left-0 bg-dimblue-gradient w-full h-full"></div>
-        <div className="relative">
-          <div className="w-[70%]">
+        <div className="relative overflow-hidden desktop:overflow-visible flex flex-col desktop:flex-row-reverse">
+          <div className="w-[70%] mb-4 desktop:flex-1">
             <h1 className="text-white font-bold text-[28px]/[28px] tablet:text-[40px]/[55px] mb-6 tablet:mb-5">
               Join our community to unlock more
             </h1>
@@ -131,9 +111,51 @@ export default function Home() {
               </p>
             ))}
           </div>
-          <div className="h-[100px]">
+          <div className="h-1/4 desktop:h-auto flex overflow-hidden desktop:overflow-visible items-baseline translate-y-6 tablet:translate-y-12 desktop:translate-y-0 desktop:flex-1">
             {/* TODO: social cards */}
+            {socialCards.map((card, index) => {
+              const stylesMap = {
+                0: "z-30 scale-100 desktop:-rotate-[30deg] desktop: translate-y-10",
+                1: "z-20 scale-[97%] -translate-x-2 tablet:-translate-x-8 desktop:scale-100",
+                2: "z-10 scale-95 -translate-x-6 tablet:-translate-x-24 desktop:rotate-[30deg] desktop: translate-y-10 desktop:scale-110"
+              };
+              return (
+                <div key={card.src} className={`${stylesMap[index] || 'scale-100'}`}>
+                  <img className="w-full" src={card.src} alt="" />
+                </div>
+              );
+            })}
           </div>
+        </div>
+      </div>
+
+      <div className="flex justify-between items-end w-full bg-[#FF9AB1] pl-8 py-7 tablet:pl-[72px] tablet:pt-[154px] tablet:pb-[56px] desktop:pb-[120px]">
+        <div className="max-w-[55%] mb-2">
+          <h2 className="text-white font-bold text-[29px]/[24px] tablet:text-[64px]/[66px]">
+            Bunch <br/>of us..
+          </h2>
+          <p className="text-[10px]/[20px] tablet:text-[24px]/[48px] font-bold text-[#b7002980]">
+            Mr. Harem :
+          </p>
+          <p className="text-[10px]/[14px] tablet:text-[20px]/[normal] font-bold text-[#b7002980] tablet:mb-[30px]">
+            {"So perhaps, you've generated some fancy text, and you're content that you can now copy and paste your fancy text in the comments section of funny cat videos"}
+          </p>
+          <div className="inline-flex items-center">
+            <span className="pr-[10px] tablet:pr-6 tablet:h-[22px]">
+              <svg className="h-[9px] tablet:h-[22px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 9" fill="none">
+                <path d="M4.94724 0.580353L1 4.53121L4.94724 8.48206" stroke="white" strokeWidth="1.11854"/>
+              </svg>
+            </span>
+            <span className="flex w-px h-3 tablet:h-6 bg-white opacity-30"></span>
+            <span className="pl-[10px] tablet:pl-6 tablet:h-[22px]">
+              <svg className="h-[9px] tablet:h-[22px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 9" fill="none">
+                <path d="M0.947252 0.580353L4.8945 4.53121L0.947252 8.48206" stroke="white" strokeWidth="1.11854"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div className="max-w-[40%]">
+          <img loading="lazy" src="/images/mrharem.png" alt="Mr. Harem" className="w-full h-auto" />
         </div>
       </div>
 
@@ -144,49 +166,61 @@ export default function Home() {
         </div>
         <div className="absolute top-0 left-0 bg-dimblue-gradient w-full h-full"></div>
         <div className="relative">
-          {[
-            {
-              title: 'Address:',
-              body: "So perhaps, you've generated some fancy text, and you're content that you can now copy and paste your fancy text in the comments section of funny cat videos",
-            },
-            {
-              title: 'Contact us:',
-              body: "Well, the answer is actually no - rather than generating fancy fonts, this converter creates fancy symbols.",
-            },
-          ].map(({ title, body }) => (
-            <div key={title} className="mb-4 w-[90%] tablet:w-auto tablet:mb-[40px] tablet:max-w-[451px]">
-              <h1 className="text-white font-bold text-[10px]/[19px] tablet:text-[36px]/[38px] mb-3 tablet:mb-[32px]">
-                {title}
-              </h1>
-              <p className="text-white text-[8px]/[8.8px] tablet:text-[15px]/[24px] font-light">
-                {body}
-              </p>
-            </div>
-          ))}
+          <div className="desktop:flex desktop:justify-between">
+            {[
+              {
+                title: 'Address:',
+                body: "So perhaps, you've generated some fancy text, and you're content that you can now copy and paste your fancy text in the comments section of funny cat videos",
+              },
+              {
+                title: 'Contact us:',
+                body: "Well, the answer is actually no - rather than generating fancy fonts, this converter creates fancy symbols.",
+              },
+            ].map(({ title, body }) => (
+              <div key={title} className="mb-4 w-[90%] tablet:w-auto tablet:mb-[40px] tablet:max-w-[451px]">
+                <h1 className="text-white font-bold text-[10px]/[19px] tablet:text-[36px]/[38px] desktop:text-[36px]/[48px] mb-3 desktop:mb-8 tablet:mb-[32px]">
+                  {title}
+                </h1>
+                <p className="text-white text-[8px]/[8.8px] tablet:text-[15px]/[24px] font-light">
+                  {body}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-x-8 desktop:justify-end tablet:mb-[74px] desktop:mb-0">
+            <span>
+              <img className="h-16" src="/images/get_it_on_google_play.svg" alt="Get it on Google Play" />
+            </span>
+            <span>
+              <img className="h-16" src="/images/download_on_app_store.svg" alt="Download on the App Store" />
+            </span>
+          </div>
           <div className="flex justify-between items-center mb-2">
-            <div>
-              <Image width={20} height={21} src={'/images/petals_studio_logo.svg'} alt="Petals Studio" />
+            <div className="tablet:mb-8">
+              <img className="h-[21px] w-[20px] tablet:h-[52px] tablet:w-[44px] desktop:h-[50px] desktop:w-[45px]" width={20} height={21} src={'/images/petals_studio_logo.svg'} alt="Petals Studio" />
             </div>
-            <div className="flex gap-x-3 items-center">
+            {/* <div className="flex gap-x-3 items-center desktop:hidden">
               <span>
                 <Image width={20} height={21} src={'/images/apple.svg'} alt="Apple" />
               </span>
               <span>
                 <Image width={16} height={18} src={'/images/google_play_store.svg'} alt="Google Play Store" />
               </span>
-            </div>
+            </div> */}
           </div>
-          <div className="mb-2">
-            <span className="text-2xs tablet:text-[16px] font-bold opacity-60">
-              &copy; {new Date().getFullYear()} Petals Studio.  All rights reserved.
-            </span>
-          </div>
-          <div className="flex justify-between">
-            {['Privacy Policy', 'Terms of Service', 'Rules of Conduct', 'Official Community Policy'].map((item) => (
-              <span key={item} className="text-2xs tablet:text-[14px] font-normal opacity-60 whitespace-nowrap hover:opacity-80">
-                {item}
+          <div className="desktop:flex desktop:justify-between">
+            <div className="mb-2 desktop:mb-0">
+              <span className="text-2xs tablet:text-[16px] font-bold opacity-60">
+                &copy; {new Date().getFullYear()} Petals Studio.  All rights reserved.
               </span>
-            ))}
+            </div>
+            <div className="flex justify-between desktop:justify-start desktop:gap-x-4">
+              {['Privacy Policy', 'Terms of Service', 'Rules of Conduct', 'Official Community Policy'].map((item) => (
+                <span key={item} className="text-2xs tablet:text-[14px] font-normal opacity-60 whitespace-nowrap hover:opacity-80 tablet:uppercase">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
