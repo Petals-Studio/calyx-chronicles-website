@@ -10,11 +10,11 @@ export default function Seasons() {
     setSeason((currentSeason) => {
       const _seasonIndex = seasons.findIndex(({ num }) => num === currentSeason.num);
       const _nextSeasonIndex = direction === 'next' 
-        ? _seasonIndex === seasons.length 
+        ? _seasonIndex === (seasons.length - 1)
           ? 0 
           : _seasonIndex + 1
         : _seasonIndex === 0
-          ? seasons.length
+          ? (seasons.length - 1)
           : _seasonIndex - 1;
       return seasons[_nextSeasonIndex];
     })
