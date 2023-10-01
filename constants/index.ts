@@ -36,6 +36,25 @@ export const footerLinks = [
   }
 ];
 
+export type TCharacter = {
+  name: string;
+  trivia: string;
+  image: string;
+};
+
+export const characters: TCharacter[] = [
+  {
+    name: 'Mr. Harem',
+    trivia: "So perhaps, you've generated some fancy text, and you're content that you can now copy and paste your fancy text in the comments section of funny cat videos",
+    image: "/images/mrharem.png",
+  },
+  {
+    name: 'Warlock',
+    trivia: "So perhaps, you've generated some fancy text, and you're content that you can now copy and paste your fancy text in the comments section of funny cat videos",
+    image: "/images/mrharem.png",
+  }
+];
+
 export type TChapter = {
   num: string | number;
   title: string;
