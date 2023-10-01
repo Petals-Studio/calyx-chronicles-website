@@ -8,7 +8,9 @@ const options = {
 };
 
 const styles = {
-  height: '100%',
+  // display: 'flex',
+  // alignItems: 'baseline',
+  height: 'auto',
   width: '100%'
 };
 

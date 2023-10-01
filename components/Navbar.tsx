@@ -15,7 +15,7 @@ export default function Navbar(props: NavbarProps) {
   return (
     <div className={`z-10 w-full flex items-center justify-between ${props.noFixed ? 'absolute' : 'fixed'} left-0 top-0 pt-6`}>
       <div className="w-full max-w-8xl mx-auto flex items-center px-4 tablet:pl-[72px] tablet:pt-[54px] tablet:pr-12">
-        <Link href="/" className=''>
+        <Link href="/" className="inline-flex">
           <div className="w-6 h-6 tablet:h-[55px] tablet:w-[55px] flex-col justify-center items-center gap-px inline-flex">
             <img className="w-full h-full" src={homepageContent.monogramUrl} />
           </div>

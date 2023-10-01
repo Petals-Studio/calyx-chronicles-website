@@ -1,4 +1,4 @@
-const homepageContent = {
+const homepageContent= {
   registerModalMessage: {
     lines: {
       line1: 'and we’ll add you to our confidential list of favourite users',
@@ -77,6 +77,11 @@ const homepageContent = {
         // },
       ]
     }
+  },
+  socialLinks: {
+    instagram: '#',
+    reddit: '#',
+    discord: '#'
   }
 };
 
