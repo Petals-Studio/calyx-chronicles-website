@@ -84,6 +84,10 @@ const homepageContent = {
           title: 'TERMS OF SERVICE',
           url: '/terms-of-service',
         },
+        {
+          title: 'Contact Us',
+          url: '/contact-us',
+        },
         // {
         //   title: 'RULES OF CONDUCT',
         //   url: '#',
