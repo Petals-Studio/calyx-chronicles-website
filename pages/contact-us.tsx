@@ -12,7 +12,7 @@ import Link from 'next/link'
 export default function ContactUs() {
   const data = `
     <p>If you have any questions or need assistance, please feel free to email us at:</p>
-    <p><a href="mailto:contact@petals.studio">contact@example.com</a></p>
+    <p><a href="mailto:contact@petals.studio">contact@petals.studio</a></p>
   `;
 
   return (
