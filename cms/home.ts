@@ -85,7 +85,7 @@ const homepageContent = {
           url: '/terms-of-service',
         },
         {
-          title: 'Contact Us',
+          title: 'CONTACT US',
           url: '/contact-us',
         },
         // {

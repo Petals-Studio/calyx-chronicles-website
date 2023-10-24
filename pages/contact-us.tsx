@@ -11,7 +11,6 @@ import Link from 'next/link'
 
 export default function ContactUs() {
   const data = `
-    <h1>Contact Us</h1>
     <p>If you have any questions or need assistance, please feel free to email us at:</p>
     <p><a href="mailto:contact@petals.studio">contact@example.com</a></p>
   `;
@@ -21,7 +20,7 @@ export default function ContactUs() {
       <Navbar noItems noFixed noMenu />
       <div className="relative py-8 tablet:py-12 w-full">
         <div className="w-full max-w-8xl mx-auto flex flex-col px-2.5 tablet:pl-5 tablet:pr-12">
-          <h1 className={`${inter.variable} font-inter tablet:text-lg font-bold tracking-wide mb-4`}>PRIVACY POLICY</h1>
+          <h1 className={`${inter.variable} font-inter tablet:text-lg font-bold tracking-wide mb-4`}>CONTACT US</h1>
           <div className={`${inter.variable} font-inter dangerous-content`} dangerouslySetInnerHTML={{__html: data}}></div>
         </div>
       </div>
