@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
     <li>the right to access and rectify your personal information;</li>
     <li>the right to object to our processing of personal information;</li>
     <li>the right to restrict to our processing of personal information;</li>
-    <li>the right to demand us to delete your personal information; and</li>
+    <li>the right to demand us to delete your personal information; and </li>
     <li>the right to data portability.</li>
   </ul>
   <p>For more information about the rights you have in relation to your personal information, please see sections 14- 20 below. If you have any concerns as to how we use your personal information, we would kindly ask you to contact us first. However, you can always lodge a complaint with a relevant authority, specifically where you live, work or where you believe an infringement of you rights has occurred. Please see section 22 for further information.</p>
