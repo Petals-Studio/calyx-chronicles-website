@@ -73,7 +73,7 @@ const homepageContent = {
     content: {
       title: 'Watch the story unfold'
     },
-    copyrightText: 'Copyright © 2023 Petals World Incorporated Pte. Ltd. All rights reserved.',
+    copyrightText: 'Copyright © 2024 Rivea World Pvt. Ltd. All rights reserved.',
     sitemap: {
       links: [
         {

@@ -5,7 +5,7 @@ import EventBus from '@/EventBus'
 
 export default function PrivacyPolicy() {
   const data = `
-<p>This User Agreement (&ldquo;Agreement&rdquo;) governs your access and use of products, content, and services offered by Petals World Incorporated Pte Ltd. (&ldquo;Petals Studio&rdquo;), such as games published by Petals Studio (&ldquo;Games&rdquo;) and thereto related content, mod tools, upgrades, patches, features, launchers, websites, forums, events hosted by Petals Studio and any other service offered by Petals Studio (collectively &ldquo;Services&rdquo;).</p>
+<p>This User Agreement (&ldquo;Agreement&rdquo;) governs your access and use of products, content, and services offered by Rivea World Pvt. Ltd. (&ldquo;Petals Studio&rdquo;), such as games published by Petals Studio (&ldquo;Games&rdquo;) and thereto related content, mod tools, upgrades, patches, features, launchers, websites, forums, events hosted by Petals Studio and any other service offered by Petals Studio (collectively &ldquo;Services&rdquo;).</p>
 <p>By using the Services, you agree to be bound by this Agreement. If you don&rsquo;t agree to the terms of this Agreement, do not use the Services and instead contact your retailer regarding a possible refund (if applicable).</p>
 <p>Below follows a summary of the Agreement. Please note that the summary is only there to help you read the Agreement while the long version actually governs your use of the Services.</p>
 <h2>Summary</h2>
