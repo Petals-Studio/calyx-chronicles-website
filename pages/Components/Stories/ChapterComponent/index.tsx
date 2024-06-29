@@ -27,19 +27,19 @@ const ChapterComponents = (props: IChapterComponent) => {
       className="p-[0rem]"
       onMouseEnter={() => {
         id === 3 && console.log("called");
-        setActiveChapter(chapterData.title);
+        setActiveChapter(chapterData?.title);
       }}
     >
       <div
         className={`w-[100%] opacity-0 relative ${
           id !== 3 ? " after:bg-black" : "after:bg-transparent"
         } text-white after:absolute after:w-[1px] after:h-[70%] after:bg-black after:rounded-[100%] after:top-20 after:right-0  ${
-          isActive && chapterData.title === activeChapter
-            ? chapterData.background
+          isActive && chapterData?.title === activeChapter
+            ? chapterData?.background
             : ""
-        } ${isActive && chapterData.title === activeChapter ? "z-[2]" : ""} ${
+        } ${isActive && chapterData?.title === activeChapter ? "z-[2]" : ""} ${
           isInView ? "story-animation" : ""
-        } ${chapterData.title === activeChapter ? "" : "overflow-hidden"}`}
+        } ${chapterData?.title === activeChapter ? "" : "overflow-hidden"}`}
         style={{
           animationDelay: `${0.1 * id}s`,
         }}
@@ -55,25 +55,25 @@ const ChapterComponents = (props: IChapterComponent) => {
           {!isActive && <div className="text-black"> Comming Soon</div>}
           {
             <>
-              {isActive && chapterData.title === activeChapter && (
+              {isActive && chapterData?.title === activeChapter && (
                 <div className=" p-[20%]">
                   <div className="font-bold text-[34px] my-2">
-                    {chapterData.title}
+                    {chapterData?.title}
                   </div>
                   <div className="font-bold text-[18px] my-2">
-                    {chapterData.heading}
+                    {chapterData?.heading}
                   </div>
-                  <div>{chapterData.subText}</div>
+                  <div>{chapterData?.subText}</div>
                 </div>
               )}
               <img
                 className="image"
                 src={
-                  isActive && chapterData.title === activeChapter
+                  isActive && chapterData?.title === activeChapter
                     ? chapterData?.image?.colored
                     : chapterData?.image?.uncolored
                 }
-                alt={chapterData.title}
+                alt={chapterData?.title}
                 style={{
                   left: 0,
                   right: 0,
@@ -85,7 +85,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                   transition: "transform .2s",
                   transformOrigin: "center",
                   transform:
-                    isActive && chapterData.title === activeChapter
+                    isActive && chapterData?.title === activeChapter
                       ? id === 3
                         ? "translateX(-10%) translateY(0%) scale(1.3)"
                         : id === 1
@@ -94,13 +94,13 @@ const ChapterComponents = (props: IChapterComponent) => {
                       : "translateY(-10%) scale(1)",
 
                   opacity:
-                    isActive && chapterData.title === activeChapter ? 1 : 1,
+                    isActive && chapterData?.title === activeChapter ? 1 : 1,
 
                   position: "absolute",
-                  ...chapterData.style,
+                  ...chapterData?.style,
                 }}
               />
-              {isActive && chapterData.title !== activeChapter && (
+              {isActive && chapterData?.title !== activeChapter && (
                 <div className="absolute bottom-10 text-[24px] right-20 mr-[2rem] text-black">
                   {chapterData?.title}
                 </div>
