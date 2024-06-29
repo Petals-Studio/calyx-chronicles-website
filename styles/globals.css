@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Porter Sans Block";
+  src: url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.eot");
+  src: url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.svg#Porter Sans Block")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.customFont {
+  font-family: "Porter Sans Block";
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

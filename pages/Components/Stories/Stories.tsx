@@ -3,37 +3,12 @@ import { albertusNova } from "@/fonts";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import ChapterComponents from "./ChapterComponent";
+import useInView from "@/hooks/useInView";
 
 const Stories = () => {
-  const [isInView, setIsInView] = useState(false);
-  const [activeChapter, setActiveChapter] = useState("");
   const targetRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Update isInView state when target element enters or leaves the viewport
-        setIsInView(entry.isIntersecting);
-      },
-      {
-        // Optional options: root, rootMargin, threshold
-        root: null, // viewport
-        rootMargin: "0px",
-        threshold: 0.5, // 0.5 means 50% of the element must be visible
-      }
-    );
-
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
-    }
-
-    // Clean up the observer
-    return () => {
-      if (targetRef.current) {
-        observer.unobserve(targetRef.current);
-      }
-    };
-  }, []); // Empty array means this effect runs only once on mount
+  const isInView = useInView({ targetRef });
+  const [activeChapter, setActiveChapter] = useState("");
 
   console.log(activeChapter);
   return (

@@ -4,7 +4,7 @@ const homepageContent = {
     links: [
       {
         label: "Home",
-        url: "#",
+        url: "",
       },
       {
         label: "The Story",
@@ -40,31 +40,52 @@ const homepageContent = {
     sectionId: "story",
     content: [
       {
-        image: { colored: "", uncolored: "" },
+        image: {
+          colored: "/images/chapter1color.png",
+          uncolored: "/images/chapter1Uncolor.png",
+        },
         title: "Chapter 1",
         heading: "Warlock Tower Caper",
         isActive: true,
+        style: { width: "500px", height: "500px", left: 0 },
         subText: "Describe the episode in an interesting manner",
-        background:
-          "bg-gradient-to-b hover:from-yellow-400 hover:to-yellow-200",
+        background: "bg-gradient-to-b from-[#E9AB4E] to-[#FFE6C1]",
       },
       {
-        image: { colored: "", uncolored: "" },
+        image: {
+          colored: "/images/chapter2Color.png",
+          uncolored: "/images/chapter2Uncolor.png",
+        },
         title: "Chapter 2",
         isActive: false,
+        style: { width: "500px", height: "500px" },
         heading: "One Last Run",
         subText: "Describe the episode in an interesting manner",
-        background: "bg-gradient-to-b hover:from-blue-500 hover:to-blue-300)",
+        background: "bg-gradient-to-b from-[#4B91D2] to-[#B7DCFF])",
       },
       {
-        image: { colored: "", uncolored: "" },
+        image: {
+          colored: "/images/chapter3Colored.png",
+          uncolored: "/images/chapter3Uncolored.png",
+        },
         isActive: true,
         title: "Chapter 3",
-        background: "bg-gradient-to-b hover:from-pink-500 hover:to-pink-300",
+        style: { width: "500px", height: "500px", right: 0 },
+        background: "bg-gradient-to-b from-[#E84A7A] to-[#FFD2E0]",
         heading: "Bread Crumbs",
         subText: "Describe the episode in an interesting manner",
       },
     ],
+  },
+  showcaseSection2: {
+    content: {
+      title: "Are you ready to fight for your story?",
+      images: {
+        background: "",
+        leftImage: "/images/fightingRobot1.png",
+        rightImage: "/images/fightingRobot2.png",
+      },
+    },
   },
   newsSection: {
     sectionId: "news",
