@@ -21,7 +21,7 @@ interface IChapterComponent {
 }
 const ChapterComponents = (props: IChapterComponent) => {
   const { chapterData, isInView, id, setActiveChapter, activeChapter } = props;
-  const isActive = chapterData.isActive;
+  const isActive = chapterData?.isActive;
   return (
     <div
       className="p-[0rem]"
