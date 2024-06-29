@@ -27,8 +27,12 @@ body {
 }
 
 /* For ToS and Privacy Policy */
-.dangerous-content p { margin-bottom: 20px; }
-.dangerous-content h2 { margin-bottom: 10px; }
+.dangerous-content p {
+  margin-bottom: 20px;
+}
+.dangerous-content h2 {
+  margin-bottom: 10px;
+}
 .dangerous-content ul {
   margin-left: 16px;
   margin-bottom: 20px;
@@ -47,4 +51,31 @@ body {
 }
 .dangerous-content a {
   text-decoration: underline;
+}
+
+.scroll-body {
+  background: #fff;
+  width: 100%;
+  height: 100vh !important;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.wrapper-body {
+  scroll-snap-align: start !important;
+}
+
+.story-animation {
+  opacity: 1;
+  transform: skew(-7deg);
+  animation: storyLoadingAnimation both 0.4s linear;
+}
+@keyframes storyLoadingAnimation {
+  0% {
+    transform: skew(-7deg) translateX(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: skew(-7deg) translateX(0%);
+    opacity: 1;
+  }
 }
