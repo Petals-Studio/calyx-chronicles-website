@@ -1,22 +1,37 @@
 import homepageContent from "@/cms/home";
 import { albertusNova } from "@/fonts";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  Dispatch,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import ChapterComponents from "./ChapterComponent";
 import useInView from "@/hooks/useInView";
 
-const Stories = () => {
+interface IStories {
+  setCurrentTab: Dispatch<SetStateAction<string>>;
+}
+const Stories = (props: IStories) => {
+  const { setCurrentTab } = props;
+
   const targetRef = useRef(null);
   const isInView = useInView({ targetRef });
   const [activeChapter, setActiveChapter] = useState("");
 
-  console.log(activeChapter);
+  useEffect(() => {
+    if (isInView) {
+      setCurrentTab(homepageContent.showcaseSection.label);
+    }
+  }, [isInView]);
   return (
     <>
       <div
         ref={targetRef}
         id={homepageContent.showcaseSection.sectionId}
-        className="w-full grid grid-cols-3 h-[100dvh] overflow-hidden text-black"
+        className="w-full grid grid-cols-3 h-[100vh] overflow-hidden text-black"
       >
         {homepageContent.showcaseSection.content.map((item, idx) => {
           return (

@@ -36,8 +36,17 @@ const homepageContent = {
     playStoreLink: "#",
     appleStoreLink: "#",
   },
+  landingPage: {
+    label: "Home",
+    sectionId: "landingPage",
+    content: {
+      images: { src: "/images/landingBg.png", alt: "landing image" },
+      title: "Begin Adventure >",
+    },
+  },
   showcaseSection: {
     sectionId: "story",
+    label: "The Story",
     content: [
       {
         image: {
@@ -81,10 +90,53 @@ const homepageContent = {
     content: {
       title: "Are you ready to fight for your story?",
       images: {
-        background: "",
+        background: "/images/backgroundBg.png",
         leftImage: "/images/fightingRobot1.png",
         rightImage: "/images/fightingRobot2.png",
       },
+    },
+  },
+  community: {
+    label: "Community",
+    content: {
+      title: "Join our Community",
+      paragraphs: [
+        "Want to help shape the future of Calyx Chronicles? Or float some radical lore theories? Maybe discuss game strategy or two or report something OP? Join our socials to engage with us and the community directly!",
+        "New exciting things to discover by connecting with us",
+      ],
+      background: "bg-gradient-to-b from-[#3C2152] to-[#465CA9]",
+      images: [
+        {
+          image: "/images/discord.png",
+          title: "Discord",
+          Zindex: "1",
+
+          animation: {
+            initial: { x: 200, opacity: 0.2 },
+            animate: { x: 0, opacity: 1 },
+          },
+        },
+        {
+          image: "/images/insta.png",
+          title: "Instagram",
+          Zindex: "3",
+
+          animation: {
+            initial: { y: 200, opacity: 0.2 },
+            animate: { y: 0, opacity: 1 },
+          },
+        },
+        {
+          image: "/images/reddit.png",
+          title: "Reddit",
+
+          Zindex: "1",
+          animation: {
+            initial: { x: -200, opacity: 0.2 },
+            animate: { x: 0, opacity: 1 },
+          },
+        },
+      ],
     },
   },
   newsSection: {

@@ -11,9 +11,13 @@ import EventBus from "@/EventBus";
 import Stories from "./Components/Stories/Stories";
 import { useNavigate } from "react-router-dom";
 import Section2 from "./Components/Section2";
+import Community from "./Components/Community";
+import HeroSection from "./Components/HeroSection";
+import { useState } from "react";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 
 export default function Home() {
+  const [currentTab, setCurrentTab] = useState("Home");
   return (
     <main
       onClick={() => {
@@ -21,16 +25,22 @@ export default function Home() {
       }}
     >
       <div className="scroll-body">
-        <Navbar />
+        <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
         <div className="w-full h-screen wrapper-body text-black flex justify-center items-center">
-          {" "}
-          <a href="#story"> Begin Adventure</a>
+          <HeroSection setCurrentTab={setCurrentTab} />
         </div>
         <div className="w-full h-screen wrapper-body" id="story">
-          <Stories />
+          <Stories setCurrentTab={setCurrentTab} />
         </div>
-        <div className="w-full h-screen wrapper-body " id="section2">
-          <Section2 />
+        <div className="w-full h-[100dvh] wrapper-body" id="section2">
+          <Section2 setCurrentTab={setCurrentTab} />
+        </div>
+
+        <div
+          id="community"
+          className={`w-full h-[100dvh] wrapper-body ${homepageContent.community.content.background} `}
+        >
+          <Community setCurrentTab={setCurrentTab} />
         </div>
 
         <RegisterModal />
