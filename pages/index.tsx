@@ -26,10 +26,10 @@ export default function Home() {
     >
       <div className="scroll-body">
         <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
-        <div className="w-full h-screen wrapper-body text-black flex justify-center items-center">
+        <div className="w-full h-[100dvh] wrapper-body text-black flex justify-center items-center">
           <HeroSection setCurrentTab={setCurrentTab} />
         </div>
-        <div className="w-full h-screen wrapper-body" id="story">
+        <div className="w-full h-[100dvh] wrapper-body" id="story">
           <Stories setCurrentTab={setCurrentTab} />
         </div>
         <div className="w-full h-[100dvh] wrapper-body" id="section2">

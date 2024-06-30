@@ -23,9 +23,9 @@ const Community = (props: ICommunity) => {
   }, [isInView]);
 
   return (
-    <div ref={targetRef}>
+    <div ref={targetRef} className="w-full h-full">
       <div
-        className={`grid lg:grid-cols-[1.5fr_minmax(300px,1.2fr)] md:grid-cols-1 place-content-center w-full h-screen overflow-visible p-[2rem]`}
+        className={`grid lg:grid-cols-[1.5fr_minmax(300px,1.2fr)] md:grid-cols-1 place-content-center w-full h-full overflow-visible p-[2rem]`}
       >
         <div className="flex justify-center items-center h-full">
           <div className="flex justify-center w-[100%]  h-[fit-content] items-center relative my-auto">

@@ -17,9 +17,9 @@ const Section2 = (props: ISection2) => {
   }, [isInView]);
 
   return (
-    <div ref={targetRef}>
+    <div ref={targetRef} className="w-full h-full">
       <div
-        className={`flex justify-between items-center w-full h-screen end flex-col overflow-hidden`}
+        className={`flex justify-between items-center w-full h-full end flex-col overflow-hidden`}
         style={{
           background: `url(${homepageContent?.showcaseSection2.content.images.background}) no-repeat`,
           backgroundSize: "cover",
@@ -30,7 +30,7 @@ const Section2 = (props: ISection2) => {
             initial={{ transform: "translateY(-100%)" }}
             animate={{ transform: "translateY(0%)" }}
           >
-            <div className="customFont lg:text-[35px] md:text-[30px] sm:text-[30px] text-[#C23C85] lg:w-[50%] md:w-[70%] sm:w-[90%] text-center mx-auto  lg:pt-[10rem] md:pt-[3rem] sm:pt-[2rem]">
+            <div className="customFont lg:text-[35px] md:text-[30px] sm:text-[30px] text-[#C23C85] lg:w-[50%] md:w-[70%] sm:w-[90%] text-center mx-auto  lg:pt-[10rem] md:pt-[10rem] sm:pt-[10rem]">
               {homepageContent?.showcaseSection2?.content.title}
             </div>
           </motion.div>
@@ -75,7 +75,7 @@ const Section2 = (props: ISection2) => {
           </div>
         )}
         {!isInView && (
-          <div className="flex justify-between w-full">
+          <div className="flex justify-between w-full opacity-0">
             <motion.div
               initial={{ transform: "translateX(-100%)" }}
               animate={{ transform: "translateX(0%)" }}

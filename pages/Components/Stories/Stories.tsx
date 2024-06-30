@@ -31,7 +31,7 @@ const Stories = (props: IStories) => {
       <div
         ref={targetRef}
         id={homepageContent.showcaseSection.sectionId}
-        className="w-full grid grid-cols-3 h-[100vh] overflow-hidden text-black"
+        className="w-full grid grid-cols-3 h-full overflow-hidden text-black"
       >
         {homepageContent.showcaseSection.content.map((item, idx) => {
           return (
