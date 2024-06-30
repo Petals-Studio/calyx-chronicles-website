@@ -90,6 +90,21 @@ body {
   transform: skew(-7deg);
   animation: storyLoadingAnimation both 0.4s linear;
 }
+
+.story-animation-mobile {
+  opacity: 1;
+  animation: storyLoadingAnimationMobile both 0.4s linear;
+}
+@keyframes storyLoadingAnimationMobile {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
 @keyframes storyLoadingAnimation {
   0% {
     transform: skew(-7deg) translateX(200%);
