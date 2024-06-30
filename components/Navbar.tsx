@@ -10,7 +10,7 @@ interface NavbarProps {
   noFixed?: boolean;
   noMenu?: boolean;
   currentTab?: string;
-  setCurrentTab: Dispatch<SetStateAction<string>>;
+  setCurrentTab?: Dispatch<SetStateAction<string>>;
 }
 
 export default function Navbar(props: NavbarProps) {
@@ -30,7 +30,7 @@ export default function Navbar(props: NavbarProps) {
                   key={`menu-link-${idx}`}
                   href={link.url}
                   onClick={() => {
-                    setCurrentTab(link.label);
+                    setCurrentTab && setCurrentTab(link.label);
                   }}
                   className={`${inter.variable} font-inter ${
                     currentTab !== "Community"
