@@ -8,11 +8,11 @@ import RegisterModal from "@/components/RegisterModal";
 import homepageContent from "@/cms/home";
 import EventBus from "@/EventBus";
 
-import Stories from "./Components/Stories/Stories";
+import Stories from "../components/Stories/Stories";
 import { useNavigate } from "react-router-dom";
-import Section2 from "./Components/Section2";
-import Community from "./Components/Community";
-import HeroSection from "./Components/HeroSection";
+import Section2 from "../components/Section2";
+import Community from "../components/Community";
+import HeroSection from "../components/HeroSection";
 import { useState } from "react";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 

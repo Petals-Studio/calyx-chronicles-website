@@ -8,9 +8,9 @@ import React, {
   useRef,
   useState,
 } from "react";
-import ChapterComponents from "./ChapterComponent";
+import ChapterComponents from "../../components/Stories/ChapterComponent";
 import useInView from "@/hooks/useInView";
-import MobileCharecterComp from "./ChapterComponent/MobileCharecterComp";
+import MobileCharecterComp from "../../components/Stories/ChapterComponent/MobileCharecterComp";
 
 interface IStories {
   setCurrentTab: Dispatch<SetStateAction<string>>;
