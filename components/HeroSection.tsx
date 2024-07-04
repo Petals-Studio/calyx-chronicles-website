@@ -33,6 +33,7 @@ const HeroSection = (props: IHeroSection) => {
       ref={targetRef}
       className="w-full flex justify-center items-center h-full flex-col relative bg-[#facc96]"
     >
+      {""}
       <div className="w-[100%] h-[100%] relative flex justify-center items-center flex-col fade-in-animation ">
         <div className="flex w-[100%] justify-between items-center fixed p-[1rem] top-0 z-[100]">
           <img
