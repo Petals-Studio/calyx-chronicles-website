@@ -24,27 +24,13 @@ export default function Home() {
         EventBus.getInstance().fireEvent(SidebarCloseEvent);
       }}
     >
-      <div className="scroll-body">
-        <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
-        <div className="w-full h-[100dvh] wrapper-body text-black flex justify-center items-center">
+      <div className="">
+        <div className="w-full h-[100dvh] text-black flex justify-center items-center">
           <HeroSection setCurrentTab={setCurrentTab} />
-        </div>
-        <div className="w-full h-[100dvh] wrapper-body" id="story">
-          <Stories setCurrentTab={setCurrentTab} />
-        </div>
-        <div className="w-full h-[100dvh] wrapper-body" id="section2">
-          <Section2 setCurrentTab={setCurrentTab} />
-        </div>
-
-        <div
-          id="community"
-          className={`w-full h-[100dvh] wrapper-body ${homepageContent.community.content.background} `}
-        >
-          <Community setCurrentTab={setCurrentTab} />
         </div>
 
         <RegisterModal />
-        <Sidebar />
+        {/* <Sidebar /> */}
       </div>
     </main>
   );

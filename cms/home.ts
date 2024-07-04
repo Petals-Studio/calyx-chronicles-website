@@ -40,7 +40,21 @@ const homepageContent = {
     label: "Home",
     sectionId: "landingPage",
     content: {
-      images: { src: "/images/landingBg.png", alt: "landing image" },
+      images: {
+        src: "https://assets.calyxchronicles.com/website/calyx.png",
+        alt: "landing image",
+      },
+      gifBG: {
+        src: "https://assets.calyxchronicles.com/website/calyx.gif",
+        alt: "landing image",
+      },
+      backgroundL: { src: "/images/leftRobot.png", alt: "robot bg image" },
+      backgroundR: { src: "/images/rightRobot.png", alt: "left bg image" },
+      icon: { src: "/images/ICON.png", alt: "Icon image" },
+      logo: { src: "/images/LOGO.png", alt: "logo image" },
+      playstore: { src: "/images/Google.png", alt: "google image" },
+      appStore: { src: "/images/app.png", alt: "google image" },
+
       title: "Begin Adventure >",
     },
   },
