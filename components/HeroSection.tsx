@@ -8,6 +8,7 @@ import React, {
   useState,
 } from "react";
 import { inView, motion } from "framer-motion";
+import Link from "next/link";
 interface IHeroSection {
   setCurrentTab: Dispatch<SetStateAction<string>>;
 }
@@ -221,11 +222,13 @@ const HeroSection = (props: IHeroSection) => {
             Copyright © 2024 Rivea World Pvt. Ltd. All rights reserved.
           </div>
           <div className="flex w-[100%] gap-[.5rem] justify-center items-center z-100 cursor-pointer left-0">
-            <a href="/privacy-policy">Privacy Policy</a>
+            <Link href="/privacy-policy">Privacy Policy</Link>
             <div className="flex w-[1px] h-[10px] bg-black"></div>
-            <a href="/terms-of-service">Terms & Condition</a>
+            <Link href="/terms-of-service">Terms & Condition</Link>
             <div className="flex w-[1px] h-[10px] bg-black"></div>
-            <a href="mailto:contact@petals.studio">contact@petals.studio</a>
+            <Link href="mailto:contact@petals.studio">
+              contact@petals.studio
+            </Link>
           </div>
         </div>
       </div>
