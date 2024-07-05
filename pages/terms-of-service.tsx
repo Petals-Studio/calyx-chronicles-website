@@ -2,6 +2,8 @@ import { inter } from "@/fonts";
 import Navbar from "@/components/Navbar";
 import { SidebarCloseEvent } from "@/components/Sidebar";
 import EventBus from "@/EventBus";
+import Link from "next/link";
+import homepageContent from "@/cms/home";
 
 export default function PrivacyPolicy() {
   const data = `
@@ -113,8 +115,30 @@ export default function PrivacyPolicy() {
         EventBus.getInstance().fireEvent(SidebarCloseEvent);
       }}
     >
-      <Navbar noItems noFixed noMenu />
-      <div className="relative py-8 tablet:py-12 w-full">
+      <div className="flex w-[100%] justify-between items-center  p-[1rem] top-0 z-[100]">
+        <Link href={"/"}>
+          <img
+            src={homepageContent.landingPage.content.blacklogo.src}
+            style={{
+              objectFit: "contain",
+              filter: "grayscale(100%)",
+
+              position: "relative",
+              width: "120px",
+            }}
+          />
+        </Link>
+        <img
+          src={homepageContent.landingPage.content.icon.src}
+          style={{
+            objectFit: "contain",
+
+            position: "relative",
+            width: "40px",
+          }}
+        />
+      </div>
+      <div className="relative w-full">
         <div className="w-full max-w-8xl mx-auto flex flex-col px-2.5 tablet:pl-5 tablet:pr-12">
           <h1
             className={`${inter.variable} font-inter tablet:text-lg uppercase font-bold tracking-wide mb-4 text-center sm:text-left`}

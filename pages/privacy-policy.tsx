@@ -6,6 +6,7 @@ import Sidebar, { SidebarCloseEvent } from "@/components/Sidebar";
 import FloatingHeader from "@/components/FloatingHeader";
 import RegisterModal from "@/components/RegisterModal";
 import homepageContent from "@/cms/home";
+
 import EventBus from "@/EventBus";
 import Link from "next/link";
 
@@ -169,7 +170,7 @@ export default function PrivacyPolicy() {
     <li>Advertising partners and attribution platforms to help us understand the effectiveness of our marketing campaigns</li>
     <li>Marketing services partnerss</li>
   </ul>
-  <p> Please note that our games or products may be advertised in other applications. If you click on one of these advertisements and install our game, you will become a user of our Services. To prevent fraud and verify the installation of the game, we may share your IDFA (iOS) and/or Advertiser ID (Android) with the relevant advertiser. For Services using the Unity Engine, such as for example our game Cities: Skylines, Unity is our service provider. Unity may collect certain data in relation to your use of such Services. You can find their privacy policy on their websites under&nbsp;<a href="https://unity3d.com/legal/privacy-policy">https://unity3d.com/legal/privacy-policy</a>&nbsp;and&nbsp;<a href="https://www.epicgames.com/site/en-US/privacypolicy">https://www.epicgames.com/site/en-US/privacypolicy</a>. We may release your data when we are required to by a court order, according to law or in the event of a bankruptcy or other similar unfortunate event. We may also share and may acquire your data with future subsidiaries or companies if we choose to sell, transfer or merge parts of our business. We will, however, only transfer the data if we must and if these companies comply with applicable privacy regulations and can guarantee that your data will be kept safe.</p>
+  <p> Please note that our games or products may be advertised in other applications. If you click on one of these advertisements and install our game, you will become a user of our Services. To prevent fraud and verify the installation of the game, we may share your IDFA (iOS) and/or Advertiser ID (Android) with the relevant advertiser. For Services using the Unity Engine, such as for example our game Cities: Skylines, Unity is our service provider. Unity may collect certain data in relation to your use of such Services. You can find their privacy policy on their websites under <a href="https://unity3d.com/legal/privacy-policy">https://unity3d.com/legal/privacy-policy</a><a href="https://www.epicgames.com/site/en-US/privacypolicy">https://www.epicgames.com/site/en-US/privacypolicy</a>. We may release your data when we are required to by a court order, according to law or in the event of a bankruptcy or other similar unfortunate event. We may also share and may acquire your data with future subsidiaries or companies if we choose to sell, transfer or merge parts of our business. We will, however, only transfer the data if we must and if these companies comply with applicable privacy regulations and can guarantee that your data will be kept safe.</p>
   <h2>9. CAN CHILDREN USE OUR SERVICES?</h2>
   <p> There is no age barier for using our Website/game apps</p>
   <h2>10. HOW DO WE USE COOKIES AND TRACKING TECHNOLOGIES?</h2>
@@ -212,13 +213,36 @@ export default function PrivacyPolicy() {
 
   return (
     <main
-      className="w-full flex min-h-screen flex-col items-center bg-white text-black"
+      className="w-full flex min-h-screen flex-col items-center bg-white text-black overflow-hidden"
       onClick={() => {
         EventBus.getInstance().fireEvent(SidebarCloseEvent);
       }}
     >
-      <Navbar noItems noFixed noMenu />
-      <div className="relative py-8 tablet:py-12 w-full">
+      {/* <Navbar noItems noFixed noMenu /> */}
+      <div className="flex w-[100%] justify-between items-center  p-[1rem] top-0 z-[100]">
+        <Link href={"/"}>
+          <img
+            src={homepageContent.landingPage.content.blacklogo.src}
+            style={{
+              objectFit: "contain",
+              filter: "grayscale(100%)",
+
+              position: "relative",
+              width: "120px",
+            }}
+          />
+        </Link>
+        <img
+          src={homepageContent.landingPage.content.icon.src}
+          style={{
+            objectFit: "contain",
+
+            position: "relative",
+            width: "40px",
+          }}
+        />
+      </div>
+      <div className="relative w-full">
         <div className="w-full max-w-8xl mx-auto flex flex-col px-2.5  tablet:pl-5 tablet:pr-12">
           <h1
             className={`${inter.variable} font-inter tablet:text-lg font-bold tracking-wide text-center sm:text-left mb-4`}

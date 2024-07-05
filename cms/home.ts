@@ -52,6 +52,10 @@ const homepageContent = {
       backgroundR: { src: "/images/rightRobot.png", alt: "left bg image" },
       icon: { src: "/images/ICON.png", alt: "Icon image" },
       logo: { src: "/images/LOGO.png", alt: "logo image" },
+      blacklogo: {
+        src: "https://assets.calyxchronicles.com/website/Petals_logo_low_res.png",
+        alt: "logo image",
+      },
       playstore: { src: "/images/Google.png", alt: "google image", url: "" },
       appStore: { src: "/images/app.png", alt: "google image", url: "" },
 
