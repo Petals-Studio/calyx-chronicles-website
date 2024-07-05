@@ -45,15 +45,15 @@ const homepageContent = {
         alt: "landing image",
       },
       gifBG: {
-        src: "https://assets.calyxchronicles.com/website/calyx.gif",
+        src: "/images/Flow2_512p_25fps.json",
         alt: "landing image",
       },
       backgroundL: { src: "/images/leftRobot.png", alt: "robot bg image" },
       backgroundR: { src: "/images/rightRobot.png", alt: "left bg image" },
       icon: { src: "/images/ICON.png", alt: "Icon image" },
       logo: { src: "/images/LOGO.png", alt: "logo image" },
-      playstore: { src: "/images/Google.png", alt: "google image" },
-      appStore: { src: "/images/app.png", alt: "google image" },
+      playstore: { src: "/images/Google.png", alt: "google image", url: "" },
+      appStore: { src: "/images/app.png", alt: "google image", url: "" },
 
       title: "Begin Adventure >",
     },
