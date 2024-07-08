@@ -139,7 +139,7 @@ const HeroSection = (props: IHeroSection) => {
             >
               {" "}
               <div className="flex w-[full] gap-[2rem] z-100 justify-center items-center cursor-pointer flex-wrap sm:hidden xs:hidden ">
-                <Link href={homepageContent.landingPage.content.playstore.url}>
+                <Link href={homepageContent.landingPage.content.playstore.url} target="_blank">
                   <img
                     src={homepageContent.landingPage.content.playstore.src}
                     className="w-[220px] md:w-[150px] sm:w-[120px] xs:w-[120px]"
@@ -179,7 +179,7 @@ const HeroSection = (props: IHeroSection) => {
           }}
         >
           <div className="flex w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer mt-[2rem] hidden sm:flex xs:flex xs:flex-col">
-            <Link href={homepageContent.landingPage.content.playstore.url}>
+            <Link href={homepageContent.landingPage.content.playstore.url} target="_blank">
               <img
                 src={homepageContent.landingPage.content.playstore.src}
                 className="w-[220px] md:w-[150px] sm:w-[120px] xs:w-[120px]"

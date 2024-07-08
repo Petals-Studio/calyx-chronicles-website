@@ -52,7 +52,7 @@ const homepageContent = {
       backgroundR: { src: "/images/rightRobot.png", alt: "left bg image" },
       icon: { src: "/images/ICON.png", alt: "Icon image" },
       logo: { src: "/images/LOGO.png", alt: "logo image" },
-      playstore: { src: "/images/Google.png", alt: "google image", url: "" },
+      playstore: { src: "https://assets.calyxchronicles.com/website/playstore_launched.png", alt: "google image", url: "https://play.google.com/store/apps/details?id=studio.petals.game.cc" },
       appStore: { src: "/images/app.png", alt: "google image", url: "" },
 
       title: "Begin Adventure >",
