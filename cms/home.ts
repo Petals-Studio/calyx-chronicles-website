@@ -58,8 +58,10 @@ const homepageContent = {
     content: [
       {
         image: {
-          colored: "/images/chapter1color.png",
-          uncolored: "/images/chapter1Uncolor.png",
+          colored:
+            "https://assets.calyxchronicles.com/website/chapter1color.png",
+          uncolored:
+            "https://assets.calyxchronicles.com/website/chapter1Uncolor.png",
         },
         title: "Chapter 1",
         heading: "Warlock Tower Caper",
@@ -71,8 +73,10 @@ const homepageContent = {
       },
       {
         image: {
-          colored: "/images/chapter2Color.png",
-          uncolored: "/images/chapter2Uncolor.png",
+          colored:
+            "https://assets.calyxchronicles.com/website/chapter2Color.png",
+          uncolored:
+            "https://assets.calyxchronicles.com/website/chapter2Uncolor.png",
         },
         title: "Chapter 2",
         isActive: true,
@@ -84,8 +88,10 @@ const homepageContent = {
       },
       {
         image: {
-          colored: "/images/chapter3Colored.png",
-          uncolored: "/images/chapter3Uncolored.png",
+          colored:
+            "https://assets.calyxchronicles.com/website/chapter3Colored.png",
+          uncolored:
+            "https://assets.calyxchronicles.com/website/chapter3Uncolored.png",
         },
         isActive: true,
         title: "Chapter 3",
@@ -101,9 +107,12 @@ const homepageContent = {
     content: {
       title: "Are you ready to fight for your story?",
       images: {
-        background: "/images/backgroundBg.png",
-        leftImage: "/images/fightingRobot1.png",
-        rightImage: "/images/fightingRobot2.png",
+        background:
+          "https://assets.calyxchronicles.com/website/backgroundBg.png",
+        leftImage:
+          "https://assets.calyxchronicles.com/website/fightingRobot1.png",
+        rightImage:
+          "https://assets.calyxchronicles.com/website/fightingRobot2.png",
       },
     },
   },
