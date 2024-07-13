@@ -75,6 +75,7 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
                   }
                   alt={chapterData?.title}
                   style={{
+                    zIndex: 999,
                     objectFit: "contain",
                     margin: "0 auto",
                     top: "0%",

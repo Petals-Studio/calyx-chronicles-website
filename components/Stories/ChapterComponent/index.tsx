@@ -33,7 +33,7 @@ const ChapterComponents = (props: IChapterComponent) => {
       <div
         className={`w-[100%] opacity-0 relative ${
           id !== 3 ? " after:bg-black" : "after:bg-transparent"
-        } text-white after:absolute after:w-[1px] after:h-[70%] after:bg-black after:rounded-[100%] after:top-20 after:right-0  ${
+        } text-white after:absolute after:z-[-1] after:w-[1px] after:h-[70%] after:bg-black after:rounded-[100%] after:top-20 after:right-0  ${
           isActive && chapterData?.title === activeChapter
             ? chapterData?.background
             : ""
@@ -77,6 +77,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                 }
                 alt={chapterData?.title}
                 style={{
+                  zIndex: 999,
                   left: 0,
                   right: 0,
                   bottom: 0,

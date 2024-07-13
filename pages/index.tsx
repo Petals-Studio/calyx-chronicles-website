@@ -14,6 +14,7 @@ import Section2 from "../components/Section2";
 import Community from "../components/Community";
 import HeroSection from "../components/HeroSection";
 import { useState } from "react";
+import StoreSection from "@/components/StoreSection";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 
 export default function Home() {
@@ -32,9 +33,12 @@ export default function Home() {
         <div className="w-full h-[100dvh] wrapper-body" id="story">
           <Stories setCurrentTab={setCurrentTab} />
         </div>
-        <div className="w-full h-[100dvh] wrapper-body" id="section2">
-          <Section2 setCurrentTab={setCurrentTab} />
+        <div className="w-full h-[100dvh] wrapper-body" id="story">
+          <StoreSection setCurrentTab={setCurrentTab} />
         </div>
+        {/* <div className="w-full h-[100dvh] wrapper-body" id="section2">
+          <Section2 setCurrentTab={setCurrentTab} />
+        </div> */}
 
         <div
           id="community"

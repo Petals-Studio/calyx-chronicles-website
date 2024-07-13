@@ -122,6 +122,7 @@ const HeroSection = (props: IHeroSection) => {
                   height: "90%",
                   width: "90%",
                 }}
+                autoplay={false}
                 loop={false}
                 animationData={jsonDtaa}
               />
