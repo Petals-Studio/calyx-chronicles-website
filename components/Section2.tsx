@@ -30,7 +30,7 @@ const Section2 = (props: ISection2) => {
             initial={{ transform: "translateY(-100%)" }}
             animate={{ transform: "translateY(0%)" }}
           >
-            <div className="customFont lg:text-[35px] md:text-[30px] sm:text-[30px] text-[#C23C85] lg:w-[50%] md:w-[70%] sm:w-[90%] text-center mx-auto  lg:pt-[10rem] md:pt-[10rem] sm:pt-[10rem]">
+            <div className="customFont lg:text-[90px] md:text-[70px] sm:text-[50px] leading-[117px] sm:leading-[80px] text-[#C23C85] lg:w-[50%] md:w-[70%] sm:w-[90%] text-center mx-auto  lg:pt-[5%] md:pt-[2rem] sm:pt-[5rem] xs:pt-[2rem]">
               {homepageContent?.showcaseSection2?.content.title}
             </div>
           </motion.div>
@@ -42,7 +42,7 @@ const Section2 = (props: ISection2) => {
         )}
 
         {isInView && (
-          <div className="flex justify-between w-full">
+          <div className="flex justify-between w-full mt-[-20rem]">
             <motion.div
               initial={{ transform: "translateX(-100%)" }}
               animate={{ transform: "translateX(0%)" }}

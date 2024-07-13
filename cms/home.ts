@@ -4,15 +4,15 @@ const homepageContent = {
     links: [
       {
         label: "Home",
-        url: "",
+        url: "/",
       },
       {
         label: "The Story",
-        url: "#story",
+        url: "/#story",
       },
       {
         label: "Community",
-        url: "#community",
+        url: "/#community",
       },
       // {
       //   label: 'Coming Soon',
@@ -24,23 +24,31 @@ const homepageContent = {
       },
     ],
   },
-  heroSection: {
-    sectionId: "hero",
-    content: {
-      logo: {
-        src: "/images/logo_desktop.png",
-        alt: "Calyx Chronicles",
-      },
-      title: ["A Heart pounding, Arcade style", "multiplayer sensation"],
-    },
-    playStoreLink: "#",
-    appleStoreLink: "#",
-  },
   landingPage: {
     label: "Home",
     sectionId: "landingPage",
     content: {
-      images: { src: "/images/landingBg.png", alt: "landing image" },
+      images: {
+        src: "https://assets.calyxchronicles.com/website/calyx.png",
+        alt: "landing image",
+      },
+      backgroundL: {
+        src: "/images/FR1.png",
+        alt: "robot bg image",
+      },
+      backgroundR: {
+        src: "/images/FR2.png",
+        alt: "left bg image",
+      },
+      icon: { src: "/images/ICON.png", alt: "Icon image" },
+      logo: { src: "/images/LOGO.png", alt: "logo image" },
+      blacklogo: {
+        src: "https://assets.calyxchronicles.com/website/Petals_logo_low_res.png",
+        alt: "logo image",
+      },
+      playstore: { src: "/images/playstore.png", alt: "google image", url: "" },
+      appStore: { src: "/images/appstore.png", alt: "google image", url: "" },
+
       title: "Begin Adventure >",
     },
   },
@@ -59,7 +67,7 @@ const homepageContent = {
         style: { width: "500px", height: "500px", left: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
         subText: "Describe the episode in an interesting manner",
-        background: "bg-gradient-to-b from-[#E9AB4E] to-[#FFE6C1]",
+        background: "bg-[url(../public/images/Yellow.png)]",
       },
       {
         image: {
@@ -72,7 +80,7 @@ const homepageContent = {
         styleResp: { width: "250px", height: "250px" },
         heading: "One Last Run",
         subText: "Describe the episode in an interesting manner",
-        background: "bg-gradient-to-b from-[#4B91D2] to-[#B7DCFF])",
+        background: "bg-[url(../public/images/pink.png)]",
       },
       {
         image: {
@@ -83,7 +91,7 @@ const homepageContent = {
         title: "Chapter 3",
         style: { width: "500px", height: "500px", right: 0 },
         styleResp: { width: "250px", height: "250px", right: 0 },
-        background: "bg-gradient-to-b from-[#E84A7A] to-[#FFD2E0]",
+        background: "bg-[url(../public/images/Blue.png)]",
         heading: "Bread Crumbs",
         subText: "Describe the episode in an interesting manner",
       },
@@ -115,46 +123,69 @@ const homepageContent = {
           Zindex: "1",
 
           animation: {
-            initial: { x: 200, opacity: 0.2 },
-            animate: { x: 0, opacity: 1 },
-          },
-        },
-        {
-          image: "/images/insta.png",
-          title: "Instagram",
-          Zindex: "3",
-
-          animation: {
-            initial: { y: 200, opacity: 0.2 },
-            animate: { y: 0, opacity: 1 },
+            initial: { rotateZ: 0 },
+            animate: {
+              rotateZ: -10,
+              y: 0,
+              transition: { rotateZ: { delay: 0.6 } },
+            },
           },
         },
         {
           image: "/images/reddit.png",
           title: "Reddit",
-
-          Zindex: "1",
           animation: {
-            initial: { x: -200, opacity: 0.2 },
-            animate: { x: 0, opacity: 1 },
+            initial: { rotateZ: 0 },
+            animate: {
+              rotateZ: 0,
+              y: 20,
+            },
+          },
+          Zindex: "1",
+        },
+        {
+          image: "/images/insta.png",
+          title: "Instagram",
+          Zindex: "3",
+          animation: {
+            initial: { rotateZ: 0 },
+            animate: {
+              rotateZ: 10,
+              y: 30,
+              transition: { rotateZ: { delay: 0.6 } },
+            },
           },
         },
       ],
     },
   },
-  newsSection: {
-    sectionId: "news",
-    title: ["stay up-to date with us"],
-    img: "/images/characters.svg",
+  about: {
+    label: "About Us",
     content: {
-      text: ["customize your character"],
+      title: "About Us",
+      paragraphs: [
+        "Cupcake ipsum dolor sit amet. Lollipop pudding topping liquorice jelly-o bonbon gummies. Sugar plum caramels chocolate bar carrot cake cake. I love gummies candy canes bear claw muffin fruitcake.",
+        "Jelly beans pie I love chocolate bar shortbread jelly. Chocolate cake toffee caramels I love marzipan.",
+        "Marshmallow danish croissant chocolate halvah tart. Cake donut tart jelly-o I love. Bear claw gummi bears carrot cake jelly beans fruitcake chupa chups cheesecake.",
+      ],
+      background: "#1C2543",
+      images: [
+        {
+          image: "/images/about.png",
+          title: "about-us",
+          Zindex: "1",
+          animation: {
+            initial: { x: "100%" },
+            animate: {
+              x: 0,
+              transition: { x: { delay: 0.1 } },
+            },
+          },
+        },
+      ],
     },
   },
-  comingSoonSection: {
-    sectionId: "coming-soon",
-    title: ["Coming Soon"],
-    readMoreUrl: "#",
-  },
+
   footer: {
     content: {
       title: "Watch the story unfold",

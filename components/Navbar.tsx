@@ -10,11 +10,12 @@ interface NavbarProps {
   noFixed?: boolean;
   noMenu?: boolean;
   currentTab?: string;
+  color?: string;
   setCurrentTab?: Dispatch<SetStateAction<string>>;
 }
 
 export default function Navbar(props: NavbarProps) {
-  const { currentTab, setCurrentTab } = props;
+  const { currentTab, setCurrentTab, color } = props;
   return (
     <div
       className={`z-10 w-full flex items-center justify-between ${
@@ -33,12 +34,16 @@ export default function Navbar(props: NavbarProps) {
                     setCurrentTab && setCurrentTab(link.label);
                   }}
                   className={`${inter.variable} font-inter ${
-                    currentTab !== "Community"
+                    currentTab !== "Community" && !color
                       ? "text-black"
                       : "text-white after:bg-[white]"
                   } relative uppercase ${
-                    currentTab === link.label ? "underlineLink" : ""
+                    currentTab?.toLocaleLowerCase() ===
+                    link.label?.toLocaleLowerCase()
+                      ? "underlineLink"
+                      : ""
                   }`}
+                  style={{ color: color ? color : "" }}
                 >
                   {link.label}
                 </a>

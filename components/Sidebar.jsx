@@ -15,8 +15,8 @@ export default function Sidebar() {
   const { os } = usePlatform();
   const downloadUrl =
     os === "iOS"
-      ? homepageContent.heroSection.appleStoreLink
-      : homepageContent.heroSection.playStoreLink;
+      ? homepageContent.landingPage.content.appStore.url
+      : homepageContent.landingPage.content.playstore.url;
 
   useEffect(() => {
     const toggleSidebar = () => {
@@ -41,7 +41,7 @@ export default function Sidebar() {
       onClick={() => {
         EventBus.getInstance().fireEvent(SidebarToggleEvent);
       }}
-      className={`top-0 right-0 w-[75vw] bg-black p-10 text-white fixed z-40 h-screen ease-in-out duration-300 flex flex-col items-center overflow-x-hidden overflow-y-scroll ${
+      className={`top-0 right-0 w-[75vw] bg-black p-10 text-white fixed  h-screen ease-in-out duration-300 flex flex-col items-center overflow-x-hidden overflow-y-scroll z-[9999] ${
         showSidebar ? "translate-x-0" : "translate-x-full"
       }`}
     >

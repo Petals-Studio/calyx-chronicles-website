@@ -37,11 +37,13 @@ const ChapterComponents = (props: IChapterComponent) => {
           isActive && chapterData?.title === activeChapter
             ? chapterData?.background
             : ""
-        } ${isActive && chapterData?.title === activeChapter ? "z-[2]" : ""} ${
-          isInView ? "story-animation" : ""
-        } ${chapterData?.title === activeChapter ? "" : "overflow-hidden"}`}
+        } bg-cover bg-no-repeat ${
+          isActive && chapterData?.title === activeChapter ? "z-[2]" : ""
+        } ${isInView ? "story-animation" : ""} ${
+          chapterData?.title === activeChapter ? "" : "overflow-hidden"
+        }`}
         style={{
-          animationDelay: `${0.1 * id}s`,
+          animationDelay: `${0.1 * (id - 1)}s`,
         }}
       >
         <div

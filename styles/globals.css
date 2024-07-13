@@ -1,26 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
 @font-face {
-  font-family: "Porter Sans Block";
-  src: url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.eot");
-  src: url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/79337523b071e6653b84176318c949cb.svg#Porter Sans Block")
-      format("svg");
-  font-weight: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Contrail+One&display=swap");
+  font-family: "Contrail One", sans-serif;
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
 .customFont {
-  font-family: "Porter Sans Block";
+  font-family: "Contrail One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 :root {
@@ -88,12 +79,12 @@ body {
 .story-animation {
   opacity: 1;
   transform: skew(-7deg);
-  animation: storyLoadingAnimation both 0.4s linear;
+  animation: storyLoadingAnimation both 0.2s linear;
 }
 
 .story-animation-mobile {
   opacity: 1;
-  animation: storyLoadingAnimationMobile both 0.4s linear;
+  animation: storyLoadingAnimationMobile both 0.2s linear;
 }
 @keyframes storyLoadingAnimationMobile {
   0% {
