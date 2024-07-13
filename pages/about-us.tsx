@@ -4,12 +4,70 @@ import homepageContent from "@/cms/home";
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import DynamicModal from "@/components/Modal";
+import { inter } from "@/fonts";
+import EventBus from "@/EventBus";
+import Sidebar, { SidebarCloseEvent } from "@/components/Sidebar";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 
 export default function AboutUs() {
   const [currentTab, setCurrentTab] = useState("ABOUT US");
+  const [termsData, setTermsData] = useState("");
+  const [privacyData, setPrivacyData] = useState("");
   return (
-    <div className="scroll-body">
+    <div
+      className="scroll-body"
+      onClick={() => {
+        EventBus.getInstance().fireEvent(SidebarCloseEvent);
+      }}
+    >
+      <DynamicModal
+        child={
+          termsData && (
+            <div
+              className={`${inter.variable} font-inter dangerous-content sm:text-[14px]`}
+              dangerouslySetInnerHTML={{ __html: termsData }}
+            ></div>
+          )
+        }
+        type="center"
+        closeClickOutside
+        title={
+          <div className={`${inter.className} text-[30px]`}>
+            {" "}
+            Terms & Conditions
+          </div>
+        }
+        isCloseIcon
+        position={""}
+        showCloseIcon={false}
+        isOpen={termsData ? true : false}
+        dynamicCloser={() => {
+          setTermsData("");
+        }}
+      />
+      <DynamicModal
+        closeClickOutside
+        child={
+          privacyData && (
+            <div
+              className={`${inter.variable} font-inter dangerous-content`}
+              dangerouslySetInnerHTML={{ __html: privacyData }}
+            ></div>
+          )
+        }
+        type="center"
+        title={
+          <div className={`${inter.className} text-[30px]`}>Privacy Policy</div>
+        }
+        isCloseIcon
+        showCloseIcon={false}
+        position={""}
+        isOpen={privacyData ? true : false}
+        dynamicCloser={() => {
+          setPrivacyData("");
+        }}
+      />
       <Navbar
         color={"#fff"}
         currentTab={"ABOUT US"}
@@ -30,8 +88,20 @@ export default function AboutUs() {
               Contact Us
             </div>
             <div className="flex gap-4">
-              <div>Privacy Policy</div>
-              <div>Terms & Conditions</div>
+              <div
+                onClick={() => {
+                  setPrivacyData(homepageContent.privacyPolicy.data);
+                }}
+              >
+                Privacy Policy
+              </div>
+              <div
+                onClick={() => {
+                  setTermsData(homepageContent.termsConditions.data);
+                }}
+              >
+                Terms & Conditions
+              </div>
             </div>
           </div>
         </div>
@@ -48,6 +118,7 @@ export default function AboutUs() {
           </motion.div>
         </div>
       </div>
+      <Sidebar />
     </div>
   );
 }
