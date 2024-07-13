@@ -79,12 +79,12 @@ body {
 .story-animation {
   opacity: 1;
   transform: skew(-7deg);
-  animation: storyLoadingAnimation both 0.2s linear;
+  animation: storyLoadingAnimation both 0.3s linear;
 }
 
 .story-animation-mobile {
   opacity: 1;
-  animation: storyLoadingAnimationMobile both 0.2s linear;
+  animation: storyLoadingAnimationMobile both 0.3s linear;
 }
 @keyframes storyLoadingAnimationMobile {
   0% {

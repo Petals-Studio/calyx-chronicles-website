@@ -43,7 +43,7 @@ const ChapterComponents = (props: IChapterComponent) => {
           chapterData?.title === activeChapter ? "" : "overflow-hidden"
         }`}
         style={{
-          animationDelay: `${0.1 * (id - 1)}s`,
+          animationDelay: `${0.2 * (id - 1)}s`,
         }}
       >
         <div
