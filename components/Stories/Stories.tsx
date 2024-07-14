@@ -13,45 +13,36 @@ import useInView from "@/hooks/useInView";
 import MobileCharecterComp from "../../components/Stories/ChapterComponent/MobileCharecterComp";
 
 interface IStories {
-  setCurrentTab: Dispatch<SetStateAction<string>>;
+  isInView?: boolean;
 }
 const Stories = (props: IStories) => {
-  const { setCurrentTab } = props;
+  const { isInView = false } = props;
 
-  const targetRef = useRef(null);
-  const isInView = useInView({ targetRef });
   const [activeChapter, setActiveChapter] = useState("");
 
-  useEffect(() => {
-    if (isInView) {
-      setCurrentTab(homepageContent.showcaseSection.label);
-    }
-  }, [isInView]);
   return (
     <>
-      <div className="w-full h-full sm:hidden">
+      <div className="w-full h-full sm:hidden bg-white">
         <div
-          ref={targetRef}
           id={homepageContent.showcaseSection.sectionId}
           className="w-full grid grid-cols-3 h-full overflow-hidden text-black"
         >
           {homepageContent.showcaseSection.content.map((item, idx) => {
             return (
               <ChapterComponents
+                isInView={isInView}
                 chapterData={item}
                 key={item.title}
                 id={idx + 1}
                 activeChapter={activeChapter}
                 setActiveChapter={setActiveChapter}
-                isInView={isInView}
               />
             );
           })}
         </div>
       </div>
-      <div className="w-full h-[0] sm:h-full sm:block">
+      <div className="w-full h-[0] sm:h-full sm:block bg-white">
         <div
-          ref={targetRef}
           id={homepageContent.showcaseSection.sectionId}
           className="w-full grid grid-cols-1 overflow-hidden grid-rows-3 h-full text-black"
         >
@@ -59,12 +50,12 @@ const Stories = (props: IStories) => {
             return (
               <>
                 <MobileCharecterComp
+                  isInView={isInView}
                   chapterData={item}
                   key={item.title}
                   id={idx + 1}
                   activeChapter={activeChapter}
                   setActiveChapter={setActiveChapter}
-                  isInView={isInView}
                 />
               </>
             );

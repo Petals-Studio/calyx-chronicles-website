@@ -6,24 +6,13 @@ import Lottie from "lottie-react";
 import jsonDtaa from "../public/images/jsonData.json";
 import Link from "next/link";
 interface IHeroSection {
-  setCurrentTab: Dispatch<SetStateAction<string>>;
+  isInView?: boolean;
 }
 const HeroSection = (props: IHeroSection) => {
-  const { setCurrentTab } = props;
-  const targetRef = useRef(null);
-  const isInView = useInView({ targetRef });
-  useEffect(() => {
-    if (isInView) {
-      setCurrentTab(homepageContent.landingPage.label);
-    }
-  }, [isInView]);
+  const { isInView = false } = props;
 
   return (
-    <div
-      ref={targetRef}
-      className="w-full flex justify-center items-center h-full overflow-hidden flex-col relative bg-[#facc96]"
-    >
-      {""}
+    <div className="w-full flex justify-center items-center h-full overflow-hidden flex-col  bg-[#facc96] text-black relative">
       <div className="w-[100%] h-[100%] flex justify-center items-center flex-col fade-in-animation ">
         <div
           style={{
@@ -33,100 +22,45 @@ const HeroSection = (props: IHeroSection) => {
             alignItems: "center",
           }}
         >
-          {isInView && (
-            <div className="flex absolute top-0 left-0 justify-between  items-center w-[100%] h-[100dvh]">
-              <motion.div
-                initial={{ x: "-100%" }}
-                animate={{ x: "-15%" }}
-                className="flex h-[100%] w-[50%] relative justify-end items-center translate-x-[-10%]"
-              >
-                <img
-                  className="h-[150%] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[500px] md:min-w-[400px] sm:min-w-[350px] "
-                  src={homepageContent.landingPage.content.backgroundL.src}
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              </motion.div>
+          <div className="flex absolute top-0 left-0 justify-between  items-center w-[100%] h-[100dvh]">
+            <motion.div
+              initial={{ x: isInView ? "-100%" : "-15%" }}
+              animate={{ x: "-15%" }}
+              className="flex h-[100%] w-[50%] relative justify-end items-center translate-x-[-10%]"
+            >
+              <img
+                className="h-[150%] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[500px] md:min-w-[400px] sm:min-w-[350px] "
+                src={homepageContent.landingPage.content.backgroundL.src}
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            </motion.div>
 
-              <motion.div
-                initial={{ x: "100%" }}
-                animate={{ x: "15%" }}
-                className="flex h-[100%] w-[50%] relative justify-start items-center translate-x-[10%]"
-              >
-                <img
-                  className="w-[100%] h-[150%] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[500px] md:min-w-[400px] sm:min-w-[350px]"
-                  src={homepageContent.landingPage.content.backgroundR.src}
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              </motion.div>
-            </div>
-          )}
-          {!isInView && (
-            <div className="flex absolute top-0 left-0 justify-between  items-center w-[100%] h-[100dvh]">
-              <motion.div
-                initial={{ x: "-15%" }}
-                animate={{ x: "-100%" }}
-                className="flex h-[100%] w-[50%] relative justify-end items-center translate-x-[-10%]"
-              >
-                <img
-                  className="h-[150%] sm:h-[100%] xs:h-[100%] min-w-[500px] absolute"
-                  src={homepageContent.landingPage.content.backgroundL.src}
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              </motion.div>
-
-              <motion.div
-                initial={{ x: "15%" }}
-                animate={{ x: "100%" }}
-                className="flex h-[100%] w-[50%] relative justify-start items-center translate-x-[10%]"
-              >
-                <img
-                  className="w-[100%] h-[150%] sm:h-[100%] xs:h-[100%] min-w-[500px] absolute"
-                  src={homepageContent.landingPage.content.backgroundR.src}
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              </motion.div>
-            </div>
-          )}
-
-          {/* <video
-          width={"200px"}
-          height={"200px"}
-          muted
-          loop
-          autoPlay
-          src={homepageContent.landingPage.content.images.src}
-        ></video> */}
+            <motion.div
+              initial={{ x: isInView ? "100%" : "15%" }}
+              animate={{ x: "15%" }}
+              className="flex h-[100%] w-[50%] relative justify-start items-center translate-x-[10%]"
+            >
+              <img
+                className="w-[100%] h-[150%] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[500px] md:min-w-[400px] sm:min-w-[350px]"
+                src={homepageContent.landingPage.content.backgroundR.src}
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            </motion.div>
+          </div>
 
           <div className="flex w-[100%] justify-center items-center">
-            {isInView && (
-              <Lottie
-                style={{
-                  height: "90%",
-                  width: "90%",
-                }}
-                loop={false}
-                animationData={jsonDtaa}
-              />
-            )}
-            {!isInView && (
-              <Lottie
-                style={{
-                  height: "90%",
-                  width: "90%",
-                }}
-                autoplay={false}
-                loop={false}
-                animationData={jsonDtaa}
-              />
-            )}
+            <Lottie
+              style={{
+                height: "90%",
+                width: "90%",
+              }}
+              loop={false}
+              animationData={jsonDtaa}
+            />
           </div>
 
           <div

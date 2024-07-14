@@ -15,12 +15,13 @@ interface IChapterComponent {
     background: string;
   };
   id: number;
-  setActiveChapter: React.Dispatch<React.SetStateAction<string>>;
   isInView: boolean;
+  setActiveChapter: React.Dispatch<React.SetStateAction<string>>;
+
   activeChapter: string;
 }
 const ChapterComponents = (props: IChapterComponent) => {
-  const { chapterData, isInView, id, setActiveChapter, activeChapter } = props;
+  const { chapterData, id, isInView, setActiveChapter, activeChapter } = props;
   const isActive = chapterData?.isActive;
   return (
     <div
@@ -39,12 +40,16 @@ const ChapterComponents = (props: IChapterComponent) => {
             : ""
         } bg-cover bg-no-repeat ${
           isActive && chapterData?.title === activeChapter ? "z-[2]" : ""
-        } ${isInView ? "story-animation" : ""} ${
+        } story-animation ${
           chapterData?.title === activeChapter ? "" : "overflow-hidden"
         }`}
-        style={{
-          animationDelay: `${0.2 * (id - 1)}s`,
-        }}
+        style={
+          isInView
+            ? {
+                animationDelay: `${0.3 * (id - 1)}s`,
+              }
+            : { animation: "none" }
+        }
       >
         <div
           className={`w-full flex flex-col  h-[100vh]  ${

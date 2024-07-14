@@ -80,12 +80,12 @@ body {
 .story-animation {
   opacity: 1;
   transform: skew(-7deg);
-  animation: storyLoadingAnimation both 0.3s linear;
+  animation: storyLoadingAnimation both 0.4s linear;
 }
 
 .story-animation-mobile {
   opacity: 1;
-  animation: storyLoadingAnimationMobile both 0.3s linear;
+  animation: storyLoadingAnimationMobile both 0.4s linear;
 }
 @keyframes storyLoadingAnimationMobile {
   0% {
@@ -129,3 +129,12 @@ body {
     width: 100%;
   }
 }
+/* canvas {
+  width: 150%;
+  background: #000;
+
+  display: block;
+
+  object-fit: cover;
+  height: 150%;
+} */

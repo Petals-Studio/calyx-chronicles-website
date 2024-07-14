@@ -9,51 +9,42 @@ import React, {
 } from "react";
 import { motion } from "framer-motion";
 interface ICommunity {
-  setCurrentTab: Dispatch<SetStateAction<string>>;
+  isInView?: boolean;
 }
 const Community = (props: ICommunity) => {
-  const { setCurrentTab } = props;
-
-  const targetRef = useRef(null);
-  const isInView = useInView({ targetRef });
-  useEffect(() => {
-    if (isInView) {
-      setCurrentTab(homepageContent.community.label);
-    }
-  }, [isInView]);
+  const { isInView } = props;
 
   return (
-    <div ref={targetRef} className="w-full h-full relative overflow-hidden">
+    <div
+      className={`w-full h-full overflow-hidden ${homepageContent.community.content.background}`}
+    >
       <div
         className={`w-full h-full px-[2rem] py-[6rem] flex flex-col justify-between`}
       >
         <div className="flex">
-          {" "}
-          {isInView && (
-            <motion.div>
-              <div className="flex flex-col items-center justify-center h-full gap-2 w-full lg:px-[20%] md:px-[1rem] text-left lg:text-[16px] relative md:text-[16px] sm:text-[14px] ">
-                <div className="lg:text-[35px] z-[1] relative md:text-[30px] sm:text-[25px] w-[fit-content] customFont">
-                  {homepageContent?.community.content.title}
-                </div>
-
-                {homepageContent?.community.content.paragraphs.map(
-                  (item, idx) => {
-                    return (
-                      <div key={idx} className="my-2 text-left w-[90%]">
-                        {item}
-                      </div>
-                    );
-                  }
-                )}
+          <motion.div>
+            <div className="flex flex-col items-center justify-center h-full gap-2 w-full lg:px-[20%] md:px-[1rem] text-left lg:text-[16px] relative md:text-[16px] sm:text-[14px] ">
+              <div className="lg:text-[35px] z-[1] relative md:text-[30px] sm:text-[25px] w-[fit-content] customFont">
+                {homepageContent?.community.content.title}
               </div>
-            </motion.div>
-          )}
+
+              {homepageContent?.community.content.paragraphs.map(
+                (item, idx) => {
+                  return (
+                    <div key={idx} className="my-2 text-left w-[90%]">
+                      {item}
+                    </div>
+                  );
+                }
+              )}
+            </div>
+          </motion.div>
         </div>
-        <div className="flex justify-center items-center absolute bottom-0 left-0 w-[100%]">
-          <div className="flex justify-center w-[100%]  h-[fit-content] items-end relative my-auto">
-            {homepageContent.community.content.images.map((item, idx) => {
-              return (
-                isInView && (
+        {
+          <div className="flex justify-center items-center absolute bottom-0 left-0 w-[100%]">
+            <div className="flex justify-center w-[100%]  h-[fit-content] items-end relative my-auto">
+              {homepageContent.community.content.images.map((item, idx) => {
+                return (
                   <motion.div
                     key={idx}
                     initial={item.animation.initial}
@@ -71,11 +62,11 @@ const Community = (props: ICommunity) => {
                       alt={item.title}
                     />
                   </motion.div>
-                )
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
+        }
       </div>
     </div>
   );

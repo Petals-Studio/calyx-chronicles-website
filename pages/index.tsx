@@ -15,10 +15,38 @@ import Community from "../components/Community";
 import HeroSection from "../components/HeroSection";
 import { useState } from "react";
 import StoreSection from "@/components/StoreSection";
+import PageRender from "@/components/PageRender";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 
 export default function Home() {
   const [currentTab, setCurrentTab] = useState("Home");
+  const [isInVeiw, setIsInVeiw] = useState({
+    name: "Home",
+    view: true,
+  });
+  const renderComponent = [
+    {
+      component: <HeroSection />,
+      id: "",
+      label: homepageContent.landingPage.label,
+    },
+    {
+      component: <Stories />,
+      id: "story",
+      label: homepageContent.showcaseSection.label,
+    },
+    {
+      component: <StoreSection />,
+      id: "store",
+      label: "Store",
+    },
+    {
+      component: <Community />,
+      id: "community",
+      label: homepageContent.community.label,
+    },
+  ];
+
   return (
     <main
       onClick={() => {
@@ -27,25 +55,15 @@ export default function Home() {
     >
       <div className="scroll-body">
         <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
-        <div className="w-full h-[100dvh] wrapper-body text-black flex justify-center items-center">
-          <HeroSection setCurrentTab={setCurrentTab} />
-        </div>
-        <div className="w-full h-[100dvh] wrapper-body" id="story">
-          <Stories setCurrentTab={setCurrentTab} />
-        </div>
-        <div className="w-full h-[100dvh] wrapper-body" id="story">
-          <StoreSection setCurrentTab={setCurrentTab} />
-        </div>
-        {/* <div className="w-full h-[100dvh] wrapper-body" id="section2">
-          <Section2 setCurrentTab={setCurrentTab} />
-        </div> */}
-
-        <div
-          id="community"
-          className={`w-full h-[100dvh] wrapper-body ${homepageContent.community.content.background} `}
-        >
-          <Community setCurrentTab={setCurrentTab} />
-        </div>
+        {renderComponent.map((component, idx) => {
+          return (
+            <PageRender
+              setCurrentTab={setCurrentTab}
+              component={component}
+              key={idx}
+            />
+          );
+        })}
 
         <RegisterModal />
         <Sidebar />

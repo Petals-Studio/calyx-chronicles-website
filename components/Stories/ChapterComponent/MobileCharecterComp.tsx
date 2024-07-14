@@ -15,12 +15,13 @@ interface IMobileCharecterComp {
     background: string;
   };
   id: number;
-  setActiveChapter: React.Dispatch<React.SetStateAction<string>>;
   isInView: boolean;
+  setActiveChapter: React.Dispatch<React.SetStateAction<string>>;
+
   activeChapter: string;
 }
 const MobileCharecterComp = (props: IMobileCharecterComp) => {
-  const { chapterData, isInView, id, setActiveChapter, activeChapter } = props;
+  const { chapterData, id, isInView, setActiveChapter, activeChapter } = props;
   const isActive = chapterData?.isActive;
 
   return (
@@ -41,12 +42,16 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
               : ""
           } ${
             isActive && chapterData?.title === activeChapter ? "z-[2]" : ""
-          } ${isInView ? "story-animation-mobile" : ""} ${
+          } story-animation-mobile ${
             chapterData?.title === activeChapter ? "" : "overflow-hidden"
           }`}
-          style={{
-            animationDelay: `${0.1 * id}s`,
-          }}
+          style={
+            isInView
+              ? {
+                  animationDelay: `${0.3 * (id - 1)}s`,
+                }
+              : { animation: "none" }
+          }
         >
           <div
             className={`w-[100%] flex flex-col h-[100%]  ${
