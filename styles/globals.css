@@ -74,6 +74,7 @@ body {
 }
 .wrapper-body {
   scroll-snap-align: start !important;
+  scroll-snap-stop: always;
 }
 
 .story-animation {
