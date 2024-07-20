@@ -42,15 +42,11 @@ export default function Navbar(props: NavbarProps) {
                   onClick={() => {
                     setCurrentTab && setCurrentTab(link.label);
                   }}
-                  className={`${inter.variable} font-inter ${
-                    currentTab !== "Community" && !color
-                      ? "text-black"
-                      : "text-white"
-                  } relative uppercase ${
+                  className={`${inter.variable} font-inter relative uppercase ${
                     currentTab?.toLocaleLowerCase() ===
                     link.label?.toLocaleLowerCase()
                       ? "underlineLink text-[#C7315C] after:bg-[#C7315C]"
-                      : ""
+                      : "text-black"
                   }`}
                   style={{ color: color ? color : "" }}
                 >
