@@ -8,6 +8,8 @@ import React, {
   useState,
 } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import Image from "next/image";
 interface ICommunity {
   isInView?: boolean;
 }
@@ -16,32 +18,54 @@ const Community = (props: ICommunity) => {
 
   return (
     <div
-      className={`w-full h-full overflow-hidden ${homepageContent.community.content.background}`}
+      className={`w-full h-full overflow-hidden ${homepageContent.community.content.background} customFont`}
     >
       <div
-        className={`w-full h-full px-[2rem] py-[6rem] flex flex-col justify-between`}
+        className={`w-full h-full px-[2rem] py-[6rem] flex justify-between sm:flex-col sm:py-[4rem]`}
       >
-        <div className="flex">
+        <div className="flex w-[30%] sm:w-[100%] z-[99] rounded-full">
           <motion.div>
-            <div className="flex flex-col items-center justify-center h-full gap-2 w-full lg:px-[20%] md:px-[1rem] text-left lg:text-[16px] relative md:text-[16px] sm:text-[14px] ">
-              <div className="lg:text-[35px] z-[1] relative md:text-[30px] sm:text-[25px] w-[fit-content] customFont">
+            <div className="flex flex-col items-start justify-center px-[1rem] h-full gap-2 w-full text-left  sm:px-[0] relative ">
+              <div className="lg:text-[65px] font-thin z-[1] relative md:text-[60px] sm:text-[45px] w-[fit-content]  uppercase">
                 {homepageContent?.community.content.title}
               </div>
 
               {homepageContent?.community.content.paragraphs.map(
                 (item, idx) => {
                   return (
-                    <div key={idx} className="my-2 text-left w-[90%]">
+                    <div
+                      key={idx}
+                      className="my-2 text-left w-[90%] text-[18px] sm:text-[14px] uppercase"
+                    >
                       {item}
                     </div>
                   );
                 }
               )}
+
+              <div className="flex gap-[1rem]">
+                {homepageContent.community.content.followIcons.map(
+                  (items, idx) => {
+                    return (
+                      <div key={idx}>
+                        <Link href={items.url}>
+                          <Image
+                            width={40}
+                            height={40}
+                            src={items.src}
+                            alt={items.alt}
+                          />
+                        </Link>
+                      </div>
+                    );
+                  }
+                )}
+              </div>
             </div>
           </motion.div>
         </div>
         {
-          <div className="flex justify-center items-center absolute bottom-0 left-0 w-[100%]">
+          <div className="flex justify-center items-center w-[60%] sm:w-[100%]">
             <div className="flex justify-center w-[100%]  h-[fit-content] items-end relative my-auto">
               {homepageContent.community.content.images.map((item, idx) => {
                 return (
@@ -51,13 +75,13 @@ const Community = (props: ICommunity) => {
                     animate={item.animation.animate}
                     className={`z-[${
                       idx === 0 ? 2 : idx === 1 ? 1 : 0
-                    }] hover:z-[9] lg:mx-[-3rem] md:mx-[-1rem] sm:mx-[-1rem] translate-z-[-200px]`}
+                    }] lg:mx-[-3rem] md:mx-[-1rem] sm:mx-[-1rem] translate-z-[-200px]`}
                   >
                     <img
                       style={{
                         aspectRatio: "1/1",
                       }}
-                      className="lg:w-[350px] md:w-[200px] sm:w-[120px] hover:scale-125 transition "
+                      className="lg:w-[400px] md:w-[400px] sm:w-[250px]  "
                       src={item.image}
                       alt={item.title}
                     />

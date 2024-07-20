@@ -14,10 +14,10 @@ const homepageContent = {
         label: "Community",
         url: "/#community",
       },
-      // {
-      //   label: 'Coming Soon',
-      //   url: '#coming-soon'
-      // },
+      {
+        label: "Contact Us",
+        url: "/#Contact-Us",
+      },
       {
         label: "About Us",
         url: "about-us",
@@ -88,9 +88,9 @@ const homepageContent = {
             "https://assets.calyxchronicles.com/website/chapter2Uncolor.png",
         },
         title: "Chapter 2",
-        isActive: true,
+        isActive: false,
         style: { width: "500px", height: "500px" },
-        styleResp: { width: "250px", height: "250px" },
+        styleResp: { width: "280px", height: "280px" },
         heading: "One Last Run",
         subText: "Describe the episode in an interesting manner",
         background:
@@ -103,10 +103,10 @@ const homepageContent = {
           uncolored:
             "https://assets.calyxchronicles.com/website/chapter3Uncolored.png",
         },
-        isActive: true,
+        isActive: false,
         title: "Chapter 3",
         style: { width: "500px", height: "500px", right: 0 },
-        styleResp: { width: "250px", height: "250px", right: 0 },
+        styleResp: { width: "500px", height: "500px", right: 0 },
         background:
           "bg-[url(https://assets.calyxchronicles.com/website/Blue.png)]",
         heading: "Bread Crumbs",
@@ -130,12 +130,26 @@ const homepageContent = {
   community: {
     label: "Community",
     content: {
-      title: "Join our Community",
-      paragraphs: [
-        "Want to help shape the future of Calyx Chronicles? Or float some radical lore theories? Maybe discuss game strategy or two or report something OP? Join our socials to engage with us and the community directly!",
-        "New exciting things to discover by connecting with us",
+      followIcons: [
+        {
+          src: "https://assets.calyxchronicles.com/website/insta_mini.png",
+          alt: "google image",
+          url: "",
+        },
+        {
+          src: "https://assets.calyxchronicles.com/website/discord_mini.png",
+          alt: "google image",
+          url: "",
+        },
+        {
+          src: "https://assets.calyxchronicles.com/website/reddit_mini.png",
+          alt: "google image",
+          url: "",
+        },
       ],
-      background: "bg-gradient-to-b from-[#3C2152] to-[#465CA9]",
+      title: "Join our Community",
+      paragraphs: ["Want to help shape the future of Calyx Chronicles?"],
+      background: "bg-gradient-to-b from-[#FF6200] to-[#FB5D66]",
       images: [
         {
           image: "https://assets.calyxchronicles.com/website/discord.png",
@@ -177,6 +191,20 @@ const homepageContent = {
           },
         },
       ],
+    },
+  },
+  stay_connected: {
+    label: "Connected",
+    content: {
+      title: ["Stay Connected with", "news and updates."],
+      cta: [
+        {
+          text: "Subscribe",
+          action: "",
+        },
+      ],
+      paragraphs: [],
+      background: "../public/images/ContactBg.png",
     },
   },
   about: {
@@ -512,33 +540,61 @@ const homepageContent = {
 
   footer: {
     content: {
-      title: "Watch the story unfold",
-    },
-    copyrightText:
-      "Copyright © 2024 Rivea World Pvt. Ltd. All rights reserved.",
-    sitemap: {
-      links: [
-        {
-          title: "PRIVACY POLICY",
-          url: "/privacy-policy",
+      leftSide: {
+        title: "Contact Us",
+        subHeading: "Want to help shape the future of Calyx Chronicles?",
+        playstore: {
+          src: "https://assets.calyxchronicles.com/website/playstore.png",
+          alt: "google image",
+          url: "",
         },
-        {
-          title: "TERMS OF SERVICE",
-          url: "/terms-of-service",
+        appStore: {
+          src: "https://assets.calyxchronicles.com/website/appstore.png",
+          alt: "google image",
+          url: "",
         },
-        {
-          title: "CONTACT US",
-          url: "/contact-us",
+      },
+      rightSide: {
+        logo: "https://assets.calyxchronicles.com/website/CalxLogo.png",
+        address: "132, My Street, Kingston, New York 12401",
+        followIcons: [
+          {
+            src: "https://assets.calyxchronicles.com/website/insta_mini.png",
+            alt: "google image",
+            url: "",
+          },
+          {
+            src: "https://assets.calyxchronicles.com/website/discord_mini.png",
+            alt: "google image",
+            url: "",
+          },
+          {
+            src: "https://assets.calyxchronicles.com/website/reddit_mini.png",
+            alt: "google image",
+            url: "",
+          },
+        ],
+        developed_at: {
+          src: "https://assets.calyxchronicles.com/website/petalStudioLogo.png",
+          alt: "google image",
+          url: "",
         },
-        // {
-        //   title: 'RULES OF CONDUCT',
-        //   url: '#',
-        // },
-        // {
-        //   title: 'OFFICIAL COMMUNITY POLICY',
-        //   url: '#',
-        // },
-      ],
+        navlinks: [
+          {
+            text: "About Us",
+            url: "/about-us",
+          },
+          {
+            text: "Terms & Conditions",
+            url: "/",
+          },
+          {
+            text: "Privacy Policy",
+            url: "",
+          },
+        ],
+      },
+      background: "https://assets.calyxchronicles.com/website/FooterBg.png",
     },
   },
 };

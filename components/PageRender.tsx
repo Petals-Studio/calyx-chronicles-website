@@ -6,6 +6,7 @@ interface IPageRender {
   component: {
     component: JSX.Element;
     id: string;
+    height?: string;
     label: string;
   };
   setCurrentTab: Dispatch<SetStateAction<string>>;
@@ -19,12 +20,14 @@ const PageRender = (props: IPageRender) => {
       setCurrentTab(component.label);
     }
   }, [isInView]);
-  console.log(isInView, component.label);
+
   return (
     <div ref={targetRef}>
       {isInView && (
         <motion.div
-          className="w-full h-[100dvh] wrapper-body relative"
+          className={`w-full ${
+            component.height ? "" : "h-[100dvh]"
+          } wrapper-body relative`}
           id={component.id ?? ""}
         >
           {React.cloneElement(component.component, { isInView: true })}
@@ -33,7 +36,9 @@ const PageRender = (props: IPageRender) => {
 
       {!isInView && (
         <motion.div
-          className="w-full h-[100dvh] wrapper-body relative"
+          className={`w-full ${
+            component.height ? "" : "h-[100dvh]"
+          } wrapper-body relative`}
           id={component.id ?? ""}
         >
           {React.cloneElement(component.component, { isInView: false })}

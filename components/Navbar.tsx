@@ -8,6 +8,7 @@ import Link from "next/link";
 interface NavbarProps {
   noItems?: boolean;
   noFixed?: boolean;
+  onlyIcon?: boolean;
   noMenu?: boolean;
   currentTab?: string;
   color?: string;
@@ -16,15 +17,23 @@ interface NavbarProps {
 
 export default function Navbar(props: NavbarProps) {
   const { currentTab, setCurrentTab, color } = props;
-  return (
+  return props.onlyIcon ? (
+    <div className="flex w-full fixed justify-end bg-white z-[999] p-[1rem] ">
+      <Link href={"/"}>
+        {" "}
+        <Image width={40} height={40} src={"/petalIcon.png"} alt="logo" />
+      </Link>
+    </div>
+  ) : (
     <div
-      className={`z-10 w-full flex items-center justify-between ${
+      className={`z-10 w-full flex items-center justify-between tablet:backdrop-blur-[4px] ${
         props.noFixed ? "" : "fixed"
-      } left-0 top-0 pt-6`}
+      } left-0 top-0 py-4 tablet:bg-gradient-to-b from-[#D29218] to-[#d5b58d78]
+      `}
     >
-      <div className="w-full max-w-8xl mx-auto flex items-center px-2.5 tablet:pl-5 tablet:pr-12">
+      <div className="w-full max-w-8xl mx-auto flex items-center px-2.5 tablet:pl-5 ">
         {!props.noItems && (
-          <div className="flex flex-1 justify-start ">
+          <div className="flex flex-1 justify-between text-[12px]">
             <div className="hidden tablet:flex flex-0 items-center space-x-6 desktop:space-x-12 tablet:justify-self-center">
               {homepageContent.menu.links.map((link, idx) => (
                 <a
@@ -36,11 +45,11 @@ export default function Navbar(props: NavbarProps) {
                   className={`${inter.variable} font-inter ${
                     currentTab !== "Community" && !color
                       ? "text-black"
-                      : "text-white after:bg-[white]"
+                      : "text-white"
                   } relative uppercase ${
                     currentTab?.toLocaleLowerCase() ===
                     link.label?.toLocaleLowerCase()
-                      ? "underlineLink"
+                      ? "underlineLink text-[#C7315C] after:bg-[#C7315C]"
                       : ""
                   }`}
                   style={{ color: color ? color : "" }}
@@ -48,6 +57,17 @@ export default function Navbar(props: NavbarProps) {
                   {link.label}
                 </a>
               ))}
+            </div>
+            <div className="hidden tablet:flex logo">
+              <Link href={"/"}>
+                {" "}
+                <Image
+                  width={40}
+                  height={40}
+                  src={"/petalIcon.png"}
+                  alt="logo"
+                />
+              </Link>
             </div>
           </div>
         )}

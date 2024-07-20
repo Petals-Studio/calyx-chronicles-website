@@ -25,16 +25,15 @@ const ChapterComponents = (props: IChapterComponent) => {
   const isActive = chapterData?.isActive;
   return (
     <div
-      className="p-[0rem]"
+      className="p-[0rem]  wrapper-body"
       onMouseEnter={() => {
-        id === 3 && console.log("called");
         setActiveChapter(chapterData?.title);
       }}
     >
       <div
-        className={`w-[100%] opacity-0 relative ${
-          id !== 3 ? " after:bg-black" : "after:bg-transparent"
-        } text-white after:absolute after:z-[-1] after:w-[1px] after:h-[70%] after:bg-black after:rounded-[100%] after:top-20 after:right-0  ${
+        className={`w-[100%] h-[100vh] opacity-0 relative ${
+          id !== 3 ? "lg:after:bg-black" : "after:bg-transparent"
+        } text-white after:absolute after:z-[-1] after:w-[1px] after:h-[70%] lg:after:bg-black after:rounded-[100%] after:top-20 after:right-0  ${
           isActive && chapterData?.title === activeChapter
             ? chapterData?.background
             : ""
@@ -52,25 +51,32 @@ const ChapterComponents = (props: IChapterComponent) => {
         }
       >
         <div
-          className={`w-full flex flex-col  h-[100vh]  ${
+          className={`w-full flex flex-col h-[100%] ${
             isActive ? "justify-start" : "justify-center"
           } ${isActive ? "items-start" : "items-center"}`}
           style={{
             transform: "skew(7deg)",
           }}
         >
-          {!isActive && <div className="text-black"> Comming Soon</div>}
+          {!isActive && (
+            <div className="text-[#737373c4] uppercase text-[35px] sm:text-[14px] italic">
+              {" "}
+              Comming Soon
+            </div>
+          )}
           {
             <>
               {isActive && chapterData?.title === activeChapter && (
-                <div className=" p-[20%]">
-                  <div className="font-bold text-[34px] my-2">
+                <div className=" p-[20%] ">
+                  <div className="font-thin text-[34px] sm:text-[24px] my-2 customFont">
                     {chapterData?.title}
                   </div>
-                  <div className="font-bold text-[18px] my-2">
+                  <div className="font-bold text-[18px] my-2 sm:text-[14px] italic">
                     {chapterData?.heading}
                   </div>
-                  <div>{chapterData?.subText}</div>
+                  <div className="sm:text-[10px] customFont">
+                    {chapterData?.subText}
+                  </div>
                 </div>
               )}
               <img
@@ -88,17 +94,16 @@ const ChapterComponents = (props: IChapterComponent) => {
                   bottom: 0,
                   width: "100%",
                   objectFit: "contain",
-
                   margin: "0 auto",
                   transition: "transform .2s",
                   transformOrigin: "center",
                   transform:
                     isActive && chapterData?.title === activeChapter
                       ? id === 3
-                        ? "translateX(-10%) translateY(0%) scale(1.3)"
+                        ? "translateX(-10%) translateY(0%)"
                         : id === 1
-                        ? "translateX(10%) translateY(0%) scale(1.3)"
-                        : "translateY(-20%) scale(1.3)"
+                        ? "translateX(10%) translateY(0%)"
+                        : "translateY(-20%)"
                       : "translateY(-10%) scale(1)",
 
                   opacity:
@@ -109,7 +114,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                 }}
               />
               {isActive && chapterData?.title !== activeChapter && (
-                <div className="absolute bottom-10 text-[24px] right-20 mr-[2rem] text-black">
+                <div className="absolute bottom-10 uppercase text-[20px] right-20 mr-[2rem] sm:right-10 text-[#ccc]">
                   {chapterData?.title}
                 </div>
               )}

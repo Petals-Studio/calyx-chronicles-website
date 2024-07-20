@@ -1,7 +1,7 @@
-import { inter } from '@/fonts'
-import Navbar from '@/components/Navbar'
-import { SidebarCloseEvent } from '@/components/Sidebar'
-import EventBus from '@/EventBus'
+import { inter } from "@/fonts";
+import Navbar from "@/components/Navbar";
+import { SidebarCloseEvent } from "@/components/Sidebar";
+import EventBus from "@/EventBus";
 
 export default function PrivacyPolicy() {
   const data = `
@@ -107,14 +107,26 @@ export default function PrivacyPolicy() {
   `;
 
   return (
-    <main className="w-full flex min-h-screen flex-col items-center bg-black text-white" onClick={() => { EventBus.getInstance().fireEvent(SidebarCloseEvent); }}>
-      <Navbar noItems noFixed noMenu />
-      <div className="relative py-8 tablet:py-12 w-full">
+    <main
+      className="w-full flex min-h-screen flex-col items-center bg-white text-black"
+      onClick={() => {
+        EventBus.getInstance().fireEvent(SidebarCloseEvent);
+      }}
+    >
+      <Navbar onlyIcon />
+      <div className="relative py-8 tablet:py-12 w-full mt-[4rem]">
         <div className="w-full max-w-8xl mx-auto flex flex-col px-2.5 tablet:pl-5 tablet:pr-12">
-          <h1 className={`${inter.variable} font-inter tablet:text-lg uppercase font-bold tracking-wide mb-4`}>Terms of services</h1>
-          <div className={`${inter.variable} font-inter dangerous-content`} dangerouslySetInnerHTML={{__html: data}}></div>
+          <h1
+            className={`${inter.variable} font-inter tablet:text-lg uppercase font-bold tracking-wide mb-4`}
+          >
+            Terms of services
+          </h1>
+          <div
+            className={`${inter.variable} font-inter dangerous-content`}
+            dangerouslySetInnerHTML={{ __html: data }}
+          ></div>
         </div>
       </div>
     </main>
-  )
+  );
 }

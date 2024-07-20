@@ -17,6 +17,7 @@ export default function AboutUs() {
   return (
     <div
       className="scroll-body"
+      style={{ background: "#1C2543 !important" }}
       onClick={() => {
         EventBus.getInstance().fireEvent(SidebarCloseEvent);
       }}
@@ -73,7 +74,7 @@ export default function AboutUs() {
         currentTab={"ABOUT US"}
         setCurrentTab={setCurrentTab}
       />
-      <div className="customFont w-full h-[100dvh]  md:h-[auto] sm:h-[auto] xs:h-[auto] wrapper-body bg-[#1C2543] flex flex-wrap">
+      <div className="customFont w-full h-[100dvh]  md:h-[auto] sm:h-[auto] xs:h-[auto] wrapper-body  flex flex-wrap mt-[2rem]">
         <div className="flex justify-between min-w-[500px] sm:min-w-[300px] xs:min-w-[300px] w-[100%] basis-[100%] lg:basis-[50%] h-[100%] px-[4rem] sm:px-[1rem] xs:px-[1rem] py-[4rem] flex-col gap-[1rem]">
           <div className="text-[35px] lg:mt-[4rem]">
             {homepageContent.about.content.title}

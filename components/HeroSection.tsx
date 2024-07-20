@@ -72,7 +72,7 @@ const HeroSection = (props: IHeroSection) => {
               justifyContent: "center",
               alignItems: "center",
               width: "100%",
-              bottom: "10%",
+              bottom: "5%",
               left: "50%",
               transform: "translate(-50%)",
             }}
@@ -113,6 +113,9 @@ const HeroSection = (props: IHeroSection) => {
                     }}
                   />
                 </Link>
+              </div>
+              <div className="text-[#565252] uppercase">
+                Begin Adventure {">"}{" "}
               </div>
             </div>
           </div>

@@ -29,7 +29,6 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
       <div
         className="w-[100%] h-[100%]"
         onMouseEnter={() => {
-          id === 3 && console.log("called");
           setActiveChapter(chapterData?.title);
         }}
       >

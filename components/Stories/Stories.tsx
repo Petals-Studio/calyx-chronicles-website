@@ -18,14 +18,14 @@ interface IStories {
 const Stories = (props: IStories) => {
   const { isInView = false } = props;
 
-  const [activeChapter, setActiveChapter] = useState("");
+  const [activeChapter, setActiveChapter] = useState("Chapter 1");
 
   return (
     <>
-      <div className="w-full h-full sm:hidden bg-white">
+      <div className="w-full h-full bg-white ">
         <div
           id={homepageContent.showcaseSection.sectionId}
-          className="w-full grid grid-cols-3 h-full overflow-hidden text-black"
+          className="w-full grid scroll-body lg:grid-cols-[1fr_1fr_1fr] grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1fr]  h-full overflow-x-hidden overflow-y-scroll text-black"
         >
           {homepageContent.showcaseSection.content.map((item, idx) => {
             return (
@@ -41,7 +41,7 @@ const Stories = (props: IStories) => {
           })}
         </div>
       </div>
-      <div className="w-full h-[0] sm:h-full sm:block bg-white">
+      {/* <div className="w-full h-[0] sm:h-full sm:block bg-white">
         <div
           id={homepageContent.showcaseSection.sectionId}
           className="w-full grid grid-cols-1 overflow-hidden grid-rows-3 h-full text-black"
@@ -61,7 +61,7 @@ const Stories = (props: IStories) => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

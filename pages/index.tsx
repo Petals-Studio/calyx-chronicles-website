@@ -16,6 +16,8 @@ import HeroSection from "../components/HeroSection";
 import { useState } from "react";
 import StoreSection from "@/components/StoreSection";
 import PageRender from "@/components/PageRender";
+import StayConnected from "@/components/StayConnected";
+import Footer from "@/components/Footer";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 
 export default function Home() {
@@ -44,6 +46,18 @@ export default function Home() {
       component: <Community />,
       id: "community",
       label: homepageContent.community.label,
+    },
+    {
+      component: <StayConnected />,
+      id: "Connected",
+      height: "h-[50vh]",
+      label: homepageContent.stay_connected.label,
+    },
+    {
+      component: <Footer />,
+      id: "Contact Us",
+      height: "h-[50vh]",
+      label: "Contact Us",
     },
   ];
 
