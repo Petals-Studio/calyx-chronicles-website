@@ -23,7 +23,7 @@ const Community = (props: ICommunity) => {
       <div
         className={`w-full h-full px-[2rem] py-[3rem] flex justify-between sm:flex-col sm:py-[3rem]`}
       >
-        <div className="flex w-[30%] sm:w-[100%] z-[2] rounded-full">
+        <div className="flex w-[30%] sm:w-[100%] z-[2] rounded-full text-[#fff]">
           <motion.div>
             <div className="flex flex-col items-start justify-center px-[1rem] h-full gap-2 w-full text-left  sm:px-[0] relative ">
               <div className="lg:text-[calc(2.75*(1vh+1vw))] z-[1] relative md:text-[60px] sm:text-[45px] w-[fit-content] uppercase roboto-light ">

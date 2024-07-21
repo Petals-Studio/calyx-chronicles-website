@@ -86,15 +86,15 @@ export default function AboutUs() {
       <div className="wrapper-body roboto-regular flex-col text-[calc(0.75vw+0.75vh)] sm:text-[15px]">
         <div className="w-[100%] min-h-[90dvh] md:h-[auto] sm:h-[auto] xs:h-[auto] flex flex-wrap pt-[2rem] overflow-hidden">
           <div className="flex justify-between min-w-[500px] sm:min-w-[300px] xs:min-w-[300px] w-[100%] basis-[100%] lg:basis-[50%] h-[100%] px-[4rem] sm:px-[1rem] xs:px-[1rem] py-[4rem] flex-col gap-[1rem]">
-            <div className="lg:mt-[4rem] text-[3em] sm:text-[35px]">
+            <div className="lg:mt-[4rem] text-[3em] sm:text-[35px] text-[#fff]">
               {homepageContent.about.content.title}
             </div>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 text-[#fff]">
               {homepageContent.about.content.paragraphs.map((item, idx) => {
                 return <p key={idx}> {item}</p>;
               })}
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 text-[#fff]">
               <Link href="mailto:contact@petals.studio">
                 <div className="w-[fit-content] cursor-pointer text-[#000] bg-[#fff] hover:bg-[#fff] focus:ring-4 focus:ring-[#fff] font-medium rounded-lg lg:text-[calc(1vw+1vh)] text-sm px-[1rem] py-[calc(0.55*(1vw+1vh))] me-2 mb-2 dark:bg-[#fff] dark:hover:bg-[#fff] focus:outline-none dark:focus:ring-[#fff]">
                   Contact US
@@ -119,7 +119,7 @@ export default function AboutUs() {
             </motion.div>
           </div>
         </div>
-        <div className="flex w-[100%] items-end justify-between flex-wrap px-[1rem]">
+        <div className="flex w-[100%] items-end justify-between flex-wrap px-[1rem] text-[#fff]">
           <div className="flex gap-[1rem]">
             {homepageContent.footer.content.rightSide.followIcons.map(
               (items, idx) => {
