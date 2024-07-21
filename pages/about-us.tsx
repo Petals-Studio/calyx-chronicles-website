@@ -29,7 +29,7 @@ export default function AboutUs() {
         child={
           termsData && (
             <div
-              className={`${inter.variable} roboto-regular  dangerous-content sm:text-[14px]`}
+              className={`${inter.variable} roboto-regular  dangerous-content lg:text-[calc(0.75vw+0.75vh)]  text-[14px]`}
               dangerouslySetInnerHTML={{ __html: termsData }}
             ></div>
           )
@@ -37,7 +37,9 @@ export default function AboutUs() {
         type="center"
         closeClickOutside
         title={
-          <div className={`${inter.className} text-[30px]`}>
+          <div
+            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[30px]`}
+          >
             {" "}
             Terms & Conditions
           </div>
@@ -55,14 +57,18 @@ export default function AboutUs() {
         child={
           privacyData && (
             <div
-              className={`${inter.variable} roboto-regular dangerous-content`}
+              className={`${inter.variable} roboto-regular dangerous-content lg:text-[calc(0.75vw+0.75vh)]  text-[14px]`}
               dangerouslySetInnerHTML={{ __html: privacyData }}
             ></div>
           )
         }
         type="center"
         title={
-          <div className={`${inter.className} text-[30px]`}>Privacy Policy</div>
+          <div
+            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))]  text-[30px]`}
+          >
+            Privacy Policy
+          </div>
         }
         isCloseIcon
         showCloseIcon={false}
@@ -77,10 +83,10 @@ export default function AboutUs() {
         currentTab={"ABOUT US"}
         setCurrentTab={setCurrentTab}
       />
-      <div className="wrapper-body roboto-regular flex-col">
+      <div className="wrapper-body roboto-regular flex-col text-[calc(0.75vw+0.75vh)] sm:text-[15px]">
         <div className="w-[100%] min-h-[90dvh] md:h-[auto] sm:h-[auto] xs:h-[auto] flex flex-wrap pt-[2rem] overflow-hidden">
           <div className="flex justify-between min-w-[500px] sm:min-w-[300px] xs:min-w-[300px] w-[100%] basis-[100%] lg:basis-[50%] h-[100%] px-[4rem] sm:px-[1rem] xs:px-[1rem] py-[4rem] flex-col gap-[1rem]">
-            <div className="text-[35px] lg:mt-[4rem]">
+            <div className="lg:mt-[4rem] text-[3em] sm:text-[35px]">
               {homepageContent.about.content.title}
             </div>
             <div className="flex flex-col gap-3">
@@ -90,13 +96,13 @@ export default function AboutUs() {
             </div>
             <div className="flex flex-col gap-4">
               <Link href="mailto:contact@petals.studio">
-                <div className="w-[fit-content] cursor-pointer text-[#000] bg-[#fff] hover:bg-[#fff] focus:ring-4 focus:ring-[#fff] font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-[#fff] dark:hover:bg-[#fff] focus:outline-none dark:focus:ring-[#fff]">
+                <div className="w-[fit-content] cursor-pointer text-[#000] bg-[#fff] hover:bg-[#fff] focus:ring-4 focus:ring-[#fff] font-medium rounded-lg lg:text-[calc(1vw+1vh)] text-sm px-[1rem] py-[calc(0.55*(1vw+1vh))] me-2 mb-2 dark:bg-[#fff] dark:hover:bg-[#fff] focus:outline-none dark:focus:ring-[#fff]">
                   Contact Us
                 </div>
               </Link>
             </div>
           </div>
-          <div className="flex w-[100%] h-[100%] basis-[100%] lg:basis-[50%]  min-w-[500px] sm:min-w-[200px] xs:min-w-[200px] p-[2rem] sm:p-[0] xs:p-[0]">
+          <div className="flex w-[100%] h-[80vh]  basis-[100%] lg:basis-[50%]   sm:min-w-[200px] xs:min-w-[200px] p-[2rem] sm:p-[0] xs:p-[0]">
             <motion.div
               initial={
                 homepageContent.about.content.images[0].animation.initial
@@ -106,7 +112,7 @@ export default function AboutUs() {
               }
             >
               <img
-                className="object-cover w-[100%] h-[100%]"
+                className="object-fill w-[100%] h-[100%]"
                 src={homepageContent.about.content.images[0].image}
                 alt=""
               />
@@ -123,6 +129,7 @@ export default function AboutUs() {
                       <Image
                         width={40}
                         height={40}
+                        className="lg:w-[calc(1*(1vw+1vh))] w-[40px]"
                         src={items.src}
                         alt={items.alt}
                       />
@@ -133,7 +140,7 @@ export default function AboutUs() {
             )}
           </div>
 
-          <div className="flex gap-[1rem] text-[16px]  sm:hidden">
+          <div className="flex gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[15px]  sm:hidden">
             <div
               className="cursor-pointer"
               onClick={() => {
@@ -152,18 +159,19 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="text-right text-[16px]">
+          <div className="text-right text-[calc(0.75vw+0.75vh)] sm:text-[15px]">
             Developed At
             <div className="pt-[.4rem]">
               <Image
                 width={100}
                 height={40}
+                className="lg:w-[calc(5.2*(1vw+1vh))] w-[100px]"
                 src={homepageContent.footer.content.rightSide.developed_at.src}
                 alt={homepageContent.footer.content.rightSide.developed_at.alt}
               />
             </div>
           </div>
-          <div className="hidden sm:flex gap-[1rem] text-[16px] w-[100%] items-center justify-center my-[1rem]">
+          <div className="hidden sm:flex gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[15px] w-[100%] items-center justify-center my-[1rem]">
             <div
               className="cursor-pointer"
               onClick={() => {

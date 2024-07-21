@@ -9,10 +9,12 @@ interface IPageRender {
     height?: string;
     label: string;
   };
+  setPrivacyData?: Dispatch<SetStateAction<string>>;
+  setTermsData?: Dispatch<SetStateAction<string>>;
   setCurrentTab: Dispatch<SetStateAction<string>>;
 }
 const PageRender = (props: IPageRender) => {
-  const { component, setCurrentTab } = props;
+  const { component, setCurrentTab, setPrivacyData, setTermsData } = props;
   const targetRef = useRef(null);
   const isInView = useInView({ targetRef });
   useEffect(() => {
@@ -30,7 +32,11 @@ const PageRender = (props: IPageRender) => {
           } wrapper-body relative`}
           id={component.id ?? ""}
         >
-          {React.cloneElement(component.component, { isInView: true })}
+          {React.cloneElement(component.component, {
+            isInView: true,
+            setPrivacyData: setPrivacyData,
+            setTermsData: setTermsData,
+          })}
         </motion.div>
       )}
 
@@ -41,7 +47,11 @@ const PageRender = (props: IPageRender) => {
           } wrapper-body relative`}
           id={component.id ?? ""}
         >
-          {React.cloneElement(component.component, { isInView: false })}
+          {React.cloneElement(component.component, {
+            isInView: false,
+            setPrivacyData: setPrivacyData,
+            setTermsData: setTermsData,
+          })}
         </motion.div>
       )}
     </div>

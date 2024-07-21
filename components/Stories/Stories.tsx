@@ -11,21 +11,49 @@ import React, {
 import ChapterComponents from "../../components/Stories/ChapterComponent";
 import useInView from "@/hooks/useInView";
 import MobileCharecterComp from "../../components/Stories/ChapterComponent/MobileCharecterComp";
+import { useWindowDimensions } from "@/hooks/useWindowDimention";
+import { useDeviceType } from "@/hooks/useDeviceType";
 
 interface IStories {
   isInView?: boolean;
 }
 const Stories = (props: IStories) => {
   const { isInView = false } = props;
+  const { isDesktop, isMobile } = useDeviceType();
 
-  const [activeChapter, setActiveChapter] = useState("Chapter 1");
+  const [activeChapter, setActiveChapter] = useState("");
+
+  useEffect(() => {
+    if (isInView) {
+      const tempArr = homepageContent.showcaseSection.content.filter((item) => {
+        return item.isActive;
+      });
+      setActiveChapter(tempArr[tempArr?.length - 1]?.title);
+      tempArr[tempArr?.length - 1]?.title &&
+        setTimeout(() => {
+          document
+            .getElementById(tempArr[tempArr?.length - 1]?.title)
+            ?.scrollIntoView({ behavior: "smooth" });
+        }, 1000);
+    } else {
+      setActiveChapter("");
+    }
+  }, [isInView]);
+  useEffect(() => {
+    activeChapter &&
+      setTimeout(() => {
+        document
+          .getElementById(activeChapter)
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+  }, [activeChapter]);
 
   return (
     <>
       <div className="w-full h-full bg-[#fff] ">
         <div
           id={homepageContent.showcaseSection.sectionId}
-          className="w-full grid scroll-body lg:grid-cols-[1fr_1fr_1fr] grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1fr]  h-full overflow-x-hidden overflow-y-scroll text-[#000]"
+          className="w-full relative grid scroll-body lg:grid-cols-[repeat(3,1fr)] grid-cols-[minmax(350px,1fr)_minmax(350px,1fr)_minmax(350px,1fr)] h-full overflow-x-scroll lg:overflow-x-hidden overflow-y-hidden  text-[#000]"
         >
           {homepageContent.showcaseSection.content.map((item, idx) => {
             return (
@@ -40,6 +68,20 @@ const Stories = (props: IStories) => {
             );
           })}
         </div>
+      </div>
+      <div className="z-[9] flex absolute bottom-0 justify-center p-[2rem] items-center gap-2 lef-0  w-[100%] ">
+        {homepageContent.showcaseSection.content.map((item, idx) => {
+          return (
+            <div
+              key={idx}
+              className={`flex w-[10px] h-[10px] ${
+                activeChapter?.toLowerCase() === item.title?.toLowerCase()
+                  ? "bg-red-500"
+                  : "bg-gray-300"
+              } rounded`}
+            ></div>
+          );
+        })}
       </div>
       {/* <div className="w-full h-[0] sm:h-full sm:block bg-[#fff]">
         <div

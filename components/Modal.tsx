@@ -48,7 +48,7 @@ const DynamicModal = (props: IDynamicModal) => {
     <div
       className={`"flex w-[100%] h-[100%] fixed ${
         isOpen
-          ? "opacity-[1] bg-[rgba(0,0,0,0.6)] z-[99999]"
+          ? "opacity-[1] bg-[rgba(0,0,0,0.6)] z-[9999999]"
           : "opacity-[0] z-[-999]"
       }`}
     >
@@ -81,7 +81,7 @@ const DynamicModal = (props: IDynamicModal) => {
       >
         {type === "center" ? (
           <div
-            className={`bg-[#fff] w-[100%] ${
+            className={`bg-[#fff] w-[100%] h-[90dvh] ${
               type === "center" ? "rounded-2xl" : "rounded-none"
             } overflow-hidden relative`}
           >
@@ -118,7 +118,7 @@ const DynamicModal = (props: IDynamicModal) => {
             )}
 
             <div className="flex h-[100%] flex-col justify-start items-start bg-[#F1F1F1] py-[1rem] px-[2rem]">
-              <div className="flex p-[1rem] text-[#000] overflow-scroll flex-col w-[100%] h-[100%] rounded-xl bg-[#fff] max-h-[500px]">
+              <div className="flex p-[1rem] text-[#000] overflow-scroll flex-col w-[100%] bg-[#fff] h-[80%] rounded-xl ">
                 {isOpen ? child : ""}
               </div>
             </div>

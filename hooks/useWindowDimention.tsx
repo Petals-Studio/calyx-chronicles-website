@@ -1,16 +1,10 @@
 import { useState, useEffect } from "react";
 
+// Function to get window dimensions
 const getWindowDimensions = () => {
-  if (typeof window !== "undefined") {
-    return {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
-  } else
-    return {
-      width: null,
-      height: null,
-    };
+  const { innerWidth, innerHeight } =
+    typeof window !== "undefined" ? window : { innerWidth: 0, innerHeight: 0 };
+  return { width: innerWidth, height: innerHeight };
 };
 
 export function useWindowDimensions() {
@@ -23,8 +17,14 @@ export function useWindowDimensions() {
       setWindowDimensions(getWindowDimensions());
     }
 
+    // Add event listener when component mounts
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+
+    // Clean up event listener when component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty dependency array means this effect runs only once after initial render
+
   return windowDimensions;
 }

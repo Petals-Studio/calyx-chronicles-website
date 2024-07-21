@@ -21,12 +21,12 @@ const Community = (props: ICommunity) => {
       className={`w-full h-full overflow-hidden ${homepageContent.community.content.background} customFont`}
     >
       <div
-        className={`w-full h-full px-[2rem] py-[6rem] flex justify-between sm:flex-col sm:py-[4rem]`}
+        className={`w-full h-full px-[2rem] py-[3rem] flex justify-between sm:flex-col sm:py-[3rem]`}
       >
         <div className="flex w-[30%] sm:w-[100%] z-[2] rounded-full">
           <motion.div>
             <div className="flex flex-col items-start justify-center px-[1rem] h-full gap-2 w-full text-left  sm:px-[0] relative ">
-              <div className="lg:text-[65px] z-[1] relative md:text-[60px] sm:text-[45px] w-[fit-content] uppercase roboto-light ">
+              <div className="lg:text-[calc(2.75*(1vh+1vw))] z-[1] relative md:text-[60px] sm:text-[45px] w-[fit-content] uppercase roboto-light ">
                 {homepageContent?.community.content.title.map((item, idx) => {
                   return <div key={idx}>{item}</div>;
                 })}
@@ -37,7 +37,7 @@ const Community = (props: ICommunity) => {
                   return (
                     <div
                       key={idx}
-                      className="my-2 text-left w-[90%] text-[18px] sm:text-[14px] uppercase roboto-medium"
+                      className="my-2 text-left w-[90%] lg:text-[calc(.75*(1vh+1vw))] text-[18px] sm:text-[14px] uppercase roboto-medium"
                     >
                       {item}
                     </div>
@@ -54,6 +54,7 @@ const Community = (props: ICommunity) => {
                           <Image
                             width={40}
                             height={40}
+                            className="lg:w-[calc(1.55*(1vw+1vh))] w-[40px]"
                             src={items.src}
                             alt={items.alt}
                           />

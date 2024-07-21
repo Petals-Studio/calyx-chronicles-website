@@ -13,7 +13,7 @@ const HeroSection = (props: IHeroSection) => {
   const { isInView = false } = props;
 
   return (
-    <div className="w-full flex justify-center items-center h-full overflow-hidden flex-col  bg-[#facc96] text-[#000] relative">
+    <div className="w-full flex justify-center items-center h-full overflow-hidden flex-col  bg-[#facc96] text-[#000] relative text-[calc(0.75vw+0.75vh)] sm:text-[15px]">
       <div className="w-[100%] h-[100%] flex justify-center items-center flex-col fade-in-animation ">
         <div
           style={{
@@ -56,8 +56,8 @@ const HeroSection = (props: IHeroSection) => {
           <div className="flex w-[100%] justify-center items-center">
             <Lottie
               style={{
-                height: "90%",
-                width: "90%",
+                height: "90vh",
+                width: "90vw",
               }}
               loop={false}
               animationData={jsonDtaa}
@@ -96,7 +96,7 @@ const HeroSection = (props: IHeroSection) => {
                 <Link href={homepageContent.landingPage.content.playstore.url}>
                   <img
                     src={homepageContent.landingPage.content.playstore.src}
-                    className="w-[200px] md:w-[150px] sm:w-[120px] xs:w-[120px]"
+                    className="w-[calc(250 * (1vw+1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                     style={{
                       objectFit: "contain",
                       position: "relative",
@@ -105,7 +105,7 @@ const HeroSection = (props: IHeroSection) => {
                 </Link>
                 <Link href={homepageContent.landingPage.content.appStore.url}>
                   <img
-                    className="w-[200px] md:w-[150px] sm:w-[120px] xs:w-[120px] "
+                    className="w-[calc(250 * (1vw+1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                     src={homepageContent.landingPage.content.appStore.src}
                     style={{
                       objectFit: "contain",
@@ -150,7 +150,7 @@ const HeroSection = (props: IHeroSection) => {
             <Link href={homepageContent.landingPage.content.playstore.url}>
               <img
                 src={homepageContent.landingPage.content.playstore.src}
-                className="w-[220px] md:w-[150px] sm:w-[120px] xs:w-[120px]"
+                className="w-[calc(250 * (1vw+1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                 style={{
                   objectFit: "contain",
                   position: "relative",
@@ -159,7 +159,7 @@ const HeroSection = (props: IHeroSection) => {
             </Link>
             <Link href={homepageContent.landingPage.content.appStore.url}>
               <img
-                className="w-[220px] md:w-[150px] sm:w-[120px] xs:w-[120px]"
+                className="w-[calc(250 * (1vw+1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                 src={homepageContent.landingPage.content.appStore.src}
                 style={{
                   objectFit: "contain",

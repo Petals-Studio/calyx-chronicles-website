@@ -76,6 +76,7 @@ const homepageContent = {
             "https://assets.calyxchronicles.com/website/chapter1Uncolor.png",
         },
         title: "Chapter 1",
+        id: "Chapter_1",
         color: "#E28D0E",
         heading: "Warlock Tower Caper",
         isActive: true,
@@ -93,9 +94,10 @@ const homepageContent = {
             "https://assets.calyxchronicles.com/website/chapter2Uncolor.png",
         },
         title: "Chapter 2",
+        id: "Chapter_2",
         color: "#E84A7A",
 
-        isActive: false,
+        isActive: true,
         style: { width: "500px", height: "500px" },
         styleResp: { width: "280px", height: "280px" },
         heading: "One Last Run",
@@ -112,6 +114,7 @@ const homepageContent = {
         },
         isActive: false,
         title: "Chapter 3",
+        id: "Chapter_3",
         color: "#4B91D2",
         style: { width: "500px", height: "500px", right: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
@@ -156,7 +159,9 @@ const homepageContent = {
         },
       ],
       title: ["Join", "our", "Community"],
-      paragraphs: ["Want to help shape the future of Calyx Chronicles?"],
+      paragraphs: [
+        "Become a part of our community! Connect with like-minded individuals, share your experiences, and stay updated with the latest news and events. Enjoy exclusive benefits and be the first to know about new features and updates. Join us today and help shape the future of our community!",
+      ],
       background: "bg-gradient-to-b from-[#FF6200] to-[#FB5D66]",
       images: [
         {

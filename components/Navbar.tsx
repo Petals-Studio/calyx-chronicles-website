@@ -18,7 +18,7 @@ interface NavbarProps {
 export default function Navbar(props: NavbarProps) {
   const { currentTab, setCurrentTab, color } = props;
   return props.onlyIcon ? (
-    <div className="flex w-full fixed justify-end bg-[#fff] z-[9999] p-[1rem] ">
+    <div className="flex w-full fixed justify-end bg-[#fff] z-[9999] p-[6vw] ">
       <Link href={"/"}>
         {" "}
         <Image width={40} height={40} src={"/petalIcon.png"} alt="logo" />
@@ -31,9 +31,9 @@ export default function Navbar(props: NavbarProps) {
       } left-0 top-0 py-4 tablet:bg-gradient-to-b from-[#D29218] to-[#d5b58d78]
       `}
     >
-      <div className="w-full max-w-8xl mx-auto flex items-center px-2.5 tablet:pl-5 ">
+      <div className="w-full mx-auto flex items-center px-[5vw]">
         {!props.noItems && (
-          <div className="flex flex-1 justify-between text-[12px]">
+          <div className="flex flex-1 justify-between lg:text-[calc(0.75vw+0.75vh)] text-[14px]">
             <div className="hidden tablet:flex flex-0 items-center space-x-6 desktop:space-x-12 tablet:justify-self-center">
               {homepageContent.menu.links.map((link, idx) => (
                 <a
@@ -60,6 +60,7 @@ export default function Navbar(props: NavbarProps) {
                 <Image
                   width={40}
                   height={40}
+                  className="w-[calc(2*(1vw+1vh))]"
                   src={"/petalIcon.png"}
                   alt="logo"
                 />
