@@ -16,7 +16,7 @@ const Footer = (props: {
       <StayConnected />
       <div
         id={"Contact-Us"}
-        className={`w-[100%] sm:h-[50vh] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
+        className={`w-[100%] h-[55vh] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
         style={{
           backgroundImage: ` url(${homepageContent.footer.content.background})`,
         }}
@@ -25,7 +25,7 @@ const Footer = (props: {
           <Image
             width={200}
             height={10}
-            className="lg:w-[calc(8*(1vw+1vh))] w-[200px]"
+            className="lg:w-[calc(8*(1vw+1vh))] w-[200px] sm:w-[150px]"
             src={homepageContent.footer.content.rightSide.logo}
             alt={homepageContent.footer.content.rightSide.logo}
           />

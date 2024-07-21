@@ -85,11 +85,11 @@ export default function AboutUs() {
       />
       <div className="wrapper-body roboto-regular flex-col text-[calc(0.75vw+0.75vh)] sm:text-[15px]">
         <div className="w-[100%] min-h-[90dvh] md:h-[auto] sm:h-[auto] xs:h-[auto] flex flex-wrap pt-[2rem] overflow-hidden">
-          <div className="flex justify-between min-w-[500px] sm:min-w-[300px] xs:min-w-[300px] w-[100%] basis-[100%] lg:basis-[50%] h-[100%] px-[4rem] sm:px-[1rem] xs:px-[1rem] py-[4rem] flex-col gap-[1rem]">
-            <div className="lg:mt-[4rem] text-[3em] sm:text-[35px] text-[#fff]">
+          <div className="flex justify-between min-w-[500px] sm:min-w-[300px] xs:min-w-[300px] w-[100%] basis-[100%] lg:basis-[50%] h-[100%] px-[4rem] sm:px-[1rem] xs:px-[1rem] py-[5rem] sm:py-[1rem] flex-col gap-[1rem]">
+            <div className="text-[3em] sm:text-[35px] text-[#fff]">
               {homepageContent.about.content.title}
             </div>
-            <div className="flex flex-col gap-3 text-[#fff]">
+            <div className="flex flex-col text-[calc(0.65vw+0.65vh)] sm:text-[14px] gap-3 text-[#fff]">
               {homepageContent.about.content.paragraphs.map((item, idx) => {
                 return <p key={idx}> {item}</p>;
               })}
@@ -110,6 +110,7 @@ export default function AboutUs() {
               animate={
                 homepageContent.about.content.images[0].animation.animate
               }
+              className="w-[100%] h-[100%]"
             >
               <img
                 className="object-contain w-[100%] h-[100%]"

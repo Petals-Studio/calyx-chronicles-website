@@ -213,7 +213,7 @@ const homepageContent = {
   stay_connected: {
     label: "Connected",
     content: {
-      title: ["Stay", "Connected", "with"],
+      title: ["Stay Connected", "with"],
       para: ["news and updates."],
       cta: [
         {
