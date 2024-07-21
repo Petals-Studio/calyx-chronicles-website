@@ -23,7 +23,7 @@ const StayConnected = () => {
   return (
     <>
       <div
-        className={`h-[70dvh] w-[100%] p-[4rem] sm:p-[1rem] flex customFont flex-col justify-center items-end text-[#000] bg-[url('../public/images/ContactBg.png')] bg-no-repeat bg-cover bg-left-bottom`}
+        className={`h-[70dvh] sm:h-[50vh] w-[100%] p-[4rem] sm:p-[1rem] flex customFont flex-col justify-center items-end text-[#000] bg-[url('../public/images/ContactBg.png')] bg-no-repeat bg-cover bg-left-bottom`}
       >
         <div className="text-[#fff] lg:w-[45%] lg:text-[calc(1.75*(1vh+1vw))] text-[30px] text-right uppercase roboto-light w-[100%] ">
           {homepageContent.stay_connected.content.title.map((item, idx) => {

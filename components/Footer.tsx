@@ -167,7 +167,7 @@ const Footer = (props: {
                     }}
                   >
                     {items.text === "About Us" ? (
-                      <a href={items.url}></a>
+                      <a href={items.url}>{items.text}</a>
                     ) : (
                       <div
                         onClick={() => {
