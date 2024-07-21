@@ -102,7 +102,7 @@ export default function AboutUs() {
               </Link>
             </div>
           </div>
-          <div className="flex w-[100%] h-[80vh]  basis-[100%] lg:basis-[50%]   sm:min-w-[200px] xs:min-w-[200px] p-[2rem] sm:p-[0] xs:p-[0]">
+          <div className="flex w-[100%] h-[80vh]  basis-[100%] lg:basis-[50%] sm:min-w-[200px] xs:min-w-[200px] p-[2rem] sm:p-[0] xs:p-[0] lg:pt-[4rem] items-start justify-start">
             <motion.div
               initial={
                 homepageContent.about.content.images[0].animation.initial

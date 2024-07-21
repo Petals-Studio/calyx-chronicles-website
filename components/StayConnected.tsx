@@ -6,11 +6,15 @@ const StayConnected = () => {
   const [isShowInput, setIsShowInput] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [apiResp, setApiResp] = useState<
-    { status: "success" | "failure"; message: string } | undefined
+    { success: boolean; status: string; msg: string } | undefined
   >(undefined);
 
   const handelOnSubmit = (data: any) => {
-    setApiResp({ status: "success", message: "Resp Submitted Successfully" });
+    setApiResp({
+      status: "OK",
+      success: true,
+      msg: "Resp Submitted Successfully",
+    });
   };
 
   function validateEmail(email: string) {
@@ -38,12 +42,10 @@ const StayConnected = () => {
             apiResp ? (
               <div
                 className={`${
-                  apiResp.status === "success"
-                    ? "text-green-400 text-right"
-                    : "text-red-500"
-                } uppercase lg:text-[calc(1.75*(1vh+1vw))] text-[24px]`}
+                  apiResp.success ? "text-green-400 text-right" : "text-red-500"
+                } uppercase lg:text-[calc(1.75*(1vh+1vw))] sm:font-bold text-[24px]`}
               >
-                {apiResp.message}
+                {apiResp.msg}
               </div>
             ) : (
               <div className="flex items-center gap-1 lg:text-[calc(1.75*(1vh+1vw))] text-[24px]">

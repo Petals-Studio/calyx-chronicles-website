@@ -230,9 +230,10 @@ const homepageContent = {
     content: {
       title: "About Us",
       paragraphs: [
-        "Cupcake ipsum dolor sit amet. Lollipop pudding topping liquorice jelly-o bonbon gummies. Sugar plum caramels chocolate bar carrot cake cake. I love gummies candy canes bear claw muffin fruitcake.",
-        "Jelly beans pie I love chocolate bar shortbread jelly. Chocolate cake toffee caramels I love marzipan.",
-        "Marshmallow danish croissant chocolate halvah tart. Cake donut tart jelly-o I love. Bear claw gummi bears carrot cake jelly beans fruitcake chupa chups cheesecake.",
+        "Welcome to Petals Studio (Formerly Rivea World Private Limited), the creative force behind the captivating app, Calyx Chronicle. As a pioneering gaming company, we specialize in developing seasonal games and engaging multiplayer experiences that connect players from all corners of the world.",
+        "At Petals Studio, our mission is to bring innovative and immersive online games to life. Calyx Chronicle is a testament to our dedication, offering a unique blend of seasonal content and thrilling multiplayer adventures. Each game we create is designed to entertain, challenge, and inspire, providing players with endless hours of enjoyment.",
+        "Join our ever-growing community and explore the exciting world of Calyx Chronicle. Whether you're battling it out in competitive multiplayer modes or diving into the rich narratives of our seasonal games, there's always something new and exciting to discover.",
+        "Be a part of the Petals Studio family and experience the future of online gaming with Calyx Chronicle. Together, let's create unforgettable memories and adventures in the gaming world!",
       ],
       background: "#1C2543",
       images: [
