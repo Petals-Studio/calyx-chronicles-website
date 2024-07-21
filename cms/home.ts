@@ -112,7 +112,7 @@ const homepageContent = {
           uncolored:
             "https://assets.calyxchronicles.com/website/chapter3Uncolored.png",
         },
-        isActive: false,
+        isActive: true,
         title: "Chapter 3",
         id: "Chapter_3",
         color: "#4B91D2",
@@ -575,7 +575,7 @@ const homepageContent = {
       },
       rightSide: {
         logo: "https://assets.calyxchronicles.com/website/CalxLogo.png",
-        address: "South Delhi",
+        address: "85, First Floor, Street 10, Alaknanda, New Delhi, India",
         followIcons: [
           {
             src: "https://assets.calyxchronicles.com/website/insta_mini.png",

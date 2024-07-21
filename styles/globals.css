@@ -145,6 +145,13 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
+.scroll-body-x {
+  background: #fff;
+  width: 100%;
+  height: 100dvh !important;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+}
 .wrapper-body {
   scroll-snap-align: start !important;
   scroll-snap-stop: always;

@@ -53,7 +53,7 @@ const Stories = (props: IStories) => {
       <div className="w-full h-full bg-[#fff] ">
         <div
           id={homepageContent.showcaseSection.sectionId}
-          className="w-full relative grid scroll-body lg:grid-cols-[repeat(3,1fr)] grid-cols-[minmax(350px,1fr)_minmax(350px,1fr)_minmax(350px,1fr)] h-full overflow-x-scroll lg:overflow-x-hidden overflow-y-hidden  text-[#000]"
+          className="w-full relative grid scroll-body-x lg:grid-cols-[repeat(3,1fr)] grid-cols-[minmax(350px,1fr)_minmax(350px,1fr)_minmax(350px,1fr)] h-full overflow-x-scroll lg:overflow-x-hidden overflow-y-hidden  text-[#000]"
         >
           {homepageContent.showcaseSection.content.map((item, idx) => {
             return (
@@ -73,6 +73,9 @@ const Stories = (props: IStories) => {
         {homepageContent.showcaseSection.content.map((item, idx) => {
           return (
             <div
+              onClick={() => {
+                setActiveChapter(item.title);
+              }}
               key={idx}
               className={`flex w-[10px] h-[10px] ${
                 activeChapter?.toLowerCase() === item.title?.toLowerCase()

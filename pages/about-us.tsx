@@ -96,8 +96,8 @@ export default function AboutUs() {
             </div>
             <div className="flex flex-col gap-4 text-[#fff]">
               <Link href="mailto:contact@petals.studio">
-                <div className="w-[fit-content] cursor-pointer text-[#000] bg-[#fff] hover:bg-[#fff] focus:ring-4 focus:ring-[#fff] font-medium rounded-lg lg:text-[calc(1vw+1vh)] text-sm px-[1rem] py-[calc(0.55*(1vw+1vh))] me-2 mb-2 dark:bg-[#fff] dark:hover:bg-[#fff] focus:outline-none dark:focus:ring-[#fff]">
-                  Contact US
+                <div className="w-[fit-content] uppercase cursor-pointer text-[#000] bg-[#fff] hover:bg-[#fff] focus:ring-4 focus:ring-[#fff] font-medium rounded-lg lg:text-[calc(0.75vw+0.75vh)] text-sm px-[1rem] py-[calc(0.55*(1vw+1vh))] me-2 mb-2 dark:bg-[#fff] dark:hover:bg-[#fff] focus:outline-none dark:focus:ring-[#fff]">
+                  Contact Us
                 </div>
               </Link>
             </div>
@@ -141,9 +141,10 @@ export default function AboutUs() {
             )}
           </div>
 
-          <div className="flex gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[15px]  sm:hidden">
+          <div className="flex uppercase gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[15px]  sm:hidden">
             <div
               className="cursor-pointer"
+              style={{ borderRight: "1px solid #fff", paddingRight: "1rem" }}
               onClick={() => {
                 setPrivacyData(homepageContent.privacyPolicy.data);
               }}
@@ -160,7 +161,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="text-right text-[calc(0.75vw+0.75vh)] sm:text-[15px]">
+          <div className="text-right text-[calc(0.55vw+0.55vh)] uppercase sm:text-[15px]">
             Developed At
             <div className="pt-[.4rem]">
               <Image
@@ -172,9 +173,10 @@ export default function AboutUs() {
               />
             </div>
           </div>
-          <div className="hidden sm:flex gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[15px] w-[100%] items-center justify-center my-[1rem]">
+          <div className="hidden sm:flex uppercase gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[15px] w-[100%] items-center justify-center my-[1rem]">
             <div
               className="cursor-pointer"
+              style={{ borderRight: "1px solid #fff", paddingRight: "1rem" }}
               onClick={() => {
                 setPrivacyData(homepageContent.privacyPolicy.data);
               }}

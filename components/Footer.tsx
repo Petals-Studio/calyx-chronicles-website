@@ -107,6 +107,7 @@ const Footer = (props: {
                         <a href={items.url}> {items.text}</a>
                       ) : (
                         <div
+                          className="cursor-pointer"
                           onClick={() => {
                             if (items.text === "Terms & Conditions") {
                               setTermsData &&
@@ -132,7 +133,7 @@ const Footer = (props: {
               )}
             </div>
 
-            <div className="text-right lg:text-[calc(.75*(1vh+1vw))] text-[16px]">
+            <div className="text-right lg:text-[calc(0.55vw+0.55vh)] text-[15px]">
               Developed At
               <div className="pt-[.4rem]">
                 <Image
@@ -170,6 +171,7 @@ const Footer = (props: {
                       <a href={items.url}>{items.text}</a>
                     ) : (
                       <div
+                        className="cursor-pointer"
                         onClick={() => {
                           if (items.text === "Terms & Conditions") {
                             setTermsData &&

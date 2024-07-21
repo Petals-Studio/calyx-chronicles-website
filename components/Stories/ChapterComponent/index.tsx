@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useDeviceType } from "@/hooks/useDeviceType";
+import useInView from "@/hooks/useInView";
 interface IChapterComponent {
   chapterData: {
     image: {
@@ -24,11 +25,24 @@ interface IChapterComponent {
 }
 const ChapterComponents = (props: IChapterComponent) => {
   const { isDesktop } = useDeviceType();
+  const ref = useRef(null);
+  const isChapterInView = useInView({ targetRef: ref });
   const { chapterData, id, isInView, setActiveChapter, activeChapter } = props;
   const isActive = chapterData?.isActive;
+  useEffect(() => {
+    if (!isDesktop && isInView && isChapterInView) {
+      setActiveChapter(chapterData.title);
+      setTimeout(() => {
+        document
+          .getElementById(chapterData.title)
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 500);
+    }
+  }, [isInView, isChapterInView]);
 
   return (
     <div
+      ref={ref}
       id={chapterData?.title}
       className="p-[0rem] wrapper-body"
       onMouseEnter={() => {
