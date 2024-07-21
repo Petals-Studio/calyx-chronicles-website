@@ -96,11 +96,11 @@ const Footer = (props: {
                       style={{
                         borderRight:
                           idx !==
-                          homepageContent.footer.content.rightSide.navlinks
+                          homepageContent?.footer?.content?.rightSide?.navlinks
                             ?.length -
                             1
                             ? "1px solid #fff"
-                            : "",
+                            : "1px",
                       }}
                     >
                       {items.text === "About Us" ? (
@@ -159,11 +159,11 @@ const Footer = (props: {
                     style={{
                       borderRight:
                         idx !==
-                        homepageContent.footer.content.rightSide.navlinks
+                        homepageContent?.footer?.content?.rightSide?.navlinks
                           ?.length -
                           1
                           ? "1px solid #fff"
-                          : "",
+                          : "1px",
                     }}
                   >
                     {items.text === "About Us" ? (
