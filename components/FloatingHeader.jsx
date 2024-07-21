@@ -47,7 +47,7 @@ export default function FloatingHeader() {
             onClick={() => {
               EventBus.getInstance().fireEvent(ShowRegisterModalEvent);
             }}
-            className={`${inter.variable} font-inter bg-gray-100 uppercase rounded-3xl flex items-center p-2 text-sm text-black desktop:mt-4`}
+            className={`${inter.variable} font-inter bg-gray-100 uppercase rounded-3xl flex items-center p-2 text-sm text-[#000] desktop:mt-4`}
           >
             <span className="mr-2">
               <svg

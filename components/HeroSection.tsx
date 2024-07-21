@@ -5,6 +5,7 @@ import { inView, motion } from "framer-motion";
 import Lottie from "lottie-react";
 import jsonDtaa from "../public/images/jsonData.json";
 import Link from "next/link";
+import Stories from "./Stories/Stories";
 interface IHeroSection {
   isInView?: boolean;
 }
@@ -12,7 +13,7 @@ const HeroSection = (props: IHeroSection) => {
   const { isInView = false } = props;
 
   return (
-    <div className="w-full flex justify-center items-center h-full overflow-hidden flex-col  bg-[#facc96] text-black relative">
+    <div className="w-full flex justify-center items-center h-full overflow-hidden flex-col  bg-[#facc96] text-[#000] relative">
       <div className="w-[100%] h-[100%] flex justify-center items-center flex-col fade-in-animation ">
         <div
           style={{
@@ -113,9 +114,20 @@ const HeroSection = (props: IHeroSection) => {
                   />
                 </Link>
               </div>
-              <div className="text-[#565252] uppercase roboto-bold-italic">
+              {/* <Link
+                href={"#story"}
+               
+              > */}{" "}
+              <div
+                onClick={() => {
+                  const ele = document.getElementById("story");
+                  ele?.scrollIntoView();
+                }}
+                className="text-[#565252] uppercase roboto-bold-italic"
+              >
                 Begin Adventure {">"}{" "}
               </div>
+              {/* </Link> */}
             </div>
           </div>
         </div>
@@ -134,7 +146,7 @@ const HeroSection = (props: IHeroSection) => {
             left: 0,
           }}
         >
-          <div className="flex w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer mt-[2rem] hidden sm:flex xs:flex xs:flex-col">
+          <div className="w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer mt-[2rem] hidden sm:flex xs:flex xs:flex-col">
             <Link href={homepageContent.landingPage.content.playstore.url}>
               <img
                 src={homepageContent.landingPage.content.playstore.src}
@@ -166,9 +178,9 @@ const HeroSection = (props: IHeroSection) => {
           </div>
           <div className="flex w-[100%] gap-[.5rem] justify-center items-center z-100 cursor-pointer left-0 flex-wrap">
             <Link href="/privacy-policy">Privacy Policy</Link>
-            <div className="flex w-[1px] h-[10px] bg-black"></div>
+            <div className="flex w-[1px] h-[10px] bg-[#000]"></div>
             <Link href="/terms-of-service">Terms & Condition</Link>
-            <div className="flex w-[1px] h-[10px] bg-black"></div>
+            <div className="flex w-[1px] h-[10px] bg-[#000]"></div>
             <Link href="mailto:contact@petals.studio">
               contact@petals.studio
             </Link>

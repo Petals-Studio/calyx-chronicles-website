@@ -21,7 +21,10 @@ const StoreSection = (props: { isInView?: boolean }) => {
 
   return (
     <>
-      <div className="w-[100%] h-[100%] overflow-hidden flex justify-center items-end bg-[#FFF2CF]">
+      <div
+        id="Store"
+        className="w-[100%] h-[100%] overflow-hidden flex justify-center items-end bg-[#FFF2CF]"
+      >
         <div className="flex w-[100%]">
           {/* <DotLottieReact
             src="/images/store.lottie"

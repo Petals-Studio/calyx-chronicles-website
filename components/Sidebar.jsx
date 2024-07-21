@@ -41,7 +41,7 @@ export default function Sidebar() {
       onClick={() => {
         EventBus.getInstance().fireEvent(SidebarToggleEvent);
       }}
-      className={`top-0 right-0 w-[75vw] bg-black p-10 text-white fixed  h-screen ease-in-out duration-300 flex flex-col items-center overflow-x-hidden overflow-y-scroll z-[9999] ${
+      className={`top-0 right-0 w-[75vw] bg-[#000] p-10 text-[#fff] fixed  h-screen ease-in-out duration-300 flex flex-col items-center overflow-x-hidden overflow-y-scroll z-[9999] ${
         showSidebar ? "translate-x-0" : "translate-x-full"
       }`}
     >
@@ -54,7 +54,7 @@ export default function Sidebar() {
             href={link.url}
             className={`${
               inter.variable
-            } font-inter font-bold text-white uppercase text-center ${
+            } font-inter font-bold text-[#fff] uppercase text-center ${
               idx > 0 ? "border-t border-1 border-gray-500 pt-4" : ""
             }`}
           >
@@ -67,7 +67,7 @@ export default function Sidebar() {
         onClick={() => {
           EventBus.getInstance().fireEvent(ShowRegisterModalEvent);
         }}
-        className={`${inter.variable} font-inter bg-gray-100 uppercase rounded-3xl flex items-center p-2 text-sm text-black mt-10`}
+        className={`${inter.variable} font-inter bg-gray-100 uppercase rounded-3xl flex items-center p-2 text-sm text-[#000] mt-10`}
       >
         <span className=" mr-2">
           <svg

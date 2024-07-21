@@ -22,10 +22,10 @@ const Stories = (props: IStories) => {
 
   return (
     <>
-      <div className="w-full h-full bg-white ">
+      <div className="w-full h-full bg-[#fff] ">
         <div
           id={homepageContent.showcaseSection.sectionId}
-          className="w-full grid scroll-body lg:grid-cols-[1fr_1fr_1fr] grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1fr]  h-full overflow-x-hidden overflow-y-scroll text-black"
+          className="w-full grid scroll-body lg:grid-cols-[1fr_1fr_1fr] grid-cols-[1fr_1fr] sm:grid-cols-[1fr_1fr]  h-full overflow-x-hidden overflow-y-scroll text-[#000]"
         >
           {homepageContent.showcaseSection.content.map((item, idx) => {
             return (
@@ -41,10 +41,10 @@ const Stories = (props: IStories) => {
           })}
         </div>
       </div>
-      {/* <div className="w-full h-[0] sm:h-full sm:block bg-white">
+      {/* <div className="w-full h-[0] sm:h-full sm:block bg-[#fff]">
         <div
           id={homepageContent.showcaseSection.sectionId}
-          className="w-full grid grid-cols-1 overflow-hidden grid-rows-3 h-full text-black"
+          className="w-full grid grid-cols-1 overflow-hidden grid-rows-3 h-full text-[#000]"
         >
           {homepageContent.showcaseSection.content.map((item, idx) => {
             return (

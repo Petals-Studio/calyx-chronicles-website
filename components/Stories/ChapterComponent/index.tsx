@@ -7,6 +7,7 @@ interface IChapterComponent {
       colored: string;
       uncolored: string;
     };
+    color: string;
     title: string;
     heading: string;
     isActive: boolean;
@@ -32,8 +33,8 @@ const ChapterComponents = (props: IChapterComponent) => {
     >
       <div
         className={`w-[100%] h-[100vh] opacity-0 relative ${
-          id !== 3 ? "lg:after:bg-black" : "after:bg-transparent"
-        } text-white after:absolute after:z-[-1] after:w-[1px] after:h-[70%] lg:after:bg-black after:rounded-[100%] after:top-20 after:right-0  ${
+          id !== 3 ? "lg:after:bg-[#000]" : "after:bg-transparent"
+        } text-[#fff] after:absolute after:z-[-1] after:w-[1px] after:h-[70%] lg:after:bg-[#000] after:rounded-[100%] after:top-20 after:right-0  ${
           isActive && chapterData?.title === activeChapter
             ? chapterData?.background
             : ""
@@ -59,8 +60,15 @@ const ChapterComponents = (props: IChapterComponent) => {
           }}
         >
           {!isActive && (
-            <div className="text-[#737373c4] uppercase text-[35px] sm:text-[14px] roboto-bold-italic">
-              {" "}
+            <div
+              style={{
+                color:
+                  chapterData?.title === activeChapter
+                    ? chapterData.color
+                    : "#737373c4",
+              }}
+              className={` uppercase text-[35px] sm:text-[14px] roboto-bold-italic`}
+            >
               Coming Soon
             </div>
           )}
@@ -79,7 +87,9 @@ const ChapterComponents = (props: IChapterComponent) => {
                   </div>
                 </div>
               )}
-              <img
+              <Image
+                width={100}
+                height={100}
                 className="image"
                 src={
                   isActive && chapterData?.title === activeChapter
@@ -113,7 +123,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                   ...chapterData?.style,
                 }}
               />
-              {isActive && chapterData?.title !== activeChapter && (
+              {(chapterData?.title !== activeChapter || !isActive) && (
                 <div className="absolute bottom-10 uppercase text-[20px] right-20 mr-[2rem] sm:right-10 text-[#ccc] roboto-medium">
                   {chapterData?.title}
                 </div>

@@ -73,16 +73,15 @@ const DynamicModal = (props: IDynamicModal) => {
             : ""
         } origin-center flex flex-col ${
           type === "side"
-            ? `bg-white h-[100%] right-0 top-0 bottom-0 rounded-none p-0`
+            ? `bg-[#fff] h-[100%] right-0 top-0 bottom-0 rounded-none p-0`
             : `bg-transparent left-[50%] rounded-xl ${
                 position === "Bottom" ? "bottom-0" : "top-[50%]"
               }`
-        } sm:w-[100%] xs:w-[100%] absolute h-[auto] p-[1rem]`}
-        style={{ width: isDesktop ? width ?? "80%" : "100%" }}
+        } w-[80%] sm:w-[100%] xs:w-[100%] absolute h-[auto] p-[1rem]`}
       >
         {type === "center" ? (
           <div
-            className={`bg-white w-[100%] ${
+            className={`bg-[#fff] w-[100%] ${
               type === "center" ? "rounded-2xl" : "rounded-none"
             } overflow-hidden relative`}
           >
@@ -111,7 +110,7 @@ const DynamicModal = (props: IDynamicModal) => {
                       className={`p-[.8rem] cursor-pointer text-right absolute text-[13px] top-[0%] right-[0%]`}
                       onClick={() => dynamicCloser()}
                     >
-                      <div className="text-black ">x</div>
+                      <div className="text-[#000] ">x</div>
                     </div>
                   )}
                 </div>
@@ -119,7 +118,7 @@ const DynamicModal = (props: IDynamicModal) => {
             )}
 
             <div className="flex h-[100%] flex-col justify-start items-start bg-[#F1F1F1] py-[1rem] px-[2rem]">
-              <div className="flex p-[1rem] text-black overflow-scroll flex-col w-[100%] h-[100%] rounded-xl bg-[#fff] max-h-[500px]">
+              <div className="flex p-[1rem] text-[#000] overflow-scroll flex-col w-[100%] h-[100%] rounded-xl bg-[#fff] max-h-[500px]">
                 {isOpen ? child : ""}
               </div>
             </div>

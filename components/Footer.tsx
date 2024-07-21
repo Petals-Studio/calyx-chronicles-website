@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <div
       id={"Contact-Us"}
-      className={`w-[100%] min-h-[50dvh] sm:minH-[100dvh] text-black  bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
+      className={`w-[100%] min-h-[50dvh] sm:minH-[100dvh] text-[#000]  bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
       style={{
         backgroundImage: ` url(${homepageContent.footer.content.background})`,
       }}
     >
-      <div className="flex  w-[100%] h-[100%] flex-col justify-center items-center p-[2rem] sm:p-[.5rem] gap-[1rem] text-white">
+      <div className="flex  w-[100%] h-[100%] flex-col justify-center items-center p-[2rem] sm:p-[.5rem] gap-[.5rem] text-[#fff]">
         <Image
           width={200}
           height={10}
@@ -90,7 +90,7 @@ const Footer = () => {
                           : "",
                     }}
                   >
-                    <Link href={items.url}>{items.text}</Link>
+                    <a href={items.url}>{items.text}</a>
                   </div>
                 );
               }
@@ -126,7 +126,7 @@ const Footer = () => {
                         : "",
                   }}
                 >
-                  <Link href={items.url}>{items.text}</Link>
+                  <a href={items.url}>{items.text}</a>
                 </div>
               );
             }

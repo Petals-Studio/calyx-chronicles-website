@@ -108,7 +108,7 @@ export default function PrivacyPolicy() {
 
   return (
     <main
-      className="w-full flex min-h-screen flex-col items-center bg-white text-black"
+      className="w-full flex min-h-screen flex-col items-center bg-[#fff] text-[#000]"
       onClick={() => {
         EventBus.getInstance().fireEvent(SidebarCloseEvent);
       }}

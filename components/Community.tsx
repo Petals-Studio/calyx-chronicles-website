@@ -27,7 +27,9 @@ const Community = (props: ICommunity) => {
           <motion.div>
             <div className="flex flex-col items-start justify-center px-[1rem] h-full gap-2 w-full text-left  sm:px-[0] relative ">
               <div className="lg:text-[65px] z-[1] relative md:text-[60px] sm:text-[45px] w-[fit-content] uppercase roboto-light ">
-                {homepageContent?.community.content.title}
+                {homepageContent?.community.content.title.map((item, idx) => {
+                  return <div key={idx}>{item}</div>;
+                })}
               </div>
 
               {homepageContent?.community.content.paragraphs.map(
@@ -75,16 +77,20 @@ const Community = (props: ICommunity) => {
                     animate={item.animation.animate}
                     className={`z-[${
                       idx === 0 ? 2 : idx === 1 ? 1 : 0
-                    }] lg:mx-[-3rem] md:mx-[-1rem] sm:mx-[-1rem] translate-z-[-200px]`}
+                    }] hover:z-[9] lg:mx-[-3rem] md:mx-[-1rem] sm:mx-[-1rem] translate-z-[-200px]`}
                   >
-                    <img
-                      style={{
-                        aspectRatio: "1/1",
-                      }}
-                      className="lg:w-[400px] md:w-[400px] sm:w-[250px]  "
-                      src={item.image}
-                      alt={item.title}
-                    />
+                    <Link href={item.action}>
+                      <Image
+                        width={100}
+                        height={100}
+                        style={{
+                          aspectRatio: "1/1",
+                        }}
+                        className="lg:w-[400px] md:w-[400px] sm:w-[250px] hover:scale-[1.3] transition"
+                        src={item.image}
+                        alt={item.title}
+                      />
+                    </Link>
                   </motion.div>
                 );
               })}

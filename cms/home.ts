@@ -11,6 +11,10 @@ const homepageContent = {
         url: "/#story",
       },
       {
+        label: "Store",
+        url: "/#Store",
+      },
+      {
         label: "Community",
         url: "/#community",
       },
@@ -72,6 +76,7 @@ const homepageContent = {
             "https://assets.calyxchronicles.com/website/chapter1Uncolor.png",
         },
         title: "Chapter 1",
+        color: "#E28D0E",
         heading: "Warlock Tower Caper",
         isActive: true,
         style: { width: "500px", height: "500px", left: 0 },
@@ -88,6 +93,8 @@ const homepageContent = {
             "https://assets.calyxchronicles.com/website/chapter2Uncolor.png",
         },
         title: "Chapter 2",
+        color: "#E84A7A",
+
         isActive: false,
         style: { width: "500px", height: "500px" },
         styleResp: { width: "280px", height: "280px" },
@@ -105,6 +112,7 @@ const homepageContent = {
         },
         isActive: false,
         title: "Chapter 3",
+        color: "#4B91D2",
         style: { width: "500px", height: "500px", right: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
         background:
@@ -133,21 +141,21 @@ const homepageContent = {
       followIcons: [
         {
           src: "https://assets.calyxchronicles.com/website/insta_mini.png",
-          alt: "google image",
-          url: "",
+          alt: "instagram",
+          url: "https://www.instagram.com/calyxchronicles",
         },
         {
           src: "https://assets.calyxchronicles.com/website/discord_mini.png",
-          alt: "google image",
-          url: "",
+          alt: "discord",
+          url: "https://discord.gg/Q7CAJ3eT",
         },
         {
           src: "https://assets.calyxchronicles.com/website/reddit_mini.png",
-          alt: "google image",
-          url: "",
+          alt: "reddit",
+          url: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
         },
       ],
-      title: "Join our Community",
+      title: ["Join", "our", "Community"],
       paragraphs: ["Want to help shape the future of Calyx Chronicles?"],
       background: "bg-gradient-to-b from-[#FF6200] to-[#FB5D66]",
       images: [
@@ -155,6 +163,7 @@ const homepageContent = {
           image: "https://assets.calyxchronicles.com/website/discord.png",
           title: "Discord",
           Zindex: "1",
+          action: "https://discord.gg/Q7CAJ3eT",
 
           animation: {
             initial: { rotateZ: 0 },
@@ -168,6 +177,8 @@ const homepageContent = {
         {
           image: "https://assets.calyxchronicles.com/website/reddit.png",
           title: "Reddit",
+          action: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
+
           animation: {
             initial: { rotateZ: 0 },
             animate: {
@@ -180,6 +191,7 @@ const homepageContent = {
         {
           image: "https://assets.calyxchronicles.com/website/insta.png",
           title: "Instagram",
+          action: "https://www.instagram.com/calyxchronicles",
           Zindex: "3",
           animation: {
             initial: { rotateZ: 0 },
@@ -561,18 +573,18 @@ const homepageContent = {
         followIcons: [
           {
             src: "https://assets.calyxchronicles.com/website/insta_mini.png",
-            alt: "google image",
-            url: "",
+            alt: "instagram",
+            url: "https://www.instagram.com/calyxchronicles",
           },
           {
             src: "https://assets.calyxchronicles.com/website/discord_mini.png",
-            alt: "google image",
-            url: "",
+            alt: "discord",
+            url: "https://discord.gg/Q7CAJ3eT",
           },
           {
             src: "https://assets.calyxchronicles.com/website/reddit_mini.png",
-            alt: "google image",
-            url: "",
+            alt: "reddit",
+            url: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
           },
         ],
         developed_at: {

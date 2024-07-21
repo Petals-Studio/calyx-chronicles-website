@@ -18,7 +18,7 @@ interface NavbarProps {
 export default function Navbar(props: NavbarProps) {
   const { currentTab, setCurrentTab, color } = props;
   return props.onlyIcon ? (
-    <div className="flex w-full fixed justify-end bg-white z-[9999] p-[1rem] ">
+    <div className="flex w-full fixed justify-end bg-[#fff] z-[9999] p-[1rem] ">
       <Link href={"/"}>
         {" "}
         <Image width={40} height={40} src={"/petalIcon.png"} alt="logo" />
@@ -42,13 +42,11 @@ export default function Navbar(props: NavbarProps) {
                   onClick={() => {
                     setCurrentTab && setCurrentTab(link.label);
                   }}
-                  className={`${
-                    inter.variable
-                  } roboto-regular relative uppercase ${
+                  className={`roboto-regular relative uppercase ${
                     currentTab?.toLocaleLowerCase() ===
                     link.label?.toLocaleLowerCase()
                       ? "underlineLink text-[#C7315C] after:bg-[#C7315C]"
-                      : "text-black"
+                      : "text-[#000]"
                   }`}
                   style={{ color: color ? color : "" }}
                 >

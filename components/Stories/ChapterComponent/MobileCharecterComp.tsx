@@ -34,8 +34,8 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
       >
         <div
           className={`w-[100%] opacity-0 relative h-[100%] ${
-            id !== 3 ? " after:bg-black" : "after:bg-transparent"
-          } text-white after:absolute after:w-[100%] after:h-[1px] after:bg-black after:rounded-[100%] after:bottom-0 after:left-10  ${
+            id !== 3 ? " after:bg-[#000]" : "after:bg-transparent"
+          } text-[#fff] after:absolute after:w-[100%] after:h-[1px] after:bg-[#000] after:rounded-[100%] after:bottom-0 after:left-10  ${
             isActive && chapterData?.title === activeChapter
               ? chapterData?.background
               : ""
@@ -57,7 +57,7 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
               isActive ? "justify-start" : "justify-center"
             } ${isActive ? "items-start" : "items-center"}`}
           >
-            {!isActive && <div className="text-black"> Comming Soon</div>}
+            {!isActive && <div className="text-[#000]"> Comming Soon</div>}
             {
               <>
                 {isActive && chapterData?.title === activeChapter && (
@@ -104,7 +104,7 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
                   }}
                 />
                 {isActive && chapterData?.title !== activeChapter && (
-                  <div className="absolute bottom-10 text-[24px] right-20 mr-[2rem] text-black">
+                  <div className="absolute bottom-10 text-[24px] right-20 mr-[2rem] text-[#000]">
                     {chapterData?.title}
                   </div>
                 )}
