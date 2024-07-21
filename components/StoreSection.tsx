@@ -10,7 +10,7 @@ import React, {
 } from "react";
 
 import jsonDtaa from "../public/images/store.json";
-import jsonDtaa2 from "../public/images/store2.json";
+import jsonDtaa2 from "../public/images/Store2.json";
 
 import useInView from "@/hooks/useInView";
 import Lottie from "lottie-react";
