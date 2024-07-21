@@ -16,7 +16,7 @@ const Footer = (props: {
       <StayConnected />
       <div
         id={"Contact-Us"}
-        className={`w-[100%] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
+        className={`w-[100%] sm:h-[50vh] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
         style={{
           backgroundImage: ` url(${homepageContent.footer.content.background})`,
         }}
@@ -155,7 +155,7 @@ const Footer = (props: {
                 return (
                   <div
                     key={idx}
-                    className="pr-[.3rem]"
+                    className="pr-[.3rem] font-bold"
                     style={{
                       borderRight:
                         idx !==

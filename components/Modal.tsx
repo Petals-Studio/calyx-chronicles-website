@@ -81,7 +81,7 @@ const DynamicModal = (props: IDynamicModal) => {
       >
         {type === "center" ? (
           <div
-            className={`bg-[#fff] w-[100%] h-[90dvh] ${
+            className={`bg-[#fff] w-[100%] h-[90dvh] sm:h-[80vh] ${
               type === "center" ? "rounded-2xl" : "rounded-none"
             } overflow-hidden relative`}
           >

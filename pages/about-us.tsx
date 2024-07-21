@@ -112,7 +112,7 @@ export default function AboutUs() {
               }
             >
               <img
-                className="object-fill w-[100%] h-[100%]"
+                className="object-contain w-[100%] h-[100%]"
                 src={homepageContent.about.content.images[0].image}
                 alt=""
               />
