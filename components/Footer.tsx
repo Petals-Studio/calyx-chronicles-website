@@ -29,14 +29,14 @@ const Footer = (props: {
             src={homepageContent.footer.content.rightSide.logo}
             alt={homepageContent.footer.content.rightSide.logo}
           />
-          <div className="flex items-center gap-1 text-left lg:text-[calc(.75*(1vh+1vw))] text-[16px] mt-[1rem]">
+          <div className="flex items-start gap-1 text-left lg:text-[calc(.75*(1vh+1vw))] text-[16px] mt-[1rem]">
             {" "}
-            <div className="roboto-regular">Address - </div>{" "}
+            <div className="roboto-regular">Address&nbsp;- </div>{" "}
             <div>{homepageContent.footer.content.rightSide.address}</div>
           </div>
           <div className="flex items-center gap-1 text-left lg:text-[calc(.75*(1vh+1vw))] text-[16px]">
             {" "}
-            <div className="roboto-regular">Contact Us - </div>{" "}
+            <div className="roboto-regular">Contact&nbsp;Us&nbsp;- </div>{" "}
             <Link
               href="mailto:contact@petals.studio"
               className="underline italic"
