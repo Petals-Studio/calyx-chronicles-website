@@ -61,13 +61,13 @@ const ChapterComponents = (props: IChapterComponent) => {
           {!isActive && (
             <div className="text-[#737373c4] uppercase text-[35px] sm:text-[14px] italic">
               {" "}
-              Comming Soon
+              Coming Soon
             </div>
           )}
           {
             <>
               {isActive && chapterData?.title === activeChapter && (
-                <div className=" p-[20%] ">
+                <div className="p-[20%] sm:pl-[3rem]">
                   <div className="font-thin text-[34px] sm:text-[24px] my-2 customFont">
                     {chapterData?.title}
                   </div>
