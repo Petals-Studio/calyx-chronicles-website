@@ -113,7 +113,7 @@ const HeroSection = (props: IHeroSection) => {
                   />
                 </Link>
               </div>
-              <div className="text-[#565252] uppercase">
+              <div className="text-[#565252] uppercase roboto-bold-italic">
                 Begin Adventure {">"}{" "}
               </div>
             </div>

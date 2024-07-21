@@ -7,13 +7,13 @@ const StayConnected = () => {
     <div
       className={`h-[50dvh] w-[100%] p-[4rem] flex customFont flex-col justify-center items-end text-black bg-[url('../public/images/ContactBg.png')] bg-no-repeat bg-cover bg-left-bottom`}
     >
-      <div className="text-white lg:w-[45%] text-[45px] sm:text-[30px] font-thin  text-right uppercase">
+      <div className="text-white lg:w-[45%] text-[45px] sm:text-[30px] text-right uppercase roboto-light">
         {homepageContent.stay_connected.content.title[0]}
-        <div className="font-extrabold">
+        <div className="roboto-bold">
           {homepageContent.stay_connected.content.title[1]}
         </div>
       </div>
-      <div className="underline text-white  font-thin text-[50px] sm:text-[30px]">
+      <div className="underline text-white  text-[40px] sm:text-[20px] roboto-light-italic uppercase ">
         <Link href={homepageContent.stay_connected.content.cta[0].action}>
           {homepageContent.stay_connected.content.cta[0].text}
         </Link>

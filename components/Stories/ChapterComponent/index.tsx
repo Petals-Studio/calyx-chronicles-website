@@ -59,7 +59,7 @@ const ChapterComponents = (props: IChapterComponent) => {
           }}
         >
           {!isActive && (
-            <div className="text-[#737373c4] uppercase text-[35px] sm:text-[14px] italic">
+            <div className="text-[#737373c4] uppercase text-[35px] sm:text-[14px] roboto-bold-italic">
               {" "}
               Coming Soon
             </div>
@@ -67,14 +67,14 @@ const ChapterComponents = (props: IChapterComponent) => {
           {
             <>
               {isActive && chapterData?.title === activeChapter && (
-                <div className="p-[20%] sm:pl-[3rem]">
-                  <div className="font-thin text-[34px] sm:text-[24px] my-2 customFont">
+                <div className="p-[20%] sm:p-[2%] sm:pl-[3.5rem] sm:pr-[0] uppercase">
+                  <div className=" text-[34px] sm:text-[24px]  my-2 roboto-thin">
                     {chapterData?.title}
                   </div>
-                  <div className="font-bold text-[18px] my-2 sm:text-[14px] italic">
+                  <div className="roboto-bold-italic text-[18px] my-2 sm:text-[14px] italic">
                     {chapterData?.heading}
                   </div>
-                  <div className="sm:text-[10px] customFont">
+                  <div className="sm:text-[10px] roboto-regular">
                     {chapterData?.subText}
                   </div>
                 </div>
@@ -114,7 +114,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                 }}
               />
               {isActive && chapterData?.title !== activeChapter && (
-                <div className="absolute bottom-10 uppercase text-[20px] right-20 mr-[2rem] sm:right-10 text-[#ccc]">
+                <div className="absolute bottom-10 uppercase text-[20px] right-20 mr-[2rem] sm:right-10 text-[#ccc] roboto-medium">
                   {chapterData?.title}
                 </div>
               )}

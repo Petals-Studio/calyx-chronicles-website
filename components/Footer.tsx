@@ -7,12 +7,12 @@ const Footer = () => {
   return (
     <div
       id={"Contact-Us"}
-      className={`w-[100%] min-h-[50dvh] sm:minH-[100dvh] text-black  bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] customFont uppercase`}
+      className={`w-[100%] min-h-[50dvh] sm:minH-[100dvh] text-black  bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
       style={{
         backgroundImage: ` url(${homepageContent.footer.content.background})`,
       }}
     >
-      <div className="flex  w-[100%] h-[100%] flex-col justify-center items-center p-[2rem] sm:p-[.5rem] gap-[1rem] text-white customFont">
+      <div className="flex  w-[100%] h-[100%] flex-col justify-center items-center p-[2rem] sm:p-[.5rem] gap-[1rem] text-white">
         <Image
           width={200}
           height={10}
@@ -21,12 +21,12 @@ const Footer = () => {
         />
         <div className="flex items-center gap-1 text-left text-[12px] mt-[1rem]">
           {" "}
-          <div>Address - </div>{" "}
+          <div className="roboto-regular">Address - </div>{" "}
           <div>{homepageContent.footer.content.rightSide.address}</div>
         </div>
         <div className="flex items-center gap-1 text-left text-[12px]">
           {" "}
-          <div>Contact Us - </div>{" "}
+          <div className="roboto-regular">Contact Us - </div>{" "}
           <Link href="mailto:contact@petals.studio">contact@petals.studio</Link>
         </div>
 
@@ -68,7 +68,7 @@ const Footer = () => {
             )}
           </div>
 
-          <div className="flex gap-[1rem] text-[12px]  sm:hidden">
+          <div className="flex gap-[1rem] text-[16px]  sm:hidden">
             {homepageContent.footer.content.rightSide.navlinks.map(
               (items, idx) => {
                 return (
@@ -81,7 +81,7 @@ const Footer = () => {
                         homepageContent.footer.content.rightSide.navlinks
                           ?.length -
                           1
-                          ? "1px solid #000"
+                          ? "1px solid #fff"
                           : "",
                     }}
                   >
@@ -92,7 +92,7 @@ const Footer = () => {
             )}
           </div>
 
-          <div className="text-right text-[12px]">
+          <div className="text-right text-[16px]">
             Developed At
             <div className="pt-[.4rem]">
               <Image
@@ -117,7 +117,7 @@ const Footer = () => {
                       homepageContent.footer.content.rightSide.navlinks
                         ?.length -
                         1
-                        ? "1px solid #000"
+                        ? "1px solid #fff"
                         : "",
                   }}
                 >

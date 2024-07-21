@@ -23,10 +23,10 @@ const Community = (props: ICommunity) => {
       <div
         className={`w-full h-full px-[2rem] py-[6rem] flex justify-between sm:flex-col sm:py-[4rem]`}
       >
-        <div className="flex w-[30%] sm:w-[100%] z-[99] rounded-full">
+        <div className="flex w-[30%] sm:w-[100%] z-[2] rounded-full">
           <motion.div>
             <div className="flex flex-col items-start justify-center px-[1rem] h-full gap-2 w-full text-left  sm:px-[0] relative ">
-              <div className="lg:text-[65px] font-thin z-[1] relative md:text-[60px] sm:text-[45px] w-[fit-content]  uppercase">
+              <div className="lg:text-[65px] z-[1] relative md:text-[60px] sm:text-[45px] w-[fit-content] uppercase roboto-light ">
                 {homepageContent?.community.content.title}
               </div>
 
@@ -35,7 +35,7 @@ const Community = (props: ICommunity) => {
                   return (
                     <div
                       key={idx}
-                      className="my-2 text-left w-[90%] text-[18px] sm:text-[14px] uppercase"
+                      className="my-2 text-left w-[90%] text-[18px] sm:text-[14px] uppercase roboto-medium"
                     >
                       {item}
                     </div>
@@ -65,7 +65,7 @@ const Community = (props: ICommunity) => {
           </motion.div>
         </div>
         {
-          <div className="flex justify-center items-center w-[60%] sm:w-[100%]">
+          <div className="flex justify-center items-center w-[60%] sm:w-[100%] z-[1]">
             <div className="flex justify-center w-[100%]  h-[fit-content] items-end relative my-auto">
               {homepageContent.community.content.images.map((item, idx) => {
                 return (
