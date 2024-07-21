@@ -13,7 +13,7 @@ const Footer = (props: {
   const { setPrivacyData, setTermsData } = props;
   return (
     <>
-      {/* <StayConnected /> */}
+      <StayConnected />
       <div
         id={"Contact-Us"}
         className={`w-[100%] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
