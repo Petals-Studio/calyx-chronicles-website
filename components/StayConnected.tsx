@@ -28,7 +28,7 @@ const StayConnected = () => {
     <>
       <div
         style={{ backgroundSize: "100% 100%" }}
-        className={`h-[45vh]  w-[100%] p-[2rem] sm:p-[1rem] flex flex-col justify-end sm:justify-center items-end text-[#000] bg-[url('../public/images/ContactBg.png')] bg-no-repeat bg-cover pt-[4rem]`}
+        className={`h-[45dvh] sm:h-[40dvh]  w-[100%] p-[2rem] sm:p-[1rem] flex flex-col justify-end sm:justify-center items-end text-[#000] bg-[url('../public/images/ContactBg.png')] bg-no-repeat bg-cover pt-[4rem]`}
       >
         <div className="text-[#fff] lg:w-[45%] lg:text-[calc(1.75*(1vh+1vw))] text-[30px] text-right uppercase roboto-light w-[100%]">
           {homepageContent.stay_connected.content.title.map((item, idx) => {

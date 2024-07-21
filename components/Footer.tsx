@@ -16,12 +16,12 @@ const Footer = (props: {
       <StayConnected />
       <div
         id={"Contact-Us"}
-        className={`w-[100%] h-[55vh] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
+        className={`w-[100%] h-[55dvh] sm:h-[60dvh] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
         style={{
           backgroundImage: ` url(${homepageContent.footer.content.background})`,
         }}
       >
-        <div className="flex  w-[100%] h-[100%] flex-col justify-between items-center p-[2rem] sm:p-[.5rem] sm:pt-[2rem] gap-[.5rem] text-[#fff]">
+        <div className="flex  w-[100%] h-[100%] flex-col justify-between items-center p-[2rem] sm:p-[.5rem]  gap-[.5rem] text-[#fff]">
           <Image
             width={200}
             height={10}
