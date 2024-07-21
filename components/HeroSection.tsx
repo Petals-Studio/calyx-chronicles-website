@@ -92,7 +92,7 @@ const HeroSection = (props: IHeroSection) => {
               }}
             >
               {" "}
-              <div className="flex w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer flex-wrap sm:hidden xs:hidden ">
+              <div className="flex w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer flex-wrap">
                 <Link href={homepageContent.landingPage.content.playstore.url}>
                   <img
                     src={homepageContent.landingPage.content.playstore.src}
@@ -131,7 +131,7 @@ const HeroSection = (props: IHeroSection) => {
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           style={{
             zIndex: "299",
 
@@ -168,7 +168,7 @@ const HeroSection = (props: IHeroSection) => {
               />
             </Link>
           </div>
-        </div>
+        </div> */}
         {/* <div
           className="fixed grid grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 bottom-[10px] left-0 w-[100%] text-[#545454] sm:text-[14px] xs:text-[14px] z-[999]"
           style={{ fontFamily: "roboto" }}
