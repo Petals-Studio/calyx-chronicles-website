@@ -19,15 +19,20 @@ const Footer = () => {
           src={homepageContent.footer.content.rightSide.logo}
           alt={homepageContent.footer.content.rightSide.logo}
         />
-        <div className="flex items-center gap-1 text-left text-[12px] mt-[1rem]">
+        <div className="flex items-center gap-1 text-left text-[16px] mt-[1rem]">
           {" "}
           <div className="roboto-regular">Address - </div>{" "}
           <div>{homepageContent.footer.content.rightSide.address}</div>
         </div>
-        <div className="flex items-center gap-1 text-left text-[12px]">
+        <div className="flex items-center gap-1 text-left text-[16px]">
           {" "}
           <div className="roboto-regular">Contact Us - </div>{" "}
-          <Link href="mailto:contact@petals.studio">contact@petals.studio</Link>
+          <Link
+            href="mailto:contact@petals.studio"
+            className="underline italic"
+          >
+            contact@petals.studio
+          </Link>
         </div>
 
         <div className="flex gap-[1rem] lg:justify-end md:justify-center  items-center mt-[3rem]">
