@@ -50,7 +50,7 @@ const Community = (props: ICommunity) => {
                   (items, idx) => {
                     return (
                       <div key={idx}>
-                        <Link href={items.url}>
+                        <Link href={items.url} target="_blank">
                           <Image
                             width={40}
                             height={40}
@@ -79,7 +79,7 @@ const Community = (props: ICommunity) => {
                       idx === 0 ? 2 : idx === 1 ? 1 : 0
                     }] hover:z-[9] lg:mx-[-3rem] md:mx-[-1rem] sm:mx-[-1rem] translate-z-[-200px]`}
                   >
-                    <Link href={item.action}>
+                    <Link href={item.action} target="_blank">
                       <Image
                         width={100}
                         height={100}

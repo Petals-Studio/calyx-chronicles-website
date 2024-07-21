@@ -48,7 +48,7 @@ export default function Navbar(props: NavbarProps) {
                       ? "underlineLink text-[#C7315C] after:bg-[#C7315C]"
                       : "text-[#000]"
                   }`}
-                  style={{ color: color ? color : "" }}
+                  // style={{ color: color ? color : "" }}
                 >
                   {link.label}
                 </a>

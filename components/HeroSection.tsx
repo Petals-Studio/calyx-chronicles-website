@@ -123,7 +123,7 @@ const HeroSection = (props: IHeroSection) => {
                   const ele = document.getElementById("story");
                   ele?.scrollIntoView();
                 }}
-                className="text-[#565252] uppercase roboto-bold-italic"
+                className="text-[#565252] uppercase roboto-bold-italic cursor-pointer"
               >
                 Begin Adventure {">"}{" "}
               </div>

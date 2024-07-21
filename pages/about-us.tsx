@@ -119,7 +119,7 @@ export default function AboutUs() {
               (items, idx) => {
                 return (
                   <div key={idx}>
-                    <Link href={items.url}>
+                    <Link href={items.url} target="_blank">
                       <Image
                         width={40}
                         height={40}
