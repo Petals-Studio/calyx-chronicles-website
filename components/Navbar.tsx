@@ -26,7 +26,7 @@ export default function Navbar(props: NavbarProps) {
     </div>
   ) : (
     <div
-      className={`z-10 w-full flex items-center justify-between backdrop-blur-[4px] ${
+      className={`z-10 w-full flex items-center justify-between tablet:backdrop-blur-[4px] ${
         props.noFixed ? "" : "fixed"
       } left-0 top-0 py-4 tablet:bg-gradient-to-b from-[#D29218] to-[#d5b58d78]
       `}
