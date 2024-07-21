@@ -21,7 +21,7 @@ const Footer = (props: {
           backgroundImage: ` url(${homepageContent.footer.content.background})`,
         }}
       >
-        <div className="flex  w-[100%] h-[100%] flex-col justify-center items-center p-[2rem] sm:p-[.5rem] gap-[.5rem] text-[#fff]">
+        <div className="flex  w-[100%] h-[100%] flex-col justify-between items-center p-[2rem] sm:p-[.5rem] gap-[.5rem] text-[#fff]">
           <Image
             width={200}
             height={10}
