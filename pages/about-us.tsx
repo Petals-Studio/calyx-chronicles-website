@@ -97,7 +97,7 @@ export default function AboutUs() {
             <div className="flex flex-col gap-4">
               <Link href="mailto:contact@petals.studio">
                 <div className="w-[fit-content] cursor-pointer text-[#000] bg-[#fff] hover:bg-[#fff] focus:ring-4 focus:ring-[#fff] font-medium rounded-lg lg:text-[calc(1vw+1vh)] text-sm px-[1rem] py-[calc(0.55*(1vw+1vh))] me-2 mb-2 dark:bg-[#fff] dark:hover:bg-[#fff] focus:outline-none dark:focus:ring-[#fff]">
-                  Contact Us
+                  Contact US
                 </div>
               </Link>
             </div>
