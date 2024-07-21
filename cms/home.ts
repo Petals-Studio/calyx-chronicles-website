@@ -556,7 +556,7 @@ const homepageContent = {
       },
       rightSide: {
         logo: "https://assets.calyxchronicles.com/website/CalxLogo.png",
-        address: "132, My Street, Kingston, New York 12401",
+        address: "South Delhi",
         followIcons: [
           {
             src: "https://assets.calyxchronicles.com/website/insta_mini.png",

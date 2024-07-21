@@ -72,7 +72,7 @@ const HeroSection = (props: IHeroSection) => {
               justifyContent: "center",
               alignItems: "center",
               width: "100%",
-              bottom: "5%",
+              bottom: "12%",
               left: "50%",
               transform: "translate(-50%)",
             }}
@@ -80,23 +80,22 @@ const HeroSection = (props: IHeroSection) => {
             <div
               style={{
                 zIndex: "299",
-
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: "3rem",
+                gap: "2rem",
                 alignItems: "center",
                 width: "100%",
-                bottom: 0,
+                bottom: "0",
                 left: 0,
               }}
             >
               {" "}
-              <div className="flex w-[full] gap-[2rem] z-100 justify-center items-center cursor-pointer flex-wrap sm:hidden xs:hidden ">
+              <div className="flex w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer flex-wrap sm:hidden xs:hidden ">
                 <Link href={homepageContent.landingPage.content.playstore.url}>
                   <img
                     src={homepageContent.landingPage.content.playstore.src}
-                    className="w-[220px] md:w-[150px] sm:w-[120px] xs:w-[120px]"
+                    className="w-[200px] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                     style={{
                       objectFit: "contain",
                       position: "relative",
@@ -105,7 +104,7 @@ const HeroSection = (props: IHeroSection) => {
                 </Link>
                 <Link href={homepageContent.landingPage.content.appStore.url}>
                   <img
-                    className="w-[220px] md:w-[150px] sm:w-[120px] xs:w-[120px] "
+                    className="w-[200px] md:w-[150px] sm:w-[120px] xs:w-[120px] "
                     src={homepageContent.landingPage.content.appStore.src}
                     style={{
                       objectFit: "contain",
