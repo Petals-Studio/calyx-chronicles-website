@@ -10,7 +10,7 @@ import React, {
 } from "react";
 
 import jsonDtaa from "../public/images/store.json";
-import jsonDtaa2 from "../public/images/Store2.json";
+import jsonDtaa2 from "../public/images/store_2.json";
 
 import useInView from "@/hooks/useInView";
 import Lottie from "lottie-react";
@@ -38,16 +38,12 @@ const StoreSection = (props: { isInView?: boolean }) => {
             }}
           />
         </div>
-        <div className="hidden w-[100%] sm:flex justify-center pt-[4rem]">
+        <div className="hidden w-[100%] sm:flex justify-center items-center">
           <Lottie
             loop={false}
-            className="mb-[0rem]"
+            className="mb-[-2rem]"
             autoplay={isInView}
             animationData={jsonDtaa2}
-            style={{
-              width: "100%",
-              height: "100%",
-            }}
           />
         </div>
       </div>

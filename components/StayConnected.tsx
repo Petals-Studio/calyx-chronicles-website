@@ -27,10 +27,11 @@ const StayConnected = () => {
   return (
     <>
       <div
-        style={{ backgroundSize: "100% 100%" }}
-        className={`h-[45dvh] sm:h-[40dvh]  w-[100%] p-[2rem] sm:p-[1rem] flex flex-col justify-end sm:justify-center items-end text-[#000] bg-[url('../public/images/ContactBg.png')] bg-no-repeat bg-cover pt-[4rem]`}
+        // style={{ backgroundSize: "100% 100%" }}
+        className={`h-[45dvh] sm:h-[40dvh]  w-[100%] p-[2rem] sm:p-[1rem] flex flex-col justify-end sm:justify-center items-end text-[#000] bg-[url('../public/images/stay_connectd.gif')] bg-no-repeat bg-left-bottom bg-cover pt-[4rem] relative`}
       >
-        <div className="text-[#fff] lg:w-[45%] lg:text-[calc(1.75*(1vh+1vw))] text-[30px] text-right uppercase roboto-light w-[100%]">
+        <div className="w-[100%] left-0 bottom-0 absolute h-[100%] bg-gradient-to-b from-[#a9a9a9e1] to-[#73737372] z-[1]"></div>
+        <div className="text-[#fff] lg:w-[45%] lg:text-[calc(1.75*(1vh+1vw))] z-[2] text-[30px] text-right uppercase roboto-light w-[100%]">
           {homepageContent.stay_connected.content.title.map((item, idx) => {
             return <div key={idx}>{item}</div>;
           })}
@@ -38,7 +39,7 @@ const StayConnected = () => {
             {homepageContent.stay_connected.content.para[0]}
           </div>
         </div>
-        <div className=" text-[#fff]  text-[40px] sm:text-[20px] roboto-light-italic uppercase ">
+        <div className=" text-[#fff]  text-[40px] sm:text-[20px] z-[2] roboto-light-italic uppercase ">
           {isShowInput ? (
             apiResp ? (
               <div
