@@ -42,12 +42,26 @@ const StayConnected = () => {
         <div className=" text-[#fff]  text-[40px] sm:text-[20px] z-[2] roboto-light-italic uppercase lg:pr-[3rem]">
           {isShowInput ? (
             apiResp ? (
-              <div
-                className={`${
-                  apiResp.success ? "text-green-400 text-right" : "text-red-500"
-                } uppercase lg:text-[calc(0.75*(1vh+1vw))] text-[14px]`}
-              >
-                {apiResp.msg}
+              <div className="flex items-center gap-2">
+                <div
+                  className={`${
+                    apiResp.success
+                      ? "text-green-400 text-right"
+                      : "text-red-500"
+                  } uppercase lg:text-[calc(0.75*(1vh+1vw))] text-[14px]`}
+                >
+                  {apiResp.msg}
+                </div>
+                <div
+                  onClick={() => {
+                    setIsShowInput(false);
+                    setApiResp(undefined);
+                  }}
+                  className="bg-[#fff] cursor-pointer roboto-light px-2 py-1 rounded-md lg:text-[calc(0.55*(1vh+1vw))] text-[14px] text-[#000] flex items-center gap-1"
+                >
+                  {" "}
+                  <div className="text-[red]">&#10005;</div> Clear
+                </div>
               </div>
             ) : (
               <div className="flex items-center gap-1 lg:text-[calc(1.75*(1vh+1vw))] text-[24px]">
