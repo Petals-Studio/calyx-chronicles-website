@@ -112,7 +112,7 @@ const homepageContent = {
           uncolored:
             "https://assets.calyxchronicles.com/website/chapter3Uncolored.png",
         },
-        isActive: true,
+        isActive: false,
         title: "Chapter 3",
         id: "Chapter_3",
         color: "#4B91D2",

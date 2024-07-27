@@ -29,24 +29,24 @@ const Stories = (props: IStories) => {
         return item.isActive;
       });
       setActiveChapter(tempArr[tempArr?.length - 1]?.title);
-      tempArr[tempArr?.length - 1]?.title &&
-        setTimeout(() => {
-          document
-            .getElementById(tempArr[tempArr?.length - 1]?.title)
-            ?.scrollIntoView({ behavior: "smooth" });
-        }, 1000);
+      // tempArr[tempArr?.length - 1]?.title &&
+      //   setTimeout(() => {
+      //     document
+      //       .getElementById(tempArr[tempArr?.length - 1]?.title)
+      //       ?.scrollIntoView({ behavior: "smooth" });
+      //   }, 1000);
     } else {
       setActiveChapter("");
     }
   }, [isInView]);
-  useEffect(() => {
-    activeChapter &&
-      setTimeout(() => {
-        document
-          .getElementById(activeChapter)
-          ?.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-  }, [activeChapter]);
+  // useEffect(() => {
+  //   activeChapter &&
+  //     setTimeout(() => {
+  //       document
+  //         .getElementById(activeChapter)
+  //         ?.scrollIntoView({ behavior: "smooth" });
+  //     }, 100);
+  // }, [activeChapter]);
 
   return (
     <>
