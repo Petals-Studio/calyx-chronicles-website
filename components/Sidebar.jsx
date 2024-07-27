@@ -5,6 +5,7 @@ import usePlatform from "@/hooks/usePlatform";
 import { ShowRegisterModalEvent } from "@/pages";
 import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
+import Image from "next/image";
 
 export const SidebarToggleEvent = "ToggleSidebar";
 export const SidebarCloseEvent = "CloseSidebar";
@@ -41,12 +42,18 @@ export default function Sidebar() {
       onClick={() => {
         EventBus.getInstance().fireEvent(SidebarToggleEvent);
       }}
-      className={`top-0 right-0 w-[75vw] bg-[#000] p-10 text-[#fff] fixed  h-screen ease-in-out duration-300 flex flex-col items-center overflow-x-hidden overflow-y-scroll z-[9999] ${
+      className={`top-0 right-0 w-[75vw] bg-[#000000c2] backdrop-blur-[4px] p-10 text-[#fff] fixed  h-screen ease-in-out duration-300 flex flex-col items-center overflow-x-hidden overflow-y-scroll z-[9999] ${
         showSidebar ? "translate-x-0" : "translate-x-full"
       }`}
     >
-      <Logo />
-
+      {/* <Logo /> */}
+      <Image
+        width={200}
+        height={10}
+        className="lg:w-[calc(8*(1vw+1vh))] w-[200px] sm:w-[150px]"
+        src={homepageContent.footer.content.rightSide.logo}
+        alt={homepageContent.footer.content.rightSide.logo}
+      />
       <div className="flex flex-col space-y-5 mt-10">
         {homepageContent.menu.links.map((link, idx) => (
           <a
@@ -62,7 +69,7 @@ export default function Sidebar() {
           </a>
         ))}
       </div>
-      <a
+      {/* <a
         href={downloadUrl}
         onClick={() => {
           EventBus.getInstance().fireEvent(ShowRegisterModalEvent);
@@ -84,7 +91,7 @@ export default function Sidebar() {
           </svg>
         </span>
         DOWNLOAD NOW
-      </a>
+      </a> */}
     </div>
   );
 }

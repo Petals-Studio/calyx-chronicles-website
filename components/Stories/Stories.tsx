@@ -16,9 +16,18 @@ import { useDeviceType } from "@/hooks/useDeviceType";
 
 interface IStories {
   isInView?: boolean;
+  setVideoData?: Dispatch<
+    SetStateAction<
+      | {
+          chaptername: string;
+          chapterLink: string;
+        }
+      | undefined
+    >
+  >;
 }
 const Stories = (props: IStories) => {
-  const { isInView = false } = props;
+  const { isInView = false, setVideoData } = props;
   const { isDesktop, isMobile } = useDeviceType();
 
   const [activeChapter, setActiveChapter] = useState("");
@@ -36,7 +45,7 @@ const Stories = (props: IStories) => {
     } else {
       setActiveChapter("");
     }
-  }, [isInView]);
+  }, []);
   // useEffect(() => {
   //   activeChapter &&
   //     setTimeout(() => {
@@ -57,6 +66,7 @@ const Stories = (props: IStories) => {
             return (
               <ChapterComponents
                 isInView={isInView}
+                setVideoData={setVideoData}
                 chapterData={item}
                 key={item.title}
                 id={idx + 1}

@@ -6,6 +6,7 @@ import Lottie from "lottie-react";
 import jsonDtaa from "../public/images/jsonData.json";
 import Link from "next/link";
 import Stories from "./Stories/Stories";
+import Image from "next/image";
 interface IHeroSection {
   isInView?: boolean;
 }
@@ -93,19 +94,31 @@ const HeroSection = (props: IHeroSection) => {
             >
               {" "}
               <div className="flex w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer flex-wrap">
-                <Link href={homepageContent.landingPage.content.playstore.url}>
-                  <img
+                <Link
+                  href={homepageContent.landingPage.content.playstore.url}
+                  target="_blank"
+                >
+                  <Image
+                    width={240}
+                    alt="ss"
+                    height={240}
+                    className="w-[calc(250 * (1vw + 1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                     src={homepageContent.landingPage.content.playstore.src}
-                    className="w-[calc(250 * (1vw+1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                     style={{
                       objectFit: "contain",
                       position: "relative",
                     }}
                   />
                 </Link>
-                <Link href={homepageContent.landingPage.content.appStore.url}>
-                  <img
-                    className="w-[calc(250 * (1vw+1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
+                <Link
+                  href={homepageContent.landingPage.content.appStore.url}
+                  target="_blank"
+                >
+                  <Image
+                    width={240}
+                    alt="ss"
+                    height={240}
+                    className="w-[calc(250 * (1vw + 1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                     src={homepageContent.landingPage.content.appStore.src}
                     style={{
                       objectFit: "contain",

@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useDeviceType } from "@/hooks/useDeviceType";
 import useInView from "@/hooks/useInView";
+import Link from "next/link";
 interface IChapterComponent {
   chapterData: {
     image: {
@@ -10,6 +11,7 @@ interface IChapterComponent {
       uncolored: string;
     };
     color: string;
+    videoLink?: string;
     title: string;
     heading: string;
     isActive: boolean;
@@ -18,7 +20,17 @@ interface IChapterComponent {
     background: string;
   };
   id: number;
+
   isInView: boolean;
+  setVideoData?: Dispatch<
+    SetStateAction<
+      | {
+          chaptername: string;
+          chapterLink: string;
+        }
+      | undefined
+    >
+  >;
   setActiveChapter: React.Dispatch<React.SetStateAction<string>>;
 
   activeChapter: string;
@@ -27,7 +39,14 @@ const ChapterComponents = (props: IChapterComponent) => {
   const { isDesktop } = useDeviceType();
   const ref = useRef(null);
   const isChapterInView = useInView({ targetRef: ref });
-  const { chapterData, id, isInView, setActiveChapter, activeChapter } = props;
+  const {
+    chapterData,
+    id,
+    isInView,
+    setVideoData,
+    setActiveChapter,
+    activeChapter,
+  } = props;
   const isActive = chapterData?.isActive;
   useEffect(() => {
     if (!isDesktop && isInView && isChapterInView) {
@@ -93,7 +112,10 @@ const ChapterComponents = (props: IChapterComponent) => {
           {
             <>
               {isActive && chapterData?.title === activeChapter && (
-                <div className="p-[20%] sm:p-[2%] sm:pl-[3.5rem] sm:pr-[0] uppercase sm:mt-[2rem]">
+                <div
+                  className="p-[20%] sm:p-[2%] sm:pl-[3.5rem] sm:pr-[0] uppercase sm:mt-[2rem]"
+                  style={{ zIndex: 100 }}
+                >
                   <div className="lg:text-[calc(1.25*(1vh+1vw))] text-[34px] my-2 roboto-thin">
                     {chapterData?.title}
                   </div>
@@ -102,6 +124,27 @@ const ChapterComponents = (props: IChapterComponent) => {
                   </div>
                   <div className="lg:text-[calc(.75*(1vh+1vw))] text-[14px] roboto-regular">
                     {chapterData?.subText}
+                  </div>
+
+                  <div
+                    className="flex items-center justify-start gap-2 mt-[1rem] cursor-pointer"
+                    onClick={() => {
+                      setVideoData &&
+                        setVideoData({
+                          chapterLink: chapterData?.videoLink ?? "",
+                          chaptername: chapterData.title,
+                        });
+                    }}
+                  >
+                    <Image
+                      width={25}
+                      height={25}
+                      src={
+                        "https://assets.calyxchronicles.com/website/playIcon.png"
+                      }
+                      alt="play_icon"
+                    />
+                    <div>Trailer</div>
                   </div>
                 </div>
               )}
@@ -116,7 +159,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                 }
                 alt={chapterData?.title}
                 style={{
-                  zIndex: 999,
+                  zIndex: 99,
                   left: 0,
                   right: 0,
                   bottom: 0,

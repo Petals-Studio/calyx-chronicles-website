@@ -18,7 +18,7 @@ const Footer = (props: {
         id={"Contact-Us"}
         className={`w-[100%] h-[55dvh] sm:h-[60dvh] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
         style={{
-          backgroundImage: ` url(${homepageContent.footer.content.background})`,
+          backgroundImage: `url(${homepageContent.footer.content.background})`,
         }}
       >
         <div className="flex  w-[100%] h-[100%] flex-col justify-between items-center p-[2rem] sm:p-[.5rem]  gap-[.5rem] text-[#fff]">
@@ -49,7 +49,10 @@ const Footer = (props: {
           </div>
 
           <div className="flex gap-[1rem] lg:justify-end md:justify-center  items-center mt-[3rem]">
-            <Link href={homepageContent.footer.content.leftSide.playstore.url}>
+            <Link
+              href={homepageContent.footer.content.leftSide.playstore.url}
+              target="_blank"
+            >
               <Image
                 width={200}
                 height={10}
@@ -58,7 +61,10 @@ const Footer = (props: {
                 alt={homepageContent.footer.content.leftSide.playstore.alt}
               />
             </Link>
-            <Link href={homepageContent.footer.content.leftSide.appStore.url}>
+            <Link
+              href={homepageContent.footer.content.leftSide.appStore.url}
+              target="_blank"
+            >
               <Image
                 width={200}
                 height={10}

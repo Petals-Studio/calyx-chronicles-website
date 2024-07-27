@@ -19,6 +19,7 @@ import PageRender from "@/components/PageRender";
 import StayConnected from "@/components/StayConnected";
 import Footer from "@/components/Footer";
 import DynamicModal from "@/components/Modal";
+import { useDeviceType } from "@/hooks/useDeviceType";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 
 export default function Home() {
@@ -58,6 +59,14 @@ export default function Home() {
   ];
   const [termsData, setTermsData] = useState("");
   const [privacyData, setPrivacyData] = useState("");
+  const [videoData, setVideoData] = useState<
+    | {
+        chaptername: string;
+        chapterLink: string;
+      }
+    | undefined
+  >(undefined);
+  const { isDesktop } = useDeviceType();
 
   return (
     <main
@@ -87,10 +96,45 @@ export default function Home() {
         }
         isCloseIcon
         position={""}
-        showCloseIcon={false}
+        showCloseIcon={isDesktop ? false : true}
         isOpen={termsData ? true : false}
         dynamicCloser={() => {
           setTermsData("");
+        }}
+      />
+
+      <DynamicModal
+        width="400px"
+        child={
+          videoData && (
+            <div style={{ height: "100%" }}>
+              <iframe
+                width="100%"
+                height="100%"
+                src={videoData.chapterLink}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+              ></iframe>
+            </div>
+          )
+        }
+        type="center"
+        closeClickOutside
+        title={
+          <div
+            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[30px]`}
+          >
+            {videoData && videoData.chaptername}
+          </div>
+        }
+        isCloseIcon
+        position={""}
+        showCloseIcon={isDesktop ? false : true}
+        isOpen={videoData ? true : false}
+        dynamicCloser={() => {
+          setVideoData(undefined);
         }}
       />
       <DynamicModal
@@ -112,19 +156,21 @@ export default function Home() {
           </div>
         }
         isCloseIcon
-        showCloseIcon={false}
+        showCloseIcon={isDesktop ? false : true}
         position={""}
         isOpen={privacyData ? true : false}
         dynamicCloser={() => {
           setPrivacyData("");
         }}
       />
+
       <div className="scroll-body">
         <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
         {renderComponent.map((component, idx) => {
           return (
             <PageRender
               setPrivacyData={setPrivacyData}
+              setVideoData={setVideoData}
               setTermsData={setTermsData}
               setCurrentTab={setCurrentTab}
               component={component}

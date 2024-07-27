@@ -10,9 +10,11 @@ import EventBus from "@/EventBus";
 import Sidebar, { SidebarCloseEvent } from "@/components/Sidebar";
 import Image from "next/image";
 import Link from "next/link";
+import { useDeviceType } from "@/hooks/useDeviceType";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 
 export default function AboutUs() {
+  const { isDesktop } = useDeviceType();
   const [currentTab, setCurrentTab] = useState("ABOUT US");
   const [termsData, setTermsData] = useState("");
   const [privacyData, setPrivacyData] = useState("");
@@ -46,7 +48,7 @@ export default function AboutUs() {
         }
         isCloseIcon
         position={""}
-        showCloseIcon={false}
+        showCloseIcon={isDesktop ? false : true}
         isOpen={termsData ? true : false}
         dynamicCloser={() => {
           setTermsData("");
@@ -71,7 +73,7 @@ export default function AboutUs() {
           </div>
         }
         isCloseIcon
-        showCloseIcon={false}
+        showCloseIcon={isDesktop ? false : true}
         position={""}
         isOpen={privacyData ? true : false}
         dynamicCloser={() => {

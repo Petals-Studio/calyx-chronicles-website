@@ -33,30 +33,30 @@ const homepageContent = {
     sectionId: "landingPage",
     content: {
       images: {
-        src: "https://assets.calyxchronicles.com/website/calyx.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/calyx.png",
         alt: "landing image",
       },
       backgroundL: {
-        src: "https://assets.calyxchronicles.com/website/FR1.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR1.png",
         alt: "robot bg image",
       },
       backgroundR: {
-        src: "https://assets.calyxchronicles.com/website/FR2.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR2.png",
         alt: "left bg image",
       },
       icon: { src: "/images/ICON.png", alt: "Icon image" },
       logo: { src: "/images/LOGO.png", alt: "logo image" },
       blacklogo: {
-        src: "https://assets.calyxchronicles.com/website/Petals_logo_low_res.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Petals_logo_low_res.png",
         alt: "logo image",
       },
       playstore: {
-        src: "https://assets.calyxchronicles.com/website/playstore.png",
-        alt: "google image",
-        url: "",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.png",
+        alt: "play store",
+        url: "https://play.google.com/store/apps/details?id=studio.petals.game.cc",
       },
       appStore: {
-        src: "https://assets.calyxchronicles.com/website/appstore.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.png",
         alt: "google image",
         url: "",
       },
@@ -71,55 +71,59 @@ const homepageContent = {
       {
         image: {
           colored:
-            "https://assets.calyxchronicles.com/website/chapter1color.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1color.png",
           uncolored:
-            "https://assets.calyxchronicles.com/website/chapter1Uncolor.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1Uncolor.png",
         },
         title: "Chapter 1",
         id: "Chapter_1",
         color: "#E28D0E",
+        videoLink:
+          "https://www.youtube.com/embed/G8LaiXG177E?si=imYRWebMfWPA4Ymh",
         heading: "Warlock Tower Caper",
         isActive: true,
         style: { width: "500px", height: "500px", left: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
         subText: "Describe the episode in an interesting manner",
         background:
-          "bg-[url(https://assets.calyxchronicles.com/website/Yellow.png)]",
+          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Yellow.png)]",
       },
       {
         image: {
           colored:
-            "https://assets.calyxchronicles.com/website/chapter2Color.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Color.png",
           uncolored:
-            "https://assets.calyxchronicles.com/website/chapter2Uncolor.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Uncolor.png",
         },
         title: "Chapter 2",
+        videoLink: "",
         id: "Chapter_2",
         color: "#E84A7A",
 
-        isActive: true,
+        isActive: false,
         style: { width: "500px", height: "500px" },
         styleResp: { width: "280px", height: "280px" },
         heading: "One Last Run",
         subText: "Describe the episode in an interesting manner",
         background:
-          "bg-[url(https://assets.calyxchronicles.com/website/pink.png)]",
+          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/pink.png)]",
       },
       {
         image: {
           colored:
-            "https://assets.calyxchronicles.com/website/chapter3Colored.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Colored.png",
           uncolored:
-            "https://assets.calyxchronicles.com/website/chapter3Uncolored.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Uncolored.png",
         },
         isActive: false,
+        videoLink: "",
         title: "Chapter 3",
         id: "Chapter_3",
         color: "#4B91D2",
         style: { width: "500px", height: "500px", right: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
         background:
-          "bg-[url(https://assets.calyxchronicles.com/website/Blue.png)]",
+          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Blue.png)]",
         heading: "Bread Crumbs",
         subText: "Describe the episode in an interesting manner",
       },
@@ -130,11 +134,11 @@ const homepageContent = {
       title: "Are you ready to fight for your story?",
       images: {
         background:
-          "https://assets.calyxchronicles.com/website/backgroundBg.png",
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/backgroundBg.png",
         leftImage:
-          "https://assets.calyxchronicles.com/website/fightingRobot1.png",
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/fightingRobot1.png",
         rightImage:
-          "https://assets.calyxchronicles.com/website/fightingRobot2.png",
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/fightingRobot2.png",
       },
     },
   },
@@ -143,17 +147,17 @@ const homepageContent = {
     content: {
       followIcons: [
         {
-          src: "https://assets.calyxchronicles.com/website/insta_mini.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.png",
           alt: "instagram",
           url: "https://www.instagram.com/calyxchronicles",
         },
         {
-          src: "https://assets.calyxchronicles.com/website/discord_mini.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.png",
           alt: "discord",
           url: "https://discord.gg/Q7CAJ3eT",
         },
         {
-          src: "https://assets.calyxchronicles.com/website/reddit_mini.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.png",
           alt: "reddit",
           url: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
         },
@@ -165,7 +169,8 @@ const homepageContent = {
       background: "bg-gradient-to-b from-[#FF6200] to-[#FB5D66]",
       images: [
         {
-          image: "https://assets.calyxchronicles.com/website/discord.png",
+          image:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord.png",
           title: "Discord",
           Zindex: "1",
           action: "https://discord.gg/Q7CAJ3eT",
@@ -180,7 +185,8 @@ const homepageContent = {
           },
         },
         {
-          image: "https://assets.calyxchronicles.com/website/reddit.png",
+          image:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit.png",
           title: "Reddit",
           action: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
 
@@ -194,7 +200,8 @@ const homepageContent = {
           Zindex: "1",
         },
         {
-          image: "https://assets.calyxchronicles.com/website/insta.png",
+          image:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta.png",
           title: "Instagram",
           action: "https://www.instagram.com/calyxchronicles",
           Zindex: "3",
@@ -238,7 +245,8 @@ const homepageContent = {
       background: "#1C2543",
       images: [
         {
-          image: "https://assets.calyxchronicles.com/website/about.png",
+          image:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/about.png",
           title: "about-us",
           Zindex: "1",
           animation: {
@@ -563,38 +571,38 @@ const homepageContent = {
         title: "Contact Us",
         subHeading: "Want to help shape the future of Calyx Chronicles?",
         playstore: {
-          src: "https://assets.calyxchronicles.com/website/playstore.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.png",
           alt: "google image",
-          url: "",
+          url: "https://play.google.com/store/apps/details?id=studio.petals.game.cc",
         },
         appStore: {
-          src: "https://assets.calyxchronicles.com/website/appstore.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.png",
           alt: "google image",
           url: "",
         },
       },
       rightSide: {
-        logo: "https://assets.calyxchronicles.com/website/CalxLogo.png",
+        logo: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/CalxLogo.png",
         address: "85, First Floor, Street 10, Alaknanda, New Delhi, India",
         followIcons: [
           {
-            src: "https://assets.calyxchronicles.com/website/insta_mini.png",
+            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.png",
             alt: "instagram",
             url: "https://www.instagram.com/calyxchronicles",
           },
           {
-            src: "https://assets.calyxchronicles.com/website/discord_mini.png",
+            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.png",
             alt: "discord",
             url: "https://discord.gg/Q7CAJ3eT",
           },
           {
-            src: "https://assets.calyxchronicles.com/website/reddit_mini.png",
+            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.png",
             alt: "reddit",
             url: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
           },
         ],
         developed_at: {
-          src: "https://assets.calyxchronicles.com/website/petalStudioLogo.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/petalStudioLogo.png",
           alt: "google image",
           url: "",
         },
@@ -613,7 +621,8 @@ const homepageContent = {
           },
         ],
       },
-      background: "https://assets.calyxchronicles.com/website/FooterBg.png",
+      background:
+        "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FooterBg.png",
     },
   },
 };

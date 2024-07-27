@@ -9,12 +9,27 @@ interface IPageRender {
     height?: string;
     label: string;
   };
+  setVideoData: Dispatch<
+    SetStateAction<
+      | {
+          chaptername: string;
+          chapterLink: string;
+        }
+      | undefined
+    >
+  >;
   setPrivacyData?: Dispatch<SetStateAction<string>>;
   setTermsData?: Dispatch<SetStateAction<string>>;
   setCurrentTab: Dispatch<SetStateAction<string>>;
 }
 const PageRender = (props: IPageRender) => {
-  const { component, setCurrentTab, setPrivacyData, setTermsData } = props;
+  const {
+    component,
+    setCurrentTab,
+    setVideoData,
+    setPrivacyData,
+    setTermsData,
+  } = props;
   const targetRef = useRef(null);
   const isInView = useInView({ targetRef });
   useEffect(() => {
@@ -35,6 +50,7 @@ const PageRender = (props: IPageRender) => {
           {React.cloneElement(component.component, {
             isInView: true,
             setPrivacyData: setPrivacyData,
+            setVideoData: setVideoData,
             setTermsData: setTermsData,
           })}
         </motion.div>
@@ -51,6 +67,7 @@ const PageRender = (props: IPageRender) => {
             isInView: false,
             setPrivacyData: setPrivacyData,
             setTermsData: setTermsData,
+            setVideoData: setVideoData,
           })}
         </motion.div>
       )}

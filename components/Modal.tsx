@@ -1,6 +1,6 @@
 import { inter } from "@/fonts";
 import { useDeviceType } from "@/hooks/useDeviceType";
-import React, { Children, ReactNode, useEffect } from "react";
+import React, { Children, ReactNode, useEffect, useState } from "react";
 
 interface IDynamicModal {
   isOpen: boolean;
@@ -34,6 +34,9 @@ const DynamicModal = (props: IDynamicModal) => {
     secondaryFooter,
     width,
   } = props;
+
+  const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
     const body = document.getElementsByTagName("body");
     if (isOpen) {
@@ -44,6 +47,12 @@ const DynamicModal = (props: IDynamicModal) => {
 
     // body
   }, [isOpen]);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
   return (
     <div
       className={`"flex w-[100%] h-[100%] fixed ${
@@ -110,14 +119,14 @@ const DynamicModal = (props: IDynamicModal) => {
                       className={`p-[.8rem] cursor-pointer text-right absolute text-[13px] top-[0%] right-[0%]`}
                       onClick={() => dynamicCloser()}
                     >
-                      <div className="text-[#000] ">x</div>
+                      <div className="text-[#000] ">&#10005;</div>
                     </div>
                   )}
                 </div>
               </div>
             )}
 
-            <div className="flex h-[100%] flex-col justify-start items-start bg-[#F1F1F1] py-[1rem] px-[2rem]">
+            <div className="flex h-[100%] flex-col justify-start items-start bg-[#F1F1F1] py-[1rem] px-[2rem] sm:px-[.5rem]">
               <div className="flex p-[1rem] text-[#000] overflow-scroll flex-col w-[100%] bg-[#fff] h-[80%] rounded-xl ">
                 {isOpen ? child : ""}
               </div>
