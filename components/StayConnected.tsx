@@ -45,7 +45,7 @@ const StayConnected = () => {
               <div
                 className={`${
                   apiResp.success ? "text-green-400 text-right" : "text-red-500"
-                } uppercase lg:text-[calc(1.75*(1vh+1vw))] sm:font-bold text-[24px]`}
+                } uppercase lg:text-[calc(0.75*(1vh+1vw))] text-[14px]`}
               >
                 {apiResp.msg}
               </div>
