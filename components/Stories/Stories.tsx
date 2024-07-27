@@ -29,12 +29,10 @@ const Stories = (props: IStories) => {
         return item.isActive;
       });
       setActiveChapter(tempArr[tempArr?.length - 1]?.title);
-      // tempArr[tempArr?.length - 1]?.title &&
-      //   setTimeout(() => {
-      //     document
-      //       .getElementById(tempArr[tempArr?.length - 1]?.title)
-      //       ?.scrollIntoView({ behavior: "smooth" });
-      //   }, 1000);
+      tempArr[tempArr?.length - 1]?.title &&
+        document
+          .getElementById(tempArr[tempArr?.length - 1]?.title)
+          ?.scrollIntoView();
     } else {
       setActiveChapter("");
     }
