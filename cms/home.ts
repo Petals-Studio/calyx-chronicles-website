@@ -84,7 +84,8 @@ const homepageContent = {
         isActive: true,
         style: { width: "500px", height: "500px", left: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
-        subText: "Describe the episode in an interesting manner",
+        subText:
+          "Just  days before the Vos attack, The Warlock Tower at the heart of Tannara is being assaulted by someone from within the city. Who is it and what is their objective?",
         background:
           "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Yellow.png)]",
       },
@@ -104,7 +105,8 @@ const homepageContent = {
         style: { width: "500px", height: "500px" },
         styleResp: { width: "280px", height: "280px" },
         heading: "One Last Run",
-        subText: "Describe the episode in an interesting manner",
+        subText:
+          "As the battle with Vos rages on, the Warlock Tribunal decides to send in a group of brave warriors to harvest as much mana as possible before the portals close for once and for all.",
         background:
           "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/pink.png)]",
       },
@@ -124,8 +126,9 @@ const homepageContent = {
         styleResp: { width: "500px", height: "500px", right: 0 },
         background:
           "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Blue.png)]",
-        heading: "Bread Crumbs",
-        subText: "Describe the episode in an interesting manner",
+        heading: "Attack on Tannara",
+        subText:
+          "Warriors of Vos have unleashed a full blown attack on the capital city of Tannara. Will the mechanised defenders of Sanctum Order be able to push back these invaders?",
       },
     ],
   },
