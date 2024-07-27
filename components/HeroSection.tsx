@@ -159,7 +159,6 @@ const HeroSection = (props: IHeroSection) => {
                     "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/BeginArrow.png"
                   }
                   alt=""
-                  style={{ transform: "rotate(180deg)" }}
                   width={20}
                   height={20}
                   className="w-[20px] md:w-[15px] sm:w-[15px]"
