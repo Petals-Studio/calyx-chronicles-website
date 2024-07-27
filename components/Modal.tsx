@@ -8,6 +8,7 @@ interface IDynamicModal {
   showCloseIcon?: boolean;
   type?: "side" | "center";
   position?: "Bottom" | "";
+  background?: string;
   dynamicCloser: () => void;
   button?: ReactNode;
   closeClickOutside?: boolean;
@@ -27,6 +28,7 @@ const DynamicModal = (props: IDynamicModal) => {
     button,
     closeClickOutside = false,
     child,
+    background,
     type = "side",
     isCloseIcon = false,
     title,
@@ -109,9 +111,13 @@ const DynamicModal = (props: IDynamicModal) => {
             {isCloseIcon && (
               <div className="flex w-[100%]">
                 <div
-                  className={`flex w-[100%] bg-[#F1F1F1] text-[#000] p-[1rem] rounded-xl relative rounded-b-none ${
+                  className={`flex w-[100%]  p-[1rem] uppercase rounded-xl relative rounded-b-none ${
                     title ? "justify-center" : "justify-end"
                   } items-center`}
+                  style={{
+                    background: background ?? "#F1F1F1",
+                    color: background ? "#fff" : "#000",
+                  }}
                 >
                   {title}
                   {showCloseIcon && (
@@ -119,14 +125,17 @@ const DynamicModal = (props: IDynamicModal) => {
                       className={`p-[.8rem] cursor-pointer text-right absolute text-[13px] top-[0%] right-[0%]`}
                       onClick={() => dynamicCloser()}
                     >
-                      <div className="text-[#000] ">&#10005;</div>
+                      <div className="">&#10005;</div>
                     </div>
                   )}
                 </div>
               </div>
             )}
 
-            <div className="flex h-[100%] flex-col justify-start items-start bg-[#F1F1F1] py-[1rem] px-[2rem] sm:px-[.5rem]">
+            <div
+              className="flex h-[100%] flex-col justify-start items-start py-[1rem] px-[2rem] sm:px-[.5rem]"
+              style={{ background: background ?? "#F1F1F1" }}
+            >
               <div className="flex p-[1rem] text-[#000] overflow-scroll flex-col w-[100%] bg-[#fff] h-[80%] rounded-xl ">
                 {isOpen ? child : ""}
               </div>

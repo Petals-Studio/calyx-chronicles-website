@@ -77,7 +77,7 @@ const homepageContent = {
         },
         title: "Chapter 1",
         id: "Chapter_1",
-        color: "#E28D0E",
+        color: "#FCCA7D",
         videoLink:
           "https://www.youtube.com/embed/G8LaiXG177E?si=imYRWebMfWPA4Ymh",
         heading: "Warlock Tower Caper",
@@ -99,7 +99,7 @@ const homepageContent = {
         title: "Chapter 2",
         videoLink: "",
         id: "Chapter_2",
-        color: "#E84A7A",
+        color: "#FFD2E0",
 
         isActive: false,
         style: { width: "500px", height: "500px" },
@@ -121,7 +121,7 @@ const homepageContent = {
         videoLink: "",
         title: "Chapter 3",
         id: "Chapter_3",
-        color: "#4B91D2",
+        color: "#B7DCFF",
         style: { width: "500px", height: "500px", right: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
         background:

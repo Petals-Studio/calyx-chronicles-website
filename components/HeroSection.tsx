@@ -111,14 +111,27 @@ const HeroSection = (props: IHeroSection) => {
                   />
                 </Link>
                 <Link
-                  href={homepageContent.landingPage.content.appStore.url}
-                  target="_blank"
+                  className={`${
+                    homepageContent.landingPage.content.appStore.url
+                      ? ""
+                      : "cursor-not-allowed"
+                  }`}
+                  href={
+                    homepageContent.landingPage.content.appStore.url
+                      ? homepageContent.landingPage.content.appStore.url
+                      : ""
+                  }
+                  target={
+                    homepageContent.landingPage.content.appStore.url
+                      ? " _blank"
+                      : "_self"
+                  }
                 >
                   <Image
                     width={240}
                     alt="ss"
                     height={240}
-                    className="w-[calc(250 * (1vw + 1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
+                    className=" w-[calc(250 * (1vw + 1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
                     src={homepageContent.landingPage.content.appStore.src}
                     style={{
                       objectFit: "contain",

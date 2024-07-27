@@ -21,6 +21,8 @@ interface IStories {
       | {
           chaptername: string;
           chapterLink: string;
+          chapterColor: string;
+          chapterDiscription: string;
         }
       | undefined
     >
@@ -41,7 +43,7 @@ const Stories = (props: IStories) => {
       tempArr[tempArr?.length - 1]?.title &&
         document
           .getElementById(tempArr[tempArr?.length - 1]?.title)
-          ?.scrollIntoView();
+          ?.scrollIntoView({ behavior: "smooth" });
     } else {
       setActiveChapter("");
     }

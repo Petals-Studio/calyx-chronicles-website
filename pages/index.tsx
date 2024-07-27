@@ -63,6 +63,8 @@ export default function Home() {
     | {
         chaptername: string;
         chapterLink: string;
+        chapterColor: string;
+        chapterDiscription: string;
       }
     | undefined
   >(undefined);
@@ -121,12 +123,16 @@ export default function Home() {
           )
         }
         type="center"
+        background={videoData && videoData?.chapterColor}
         closeClickOutside
         title={
           <div
-            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[30px]`}
+            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[30px] text-center`}
           >
             {videoData && videoData.chaptername}
+            <div className="lg:text-[calc(1*(0.75vw+0.75vh))] text-[20px]">
+              {videoData && videoData.chapterDiscription}
+            </div>
           </div>
         }
         isCloseIcon

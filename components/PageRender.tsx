@@ -14,6 +14,8 @@ interface IPageRender {
       | {
           chaptername: string;
           chapterLink: string;
+          chapterColor: string;
+          chapterDiscription: string;
         }
       | undefined
     >
@@ -30,7 +32,7 @@ const PageRender = (props: IPageRender) => {
     setPrivacyData,
     setTermsData,
   } = props;
-  const targetRef = useRef(null);
+  const targetRef = useRef<HTMLDivElement>(null);
   const isInView = useInView({ targetRef });
   useEffect(() => {
     if (isInView) {

@@ -62,8 +62,21 @@ const Footer = (props: {
               />
             </Link>
             <Link
-              href={homepageContent.footer.content.leftSide.appStore.url}
-              target="_blank"
+              className={`${
+                homepageContent.landingPage.content.appStore.url
+                  ? ""
+                  : "cursor-not-allowed"
+              }`}
+              href={
+                homepageContent.landingPage.content.appStore.url
+                  ? homepageContent.landingPage.content.appStore.url
+                  : ""
+              }
+              target={
+                homepageContent.landingPage.content.appStore.url
+                  ? " _blank"
+                  : "_self"
+              }
             >
               <Image
                 width={200}

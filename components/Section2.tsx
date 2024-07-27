@@ -8,7 +8,7 @@ interface ISection2 {
 const Section2 = (props: ISection2) => {
   const { setCurrentTab } = props;
 
-  const targetRef = useRef(null);
+  const targetRef = useRef<HTMLDivElement>(null);
   const isInView = useInView({ targetRef });
   useEffect(() => {
     if (isInView) {

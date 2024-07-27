@@ -27,6 +27,8 @@ interface IChapterComponent {
       | {
           chaptername: string;
           chapterLink: string;
+          chapterColor: string;
+          chapterDiscription: string;
         }
       | undefined
     >
@@ -37,8 +39,8 @@ interface IChapterComponent {
 }
 const ChapterComponents = (props: IChapterComponent) => {
   const { isDesktop } = useDeviceType();
-  const ref = useRef(null);
-  const isChapterInView = useInView({ targetRef: ref });
+  const divRef = useRef<HTMLDivElement>(null);
+  const isChapterInView = useInView({ targetRef: divRef });
   const {
     chapterData,
     id,
@@ -48,20 +50,16 @@ const ChapterComponents = (props: IChapterComponent) => {
     activeChapter,
   } = props;
   const isActive = chapterData?.isActive;
+
   useEffect(() => {
     if (!isDesktop && isInView && isChapterInView) {
       setActiveChapter(chapterData.title);
-      setTimeout(() => {
-        document
-          .getElementById(chapterData.title)
-          ?.scrollIntoView({ behavior: "smooth" });
-      }, 500);
     }
   }, [isInView, isChapterInView]);
 
   return (
     <div
-      ref={ref}
+      ref={divRef}
       id={chapterData?.title}
       className="p-[0rem] wrapper-body"
       onMouseEnter={() => {
@@ -133,6 +131,8 @@ const ChapterComponents = (props: IChapterComponent) => {
                         setVideoData({
                           chapterLink: chapterData?.videoLink ?? "",
                           chaptername: chapterData.title,
+                          chapterColor: chapterData.color,
+                          chapterDiscription: chapterData.heading,
                         });
                     }}
                   >
