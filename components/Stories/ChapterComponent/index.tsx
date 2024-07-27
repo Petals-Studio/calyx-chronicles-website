@@ -125,7 +125,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                   </div>
 
                   <div
-                    className="flex items-center justify-start gap-2 mt-[1rem] cursor-pointer"
+                    className="flex items-center justify-start gap-2 mt-[1rem] cursor-pointer lg:text-[calc(.75*(1vh+1vw))] text-[14px] roboto-regular"
                     onClick={() => {
                       setVideoData &&
                         setVideoData({
@@ -171,7 +171,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                   transform:
                     isActive && chapterData?.title === activeChapter
                       ? id === 3
-                        ? "translateX(-10%) translateY(0%)"
+                        ? "translateX(20%) translateY(0%)"
                         : id === 1
                         ? "translateX(10%) translateY(0%)"
                         : "translateY(-20%)"
@@ -185,7 +185,15 @@ const ChapterComponents = (props: IChapterComponent) => {
                 }}
               />
               {(chapterData?.title !== activeChapter || !isActive) && (
-                <div className="absolute bottom-10 uppercase lg:text-[calc(.75*(1vh+1vw))] text-[20px] right-20 mr-[2rem] sm:right-10 text-[#ccc] roboto-medium">
+                <div
+                  className="absolute uppercase lg:text-[calc(.75*(1vh+1vw))] text-[20px]  right-[50%] mr-[-.4rem] translate-x-[50%] bottom-[3rem] text-[#ccc] roboto-medium"
+                  style={{
+                    color:
+                      chapterData?.title === activeChapter
+                        ? chapterData.color
+                        : "",
+                  }}
+                >
                   {chapterData?.title}
                 </div>
               )}

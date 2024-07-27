@@ -122,7 +122,7 @@ const homepageContent = {
         title: "Chapter 3",
         id: "Chapter_3",
         color: "#B7DCFF",
-        style: { width: "500px", height: "500px", right: 0 },
+        style: { width: "400px", height: "400px", right: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
         background:
           "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Blue.png)]",
