@@ -197,7 +197,7 @@ const homepageContent = {
             initial: { rotateZ: 0 },
             animate: {
               rotateZ: 0,
-              y: 20,
+              y: -10,
             },
           },
           Zindex: "1",
@@ -212,7 +212,7 @@ const homepageContent = {
             initial: { rotateZ: 0 },
             animate: {
               rotateZ: 10,
-              y: 30,
+              y: 0,
               transition: { rotateZ: { delay: 0.6 } },
             },
           },
@@ -232,7 +232,7 @@ const homepageContent = {
         },
       ],
       paragraphs: [],
-      background: "../public/images/ContactBg.png",
+      background: "",
     },
   },
   about: {

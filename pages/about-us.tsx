@@ -91,12 +91,12 @@ export default function AboutUs() {
             <div className="text-[3em] sm:text-[35px] text-[#fff]">
               {homepageContent.about.content.title}
             </div>
-            <div className="flex flex-col text-[calc(0.65vw+0.65vh)] sm:text-[14px] gap-3 text-[#fff]">
+            <div className="flex flex-col text-[calc(0.65vw+0.65vh)] sm:text-[12px] gap-3 text-[#fff]">
               {homepageContent.about.content.paragraphs.map((item, idx) => {
                 return <p key={idx}> {item}</p>;
               })}
             </div>
-            <div className="flex flex-col gap-4 text-[#fff]">
+            <div className="flex flex-col gap-4 text-[#fff] mt-[1rem]">
               <Link href="mailto:contact@petals.studio">
                 <div className="w-[fit-content] uppercase cursor-pointer text-[#000] bg-[#fff] hover:bg-[#fff] focus:ring-4 focus:ring-[#fff] font-medium rounded-lg lg:text-[calc(0.75vw+0.75vh)] text-sm px-[1rem] py-[calc(0.55*(1vw+1vh))] me-2 mb-2 dark:bg-[#fff] dark:hover:bg-[#fff] focus:outline-none dark:focus:ring-[#fff]">
                   Contact Us
@@ -115,15 +115,15 @@ export default function AboutUs() {
               className="w-[100%] h-[100%]"
             >
               <img
-                className="object-contain w-[100%] h-[100%]"
+                className="object-contain w-[100%] h-[100%] ml-[-2rem]"
                 src={homepageContent.about.content.images[0].image}
                 alt=""
               />
             </motion.div>
           </div>
         </div>
-        <div className="flex w-[100%] items-end justify-between flex-wrap px-[1rem] text-[#fff]">
-          <div className="flex gap-[1rem]">
+        <div className="flex w-[100%] items-end justify-between sm:justify-center gap-2 sm:gap-[1rem] flex-wrap sm:flex-col px-[4rem] sm:px-[1rem] text-[#fff] sm:pb-[.5rem]">
+          <div className="flex gap-[1rem] sm:justify-start sm:w-[100%]">
             {homepageContent.footer.content.rightSide.followIcons.map(
               (items, idx) => {
                 return (
@@ -132,7 +132,7 @@ export default function AboutUs() {
                       <Image
                         width={40}
                         height={40}
-                        className="lg:w-[calc(1*(1vw+1vh))] w-[40px]"
+                        className="lg:w-[calc(1.65*(1vw+1vh))] w-[30px] sm:w-[20px]"
                         src={items.src}
                         alt={items.alt}
                       />
@@ -143,7 +143,7 @@ export default function AboutUs() {
             )}
           </div>
 
-          <div className="flex uppercase gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[15px]  sm:hidden">
+          <div className="flex uppercase gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:justify-start sm:w-[100%] sm:text-[10px]">
             <div
               className="cursor-pointer"
               style={{ borderRight: "1px solid #fff", paddingRight: "1rem" }}
@@ -163,9 +163,9 @@ export default function AboutUs() {
             </div>
           </div>
 
-          <div className="text-right text-[calc(0.55vw+0.55vh)] uppercase sm:text-[15px]">
+          <div className="text-right sm:flex sm:justify-start sm:items-center text-[calc(0.55vw+0.55vh)] sm:w-[100%] sm:gap-2 uppercase sm:text-[12px]">
             Developed At
-            <div className="pt-[.4rem]">
+            <div className="pt-[.4rem] sm:pt-0">
               <Image
                 width={100}
                 height={40}
@@ -175,7 +175,7 @@ export default function AboutUs() {
               />
             </div>
           </div>
-          <div className="hidden sm:flex uppercase gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[15px] w-[100%] items-center justify-center my-[1rem]">
+          {/* <div className="hidden sm:flex uppercase gap-[1rem] text-[calc(0.75vw+0.75vh)] sm:text-[12px] w-[100%] items-center justify-center my-[1rem]">
             <div
               className="cursor-pointer"
               style={{ borderRight: "1px solid #fff", paddingRight: "1rem" }}
@@ -193,7 +193,7 @@ export default function AboutUs() {
             >
               Terms & Conditions
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <Sidebar />

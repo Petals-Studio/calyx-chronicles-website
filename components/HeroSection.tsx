@@ -74,7 +74,7 @@ const HeroSection = (props: IHeroSection) => {
               justifyContent: "center",
               alignItems: "center",
               width: "100%",
-              bottom: "12%",
+              bottom: "5%",
               left: "50%",
               transform: "translate(-50%)",
             }}
@@ -93,7 +93,7 @@ const HeroSection = (props: IHeroSection) => {
               }}
             >
               {" "}
-              <div className="flex w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer flex-wrap">
+              <div className="flex w-[full] gap-[1rem] z-100 justify-center items-center cursor-pointer flex-wrap sm:flex-col sm:mb-[1rem]">
                 <Link
                   href={homepageContent.landingPage.content.playstore.url}
                   target="_blank"
@@ -102,7 +102,7 @@ const HeroSection = (props: IHeroSection) => {
                     width={240}
                     alt="ss"
                     height={240}
-                    className="w-[calc(250 * (1vw + 1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
+                    className="w-[calc(250 * (1vw + 1vh))] md:w-[150px] sm:w-[140px] xs:w-[120px]"
                     src={homepageContent.landingPage.content.playstore.src}
                     style={{
                       objectFit: "contain",
@@ -131,7 +131,7 @@ const HeroSection = (props: IHeroSection) => {
                     width={240}
                     alt="ss"
                     height={240}
-                    className=" w-[calc(250 * (1vw + 1vh))] md:w-[150px] sm:w-[120px] xs:w-[120px]"
+                    className=" w-[calc(250 * (1vw + 1vh))] md:w-[150px] sm:w-[140px] xs:w-[120px]"
                     src={homepageContent.landingPage.content.appStore.src}
                     style={{
                       objectFit: "contain",
@@ -149,9 +149,21 @@ const HeroSection = (props: IHeroSection) => {
                   const ele = document.getElementById("story");
                   ele?.scrollIntoView();
                 }}
-                className="text-[#565252] uppercase roboto-bold-italic cursor-pointer"
+                className="text-[#565252] uppercase roboto-bold-italic flex cursor-pointer gap-2 sm:text-[14px]"
               >
-                Begin Adventure {">"}{" "}
+                <div className="border-b-[1px] border-[#565252]">
+                  Begin Adventure
+                </div>
+                <Image
+                  src={
+                    "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/BeginArrow.png"
+                  }
+                  alt=""
+                  style={{ transform: "rotate(180deg)" }}
+                  width={20}
+                  height={20}
+                  className="w-[20px] md:w-[15px] sm:w-[15px]"
+                />
               </div>
               {/* </Link> */}
             </div>

@@ -68,8 +68,8 @@ const ChapterComponents = (props: IChapterComponent) => {
     >
       <div
         className={`w-[100%] h-[100dvh] opacity-0 relative ${
-          id !== 3 ? "after:bg-[#000]" : "after:bg-transparent"
-        } text-[#fff] after:absolute after:z-[-1] after:w-[1px] after:h-[70%] lg:after:bg-[#000] after:rounded-[100%] after:top-20 after:right-0  ${
+          id !== 3 ? "" : "after:bg-transparent"
+        } text-[#fff] after:absolute after:z-[-1] after:w-[1px] after:h-[70%] after:rounded-[100%] after:top-20 after:right-0  ${
           isActive && chapterData?.title === activeChapter
             ? chapterData?.background
             : ""
@@ -120,7 +120,7 @@ const ChapterComponents = (props: IChapterComponent) => {
                   <div className="roboto-bold-italic lg:text-[calc(.75*(1vh+1vw))] text-[18px] my-2 sm:text-[16px] italic">
                     {chapterData?.heading}
                   </div>
-                  <div className="lg:text-[calc(.75*(1vh+1vw))] text-[14px] roboto-regular">
+                  <div className="lg:text-[calc(.55*(1vh+1vw))] text-[12px] roboto-regular">
                     {chapterData?.subText}
                   </div>
 

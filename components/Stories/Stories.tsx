@@ -89,7 +89,7 @@ const Stories = (props: IStories) => {
               key={idx}
               className={`flex w-[10px] h-[10px] ${
                 activeChapter?.toLowerCase() === item.title?.toLowerCase()
-                  ? "bg-red-500"
+                  ? "bg-[#565252]"
                   : "bg-gray-300"
               } rounded`}
             ></div>

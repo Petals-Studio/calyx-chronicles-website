@@ -25,30 +25,11 @@ const Footer = (props: {
           <Image
             width={200}
             height={10}
-            className="lg:w-[calc(8*(1vw+1vh))] w-[200px] sm:w-[150px]"
+            className="lg:w-[calc(8*(1vw+1vh))] w-[200px] sm:w-[150px] sm:mt-[1rem]"
             src={homepageContent.footer.content.rightSide.logo}
             alt={homepageContent.footer.content.rightSide.logo}
           />
-          <div className="flex items-start gap-1 text-center lg:text-[calc(.75*(1vh+1vw))] text-[16px] mt-[1rem]">
-            {" "}
-            <div className="roboto-regular">
-              Address&nbsp;- {homepageContent.footer.content.rightSide.address}
-            </div>{" "}
-          </div>
-          <div className="flex items-center gap-1 text-left lg:text-[calc(.75*(1vh+1vw))] text-[16px]">
-            {" "}
-            <div className="roboto-regular">
-              Contact&nbsp;Us&nbsp;-{" "}
-              <Link
-                href="mailto:contact@petals.studio"
-                className="underline italic"
-              >
-                contact@petals.studio
-              </Link>
-            </div>{" "}
-          </div>
-
-          <div className="flex gap-[1rem] lg:justify-end md:justify-center  items-center mt-[3rem]">
+          <div className="flex gap-[1rem] lg:justify-end md:justify-center  items-center mt-[1rem]">
             <Link
               href={homepageContent.footer.content.leftSide.playstore.url}
               target="_blank"
@@ -56,7 +37,7 @@ const Footer = (props: {
               <Image
                 width={200}
                 height={10}
-                className="lg:w-[calc(8*(1vw+1vh))] w-[200px]"
+                className="lg:w-[calc(8*(1vw+1vh))] w-[130px]"
                 src={homepageContent.footer.content.leftSide.playstore.src}
                 alt={homepageContent.footer.content.leftSide.playstore.alt}
               />
@@ -81,12 +62,31 @@ const Footer = (props: {
               <Image
                 width={200}
                 height={10}
-                className="lg:w-[calc(8*(1vw+1vh))] w-[200px]"
+                className="lg:w-[calc(8*(1vw+1vh))] w-[130px]"
                 src={homepageContent.footer.content.leftSide.appStore.src}
                 alt={homepageContent.footer.content.leftSide.appStore.alt}
               />
             </Link>
           </div>
+          <div className="flex items-start gap-1 text-center lg:text-[calc(.75*(1vh+1vw))] text-[16px] mt-[3rem] sm:mt-[1rem]">
+            {" "}
+            <div className="roboto-regular">
+              Address&nbsp;- {homepageContent.footer.content.rightSide.address}
+            </div>{" "}
+          </div>
+          <div className="flex items-center gap-1 text-left lg:text-[calc(.75*(1vh+1vw))] text-[16px]">
+            {" "}
+            <div className="roboto-regular">
+              Contact&nbsp;Us&nbsp;-{" "}
+              <Link
+                href="mailto:contact@petals.studio"
+                className="underline italic"
+              >
+                contact@petals.studio
+              </Link>
+            </div>{" "}
+          </div>
+
           <div className="flex w-[100%] items-end justify-between flex-wrap">
             <div className="flex gap-[1rem]">
               {homepageContent.footer.content.rightSide.followIcons.map(
@@ -155,9 +155,9 @@ const Footer = (props: {
               )}
             </div>
 
-            <div className="text-right lg:text-[calc(0.55vw+0.55vh)] text-[15px]">
+            <div className="text-right lg:text-[calc(0.55vw+0.55vh)] text-[10px] text-[#cacaca]">
               Developed At
-              <div className="pt-[.4rem]">
+              <div className="pt-[.4rem] sm:pt-0">
                 <Image
                   width={100}
                   height={40}
