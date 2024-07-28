@@ -11,6 +11,9 @@ app.get('/privacy-policy', (req: Request, res: Response) => {
 app.get('/terms-of-service', (req: Request, res: Response) => {
     res.sendFile(path + '/terms-of-service.html');
 });
+app.get('/about-us', (req: Request, res: Response) => {
+    res.sendFile(path + '/about-us.html');
+});
 app.get('/', (req: Request, res: Response) => {
   res.sendFile(path + '/index.html');
 });
