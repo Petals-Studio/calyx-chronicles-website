@@ -212,16 +212,17 @@ export default function PrivacyPolicy() {
 
   return (
     <main
-      className="w-full flex min-h-screen flex-col items-center bg-white text-black"
+      className="w-full flex min-h-screen flex-col items-center bg-[#fff] text-[#000]"
       onClick={() => {
         EventBus.getInstance().fireEvent(SidebarCloseEvent);
       }}
     >
-      <Navbar noItems noFixed noMenu />
+      <Navbar onlyIcon />
+
       <div className="relative py-8 tablet:py-12 w-full">
-        <div className="w-full max-w-8xl mx-auto flex flex-col px-2.5  tablet:pl-5 tablet:pr-12">
+        <div className="w-full max-w-8xl mx-auto flex flex-col px-2.5 tablet:pl-5 tablet:pr-12">
           <h1
-            className={`${inter.variable} font-inter tablet:text-lg font-bold tracking-wide text-center sm:text-left mb-4`}
+            className={`${inter.variable} font-inter tablet:text-lg font-bold tracking-wide mb-4`}
           >
             PRIVACY POLICY
           </h1>

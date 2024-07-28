@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { RefObject, useEffect, useState } from "react";
 interface IUseInView {
-  targetRef: React.MutableRefObject<null>;
+  targetRef: RefObject<HTMLDivElement>;
 }
 const useInView = (props: IUseInView) => {
   const { targetRef } = props;

@@ -4,13 +4,13 @@ import { getFirestore } from "firebase/firestore";
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://support.google.com/firebase/answer/7015592
 const firebaseConfig = {
-  apiKey: "AIzaSyAD2hh4CgolpbYdod0qg2kVgQCwTYsW6TM",
-  authDomain: "petals-studio.firebaseapp.com",
-  projectId: "petals-studio",
-  storageBucket: "petals-studio.appspot.com",
-  messagingSenderId: "389748617194",
-  appId: "1:389748617194:web:df2778fd100735ce174c93",
-  measurementId: "G-CRMBQQ8L73"
+  apiKey: "AIzaSyAfxgef_qRdsrq9bjcdkErGr5B8YbVVFGg",
+  authDomain: "petals-studio-dev.firebaseapp.com",
+  projectId: "petals-studio-dev",
+  storageBucket: "petals-studio-dev.appspot.com",
+  messagingSenderId: "390614518223",
+  appId: "1:390614518223:web:8dfd9ced354b2d79cbeaba",
+  measurementId: "G-7FKGW1R69V"
 };
 
 // Initialize Firebase

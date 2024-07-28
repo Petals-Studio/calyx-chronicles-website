@@ -3,7 +3,7 @@ import { db } from "./db";
 
 async function storeEmail(email: string): Promise<boolean> {
   try {
-    const docRef = doc(db, 'petals_studio', 'subscribers');
+    const docRef = doc(db, 'website', 'subscribers');
     await updateDoc(docRef, { emails: arrayUnion(email) });
     return true;
   } catch (error) {

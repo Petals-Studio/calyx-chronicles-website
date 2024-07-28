@@ -11,66 +11,112 @@ import React, {
 import ChapterComponents from "../../components/Stories/ChapterComponent";
 import useInView from "@/hooks/useInView";
 import MobileCharecterComp from "../../components/Stories/ChapterComponent/MobileCharecterComp";
+import { useWindowDimensions } from "@/hooks/useWindowDimention";
+import { useDeviceType } from "@/hooks/useDeviceType";
 
 interface IStories {
-  setCurrentTab: Dispatch<SetStateAction<string>>;
+  isInView?: boolean;
+  setVideoData?: Dispatch<
+    SetStateAction<
+      | {
+          chaptername: string;
+          chapterLink: string;
+          chapterColor: string;
+          chapterDiscription: string;
+        }
+      | undefined
+    >
+  >;
 }
 const Stories = (props: IStories) => {
-  const { setCurrentTab } = props;
+  const { isInView = false, setVideoData } = props;
+  const { isDesktop, isMobile } = useDeviceType();
 
-  const targetRef = useRef(null);
-  const isInView = useInView({ targetRef });
   const [activeChapter, setActiveChapter] = useState("");
 
   useEffect(() => {
     if (isInView) {
-      setCurrentTab(homepageContent.showcaseSection.label);
+      const tempArr = homepageContent.showcaseSection.content.filter((item) => {
+        return item.isActive;
+      });
+      setActiveChapter(tempArr[tempArr?.length - 1]?.title);
+      tempArr[tempArr?.length - 1]?.title &&
+        document
+          .getElementById(tempArr[tempArr?.length - 1]?.title)
+          ?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      setActiveChapter("");
     }
-  }, [isInView]);
+  }, []);
+  // useEffect(() => {
+  //   activeChapter &&
+  //     setTimeout(() => {
+  //       document
+  //         .getElementById(activeChapter)
+  //         ?.scrollIntoView({ behavior: "smooth" });
+  //     }, 100);
+  // }, [activeChapter]);
+
   return (
     <>
-      <div className="w-full h-full sm:hidden">
+      <div className="w-full h-full bg-[#fff] ">
         <div
-          ref={targetRef}
           id={homepageContent.showcaseSection.sectionId}
-          className="w-full grid grid-cols-3 h-full overflow-hidden text-black"
+          className="w-full relative grid scroll-body-x lg:grid-cols-[repeat(3,1fr)] grid-cols-[minmax(350px,1fr)_minmax(350px,1fr)_minmax(350px,1fr)] h-full overflow-x-scroll lg:overflow-x-hidden overflow-y-hidden  text-[#000]"
         >
           {homepageContent.showcaseSection.content.map((item, idx) => {
             return (
               <ChapterComponents
+                isInView={isInView}
+                setVideoData={setVideoData}
                 chapterData={item}
                 key={item.title}
                 id={idx + 1}
                 activeChapter={activeChapter}
                 setActiveChapter={setActiveChapter}
-                isInView={isInView}
               />
             );
           })}
         </div>
       </div>
-      <div className="w-full h-[0] sm:h-full sm:block">
+      <div className="z-[9] flex absolute bottom-0 justify-center p-[2rem] items-center gap-2 lef-0  w-[100%] ">
+        {homepageContent.showcaseSection.content.map((item, idx) => {
+          return (
+            <div
+              onClick={() => {
+                setActiveChapter(item.title);
+              }}
+              key={idx}
+              className={`flex w-[10px] h-[10px] ${
+                activeChapter?.toLowerCase() === item.title?.toLowerCase()
+                  ? "bg-[#565252]"
+                  : "bg-gray-300"
+              } rounded`}
+            ></div>
+          );
+        })}
+      </div>
+      {/* <div className="w-full h-[0] sm:h-full sm:block bg-[#fff]">
         <div
-          ref={targetRef}
           id={homepageContent.showcaseSection.sectionId}
-          className="w-full grid grid-cols-1 overflow-hidden grid-rows-3 h-full text-black"
+          className="w-full grid grid-cols-1 overflow-hidden grid-rows-3 h-full text-[#000]"
         >
           {homepageContent.showcaseSection.content.map((item, idx) => {
             return (
               <>
                 <MobileCharecterComp
+                  isInView={isInView}
                   chapterData={item}
                   key={item.title}
                   id={idx + 1}
                   activeChapter={activeChapter}
                   setActiveChapter={setActiveChapter}
-                  isInView={isInView}
                 />
               </>
             );
           })}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

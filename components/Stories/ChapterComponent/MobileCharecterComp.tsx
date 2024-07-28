@@ -15,12 +15,13 @@ interface IMobileCharecterComp {
     background: string;
   };
   id: number;
-  setActiveChapter: React.Dispatch<React.SetStateAction<string>>;
   isInView: boolean;
+  setActiveChapter: React.Dispatch<React.SetStateAction<string>>;
+
   activeChapter: string;
 }
 const MobileCharecterComp = (props: IMobileCharecterComp) => {
-  const { chapterData, isInView, id, setActiveChapter, activeChapter } = props;
+  const { chapterData, id, isInView, setActiveChapter, activeChapter } = props;
   const isActive = chapterData?.isActive;
 
   return (
@@ -28,32 +29,35 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
       <div
         className="w-[100%] h-[100%]"
         onMouseEnter={() => {
-          id === 3 && console.log("called");
           setActiveChapter(chapterData?.title);
         }}
       >
         <div
           className={`w-[100%] opacity-0 relative h-[100%] ${
-            id !== 3 ? " after:bg-black" : "after:bg-transparent"
-          } text-white after:absolute after:w-[100%] after:h-[1px] after:bg-black after:rounded-[100%] after:bottom-0 after:left-10  ${
+            id !== 3 ? " after:bg-[#000]" : "after:bg-transparent"
+          } text-[#fff] after:absolute after:w-[100%] after:h-[1px] after:bg-[#000] after:rounded-[100%] after:bottom-0 after:left-10  ${
             isActive && chapterData?.title === activeChapter
               ? chapterData?.background
               : ""
           } ${
             isActive && chapterData?.title === activeChapter ? "z-[2]" : ""
-          } ${isInView ? "story-animation-mobile" : ""} ${
+          } story-animation-mobile ${
             chapterData?.title === activeChapter ? "" : "overflow-hidden"
           }`}
-          style={{
-            animationDelay: `${0.1 * id}s`,
-          }}
+          style={
+            isInView
+              ? {
+                  animationDelay: `${0.3 * (id - 1)}s`,
+                }
+              : { animation: "none" }
+          }
         >
           <div
             className={`w-[100%] flex flex-col h-[100%]  ${
               isActive ? "justify-start" : "justify-center"
             } ${isActive ? "items-start" : "items-center"}`}
           >
-            {!isActive && <div className="text-black"> Comming Soon</div>}
+            {!isActive && <div className="text-[#000]"> Comming Soon</div>}
             {
               <>
                 {isActive && chapterData?.title === activeChapter && (
@@ -75,6 +79,7 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
                   }
                   alt={chapterData?.title}
                   style={{
+                    zIndex: 999,
                     objectFit: "contain",
                     margin: "0 auto",
                     top: "0%",
@@ -99,7 +104,7 @@ const MobileCharecterComp = (props: IMobileCharecterComp) => {
                   }}
                 />
                 {isActive && chapterData?.title !== activeChapter && (
-                  <div className="absolute bottom-10 text-[24px] right-20 mr-[2rem] text-black">
+                  <div className="absolute bottom-10 text-[24px] right-20 mr-[2rem] text-[#000]">
                     {chapterData?.title}
                   </div>
                 )}

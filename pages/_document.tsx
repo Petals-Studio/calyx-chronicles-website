@@ -1,15 +1,15 @@
 import { albertusNova } from "@/fonts";
 import { Html, Head, Main, NextScript } from "next/document";
+import { useEffect } from "react";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Calyx Chronicle</title>
         <link
           id="light-scheme-icon"
           rel="shortcut icon"
-          href="/images/ICON.png"
+          href="/petalIcon.png"
         />
         {/* <link id="dark-scheme-icon" rel="shortcut icon" href="/petals-favicon-black.png" /> */}
       </Head>
