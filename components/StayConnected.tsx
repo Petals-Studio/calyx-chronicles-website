@@ -1,4 +1,5 @@
 import homepageContent from "@/cms/home";
+import storeEmail from '@/utils/storeEmail';
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -10,11 +11,21 @@ const StayConnected = () => {
   >(undefined);
 
   const handelOnSubmit = (data: any) => {
-    setApiResp({
-      status: "OK",
-      success: true,
-      msg: "Resp Submitted Successfully",
-    });
+    try {
+      storeEmail(inputValue);
+      setApiResp({
+        status: "OK",
+        success: true,
+        msg: "Resp Submitted Successfully",
+      });
+      setInputValue('');
+    } catch (e) {
+      setApiResp({
+        status: "Error",
+        success: false,
+        msg: "Something went wrong, please try again",
+      });
+    }
   };
 
   function validateEmail(email: string) {
