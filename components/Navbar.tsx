@@ -18,7 +18,7 @@ interface NavbarProps {
 export default function Navbar(props: NavbarProps) {
   const { currentTab, setCurrentTab, color } = props;
   return props.onlyIcon ? (
-    <div className="flex w-full fixed justify-end bg-[#fff] z-[9999] p-[6vw] ">
+    <div className="flex w-full fixed justify-end bg-[#fff] z-[9999] px-[1rem] py-[0.5rem]">
       <Link href={"/"}>
         {" "}
         <Image width={40} height={40} src={"/petalIcon.png"} alt="logo" />

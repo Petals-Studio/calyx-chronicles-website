@@ -155,7 +155,7 @@ const HeroSection = (props: IHeroSection) => {
                   const ele = document.getElementById("story");
                   ele?.scrollIntoView();
                 }}
-                className="text-[#565252] uppercase roboto-bold-italic flex cursor-pointer gap-2 sm:text-[14px]"
+                className="text-[#565252] uppercase roboto-black-italic flex cursor-pointer gap-2 sm:text-[14px]"
               >
                 <div className="border-b-[1px] border-[#565252]">
                   Begin Adventure
@@ -167,7 +167,7 @@ const HeroSection = (props: IHeroSection) => {
                   alt=""
                   width={20}
                   height={20}
-                  className="w-[20px] md:w-[15px] sm:w-[15px]"
+                  className="w-[18px] md:w-[12px] sm:w-[12px]"
                 />
               </div>
               {/* </Link> */}

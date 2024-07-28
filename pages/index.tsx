@@ -90,7 +90,7 @@ export default function Home() {
         closeClickOutside
         title={
           <div
-            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[30px]`}
+            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[24px]`}
           >
             {" "}
             Terms & Conditions
@@ -156,7 +156,7 @@ export default function Home() {
         type="center"
         title={
           <div
-            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))]  text-[30px]`}
+            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[24px]`}
           >
             Privacy Policy
           </div>
@@ -186,7 +186,7 @@ export default function Home() {
         })}
 
         <RegisterModal />
-        {/* <Sidebar /> */}
+        <Sidebar />
       </div>
     </main>
   );
