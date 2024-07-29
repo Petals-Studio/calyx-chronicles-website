@@ -196,7 +196,7 @@ body {
   position: absolute;
   content: "";
   height: 2px;
-  animation: animateUnderline 0.3s ease-in-out;
+  /* animation: animateUnderline 0.3s ease-in-out; */
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -204,14 +204,14 @@ body {
   background-color: #000;
 }
 
-@keyframes animateUnderline {
+/* @keyframes animateUnderline {
   0% {
     width: 0%;
   }
   100% {
     width: 100%;
   }
-}
+} */
 /* canvas {
   width: 150%;
   background: #000;
