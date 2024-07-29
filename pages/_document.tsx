@@ -10,7 +10,7 @@ export default function Document() {
           name="Calyx Chronicles"
           content="Welcome to Petals Studio (Formerly Rivea World Private Limited), the creative force behind the captivating app, Calyx Chronicle. As a pioneering gaming company, we specialize in developing seasonal games and engaging multiplayer experiences that connect players from all corners of the world."
         />
-        <title>Calyx Chronicles</title>
+
         <link
           id="light-scheme-icon"
           rel="shortcut icon"

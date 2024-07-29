@@ -18,7 +18,7 @@ const Community = (props: ICommunity) => {
 
   return (
     <div
-      className={`w-full h-full overflow-hidden ${homepageContent.community.content.background} customFont`}
+      className={`w-full h-full overflow-hidden ${homepageContent.community.content.background}`}
     >
       <div
         className={`w-full h-full px-[2rem] py-[3rem] flex justify-between lg:flex-row flex-col sm:py-[3rem] lg:pl-[3.5rem]`}
