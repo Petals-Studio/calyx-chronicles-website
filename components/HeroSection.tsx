@@ -13,6 +13,7 @@ import jsonDtaa from "../public/images/jsonData.json";
 import Link from "next/link";
 import Stories from "./Stories/Stories";
 import Image from "next/image";
+import ImageFallback from "./ImageWithFallback";
 interface IHeroSection {
   isInView?: boolean;
 }
@@ -36,16 +37,22 @@ const HeroSection = (props: IHeroSection) => {
               animate={{ x: "-30%" }}
               className="flex h-[100%] w-[50%] relative justify-end items-center translate-x-[-0%]"
             >
-              <Image
+              <ImageFallback
                 width={100}
                 height={100}
                 alt="calax1"
-                className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[400px] "
-                src={homepageContent.landingPage.content.backgroundL.src}
                 style={{
                   objectFit: "cover",
                 }}
+                className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[400px] "
+                fallbackSrc={
+                  homepageContent.landingPage.content.backgroundL.fallbackSrc
+                }
+                src={homepageContent.landingPage.content.backgroundL.src}
               />
+              {/* <Image
+                src={homepageContent.landingPage.content.backgroundL.src}
+              /> */}
             </motion.div>
 
             <motion.div
@@ -53,16 +60,20 @@ const HeroSection = (props: IHeroSection) => {
               animate={{ x: "15%" }}
               className="flex h-[100%] w-[50%] relative justify-start items-center translate-x-[10%]"
             >
-              <Image
+              <ImageFallback
                 width={100}
                 height={100}
                 alt="calax"
                 className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[400px] "
                 src={homepageContent.landingPage.content.backgroundR.src}
+                fallbackSrc={
+                  homepageContent.landingPage.content.backgroundR.fallbackSrc
+                }
                 style={{
                   objectFit: "cover",
                 }}
               />
+              {/* <Image /> */}
             </motion.div>
           </div>
 

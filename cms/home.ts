@@ -37,11 +37,15 @@ const homepageContent = {
         alt: "landing image",
       },
       backgroundL: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR1.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR1.avif",
+        fallbackSrc:
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR1.png",
         alt: "robot bg image",
       },
       backgroundR: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR2.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR2.avif",
+        fallbackSrc:
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR2.png",
         alt: "left bg image",
       },
       icon: { src: "/images/ICON.png", alt: "Icon image" },
