@@ -42,9 +42,9 @@ const HeroSection = (props: IHeroSection) => {
                 height={100}
                 alt="calax1"
                 style={{
-                  objectFit: "cover",
+                  objectFit: "contain",
                 }}
-                className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[400px] "
+                className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[100px] "
                 fallbackSrc={
                   homepageContent.landingPage.content.backgroundL.fallbackSrc
                 }
@@ -64,13 +64,13 @@ const HeroSection = (props: IHeroSection) => {
                 width={100}
                 height={100}
                 alt="calax"
-                className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[400px] "
+                className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[100px] "
                 src={homepageContent.landingPage.content.backgroundR.src}
                 fallbackSrc={
                   homepageContent.landingPage.content.backgroundR.fallbackSrc
                 }
                 style={{
-                  objectFit: "cover",
+                  objectFit: "contain",
                 }}
               />
               {/* <Image /> */}
