@@ -10,7 +10,6 @@ import EventBus from "@/EventBus";
 
 import Stories from "../components/Stories/Stories";
 import { useNavigate } from "react-router-dom";
-import Section2 from "../components/Section2";
 import Community from "../components/Community";
 import HeroSection from "../components/HeroSection";
 import { useState } from "react";

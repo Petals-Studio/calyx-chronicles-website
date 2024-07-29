@@ -30,14 +30,17 @@ const HeroSection = (props: IHeroSection) => {
             alignItems: "center",
           }}
         >
-          <div className="flex absolute top-0 left-0 justify-between  items-center w-[100%] h-[100dvh]">
+          <div className="flex absolute top-0 left-0 justify-center items-center w-[100%] h-[100dvh]">
             <motion.div
               initial={{ x: isInView ? "-100%" : "-15%" }}
-              animate={{ x: "-15%" }}
-              className="flex h-[100%] w-[50%] relative justify-end items-center translate-x-[-10%]"
+              animate={{ x: "-30%" }}
+              className="flex h-[100%] w-[50%] relative justify-end items-center translate-x-[-0%]"
             >
-              <img
-                className="h-[150%] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[500px] md:min-w-[400px] sm:min-w-[350px] "
+              <Image
+                width={100}
+                height={100}
+                alt="calax1"
+                className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[400px] "
                 src={homepageContent.landingPage.content.backgroundL.src}
                 style={{
                   objectFit: "cover",
@@ -50,8 +53,11 @@ const HeroSection = (props: IHeroSection) => {
               animate={{ x: "15%" }}
               className="flex h-[100%] w-[50%] relative justify-start items-center translate-x-[10%]"
             >
-              <img
-                className="w-[100%] h-[150%] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[500px] md:min-w-[400px] sm:min-w-[350px]"
+              <Image
+                width={100}
+                height={100}
+                alt="calax"
+                className="h-[calc(50*(1vh+1vw))] md:h-[100%] sm:h-[100%] xs:h-[100%] min-w-[calc(30*(1vh+1vw))] md:min-w-[500px] sm:min-w-[400px] "
                 src={homepageContent.landingPage.content.backgroundR.src}
                 style={{
                   objectFit: "cover",

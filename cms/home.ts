@@ -132,19 +132,7 @@ const homepageContent = {
       },
     ],
   },
-  showcaseSection2: {
-    content: {
-      title: "Are you ready to fight for your story?",
-      images: {
-        background:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/backgroundBg.png",
-        leftImage:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/fightingRobot1.png",
-        rightImage:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/fightingRobot2.png",
-      },
-    },
-  },
+
   community: {
     label: "Community",
     content: {

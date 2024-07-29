@@ -10,7 +10,7 @@ import React, {
 } from "react";
 import ChapterComponents from "../../components/Stories/ChapterComponent";
 import useInView from "@/hooks/useInView";
-import MobileCharecterComp from "../../components/Stories/ChapterComponent/MobileCharecterComp";
+
 import { useWindowDimensions } from "@/hooks/useWindowDimention";
 import { useDeviceType } from "@/hooks/useDeviceType";
 
