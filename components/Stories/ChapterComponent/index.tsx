@@ -78,8 +78,10 @@ const ChapterComponents = (props: IChapterComponent) => {
     >
       <div
         className={`w-[100%] h-[100dvh] opacity-0 relative ${
-          id !== 3 ? "" : "after:bg-transparent"
-        } text-[#fff] after:absolute after:z-[-1] after:w-[1px] after:h-[70%] after:rounded-[100%] after:top-20 after:right-0  ${
+          id !== 3
+            ? "after:bg-gradient-radial from-[#000] to-[#0000000a]"
+            : "after:bg-transparent"
+        } text-[#fff] after:absolute after:z-[-1]  after:w-[1px] after:h-[90%] after:rounded-[190%] after:top-10 after:right-0  ${
           isActive && chapterData?.title === activeChapter
             ? chapterData?.background
             : ""

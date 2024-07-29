@@ -103,6 +103,8 @@ const homepageContent = {
         subText:
           "Just  days before the Vos attack, The Warlock Tower at the heart of Tannara is being assaulted by someone from within the city. Who is it and what is their objective?",
         background:
+          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Yellow.avif)]",
+        backgroundFallback:
           "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Yellow.png)]",
       },
       {
@@ -130,6 +132,8 @@ const homepageContent = {
         subText:
           "As the battle with Vos rages on, the Warlock Tribunal decides to send in a group of brave warriors to harvest as much mana as possible before the portals close for once and for all.",
         background:
+          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/pink.avif)]",
+        backgroundFallback:
           "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/pink.png)]",
       },
       {
@@ -152,6 +156,8 @@ const homepageContent = {
         style: { width: "400px", height: "400px", right: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
         background:
+          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Blue.avif)]",
+        backgroundFallback:
           "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Blue.png)]",
         heading: "Attack on Tannara",
         subText:
@@ -670,7 +676,7 @@ const homepageContent = {
         ],
       },
       background:
-        "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FooterBg.png",
+        "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FooterBg.avif",
     },
   },
 };
