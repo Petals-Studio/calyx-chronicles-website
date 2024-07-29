@@ -10,11 +10,12 @@ import ImageFallback from "./ImageWithFallback";
 const Footer = (props: {
   setPrivacyData?: React.Dispatch<React.SetStateAction<string>>;
   setTermsData?: React.Dispatch<React.SetStateAction<string>>;
+  isInView?: boolean;
 }) => {
-  const { setPrivacyData, setTermsData } = props;
+  const { setPrivacyData, setTermsData, isInView } = props;
   return (
     <>
-      <StayConnected />
+      <StayConnected isInView={isInView} />
       <div
         id={"Contact-Us"}
         className={`w-[100%] h-[55dvh] sm:h-[60dvh] text-[#000] bg-no-repeat bg-center bg-cover flex flex-wrap justify-between gap-[1rem] uppercase roboto-thin`}
