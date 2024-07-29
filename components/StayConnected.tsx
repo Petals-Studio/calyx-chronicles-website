@@ -1,5 +1,5 @@
 import homepageContent from "@/cms/home";
-import storeEmail from '@/utils/storeEmail';
+import storeEmail from "@/utils/storeEmail";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -18,7 +18,7 @@ const StayConnected = () => {
         success: true,
         msg: "Resp Submitted Successfully",
       });
-      setInputValue('');
+      setInputValue("");
     } catch (e) {
       setApiResp({
         status: "Error",
@@ -39,7 +39,7 @@ const StayConnected = () => {
     <>
       <div
         // style={{ backgroundSize: "100% 100%" }}
-        className={`h-[45dvh] sm:h-[40dvh]  w-[100%] p-[2rem] sm:p-[1rem] flex flex-col justify-end sm:justify-center items-end text-[#000] bg-[url('https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/stay_connectd.gif')] bg-no-repeat bg-left-bottom bg-cover pt-[4rem] relative`}
+        className={`h-[45dvh] sm:h-[40dvh]  w-[100%] p-[2rem] sm:p-[1rem] flex flex-col justify-end sm:justify-center items-end text-[#000] bg-[url('https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/stay_connectd.avif')] bg-no-repeat bg-left-bottom bg-cover pt-[4rem] relative`}
       >
         <div className="w-[100%] left-0 bottom-0 absolute h-[100%] bg-gradient-to-b from-[#a9a9a9e1] to-[#73737372] z-[1]"></div>
         <div className="text-[#fff] lg:w-[45%] lg:text-[calc(1.75*(1vh+1vw))] z-[2] text-[30px] text-right uppercase roboto-light w-[100%] lg:pr-[3rem]">
