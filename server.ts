@@ -4,7 +4,13 @@ const app: Express = express();
 
 const path = __dirname + '/out';
 const port = 8080;
+
+app.use(function(req, res, next) {
+    res.setHeader('Cache-Control', 'public, max-age=86400')
+    next();
+});
 app.use(express.static(path));
+
 app.get('/privacy-policy', (req: Request, res: Response) => {
     res.sendFile(path + '/privacy-policy.html');
 });
