@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import StayConnected from "./StayConnected";
 import DynamicModal from "./Modal";
 import { inter } from "@/fonts";
+import ImageFallback from "./ImageWithFallback";
 
 const Footer = (props: {
   setPrivacyData?: React.Dispatch<React.SetStateAction<string>>;
@@ -22,24 +23,28 @@ const Footer = (props: {
         }}
       >
         <div className="flex  w-[100%] h-[100%] flex-col justify-between items-center p-[2rem] sm:p-[.5rem]  gap-[.5rem] text-[#fff]">
-          <Image
+          <ImageFallback
             width={200}
             height={10}
             className="lg:w-[calc(8*(1vw+1vh))] w-[200px] sm:w-[150px] sm:mt-[1rem]"
             src={homepageContent.footer.content.rightSide.logo}
             alt={homepageContent.footer.content.rightSide.logo}
+            fallbackSrc={homepageContent.footer.content.rightSide.fallbackLogo}
           />
           <div className="flex gap-[1rem] lg:justify-end md:justify-center  items-center mt-[1rem]">
             <Link
               href={homepageContent.footer.content.leftSide.playstore.url}
               target="_blank"
             >
-              <Image
+              <ImageFallback
                 width={200}
                 height={10}
                 className="lg:w-[calc(8*(1vw+1vh))] w-[130px]"
                 src={homepageContent.footer.content.leftSide.playstore.src}
                 alt={homepageContent.footer.content.leftSide.playstore.alt}
+                fallbackSrc={
+                  homepageContent.footer.content.leftSide.playstore.fallbacksrc
+                }
               />
             </Link>
             <Link
@@ -59,12 +64,15 @@ const Footer = (props: {
                   : "_self"
               }
             >
-              <Image
+              <ImageFallback
                 width={200}
                 height={10}
                 className="lg:w-[calc(8*(1vw+1vh))] w-[130px]"
                 src={homepageContent.footer.content.leftSide.appStore.src}
                 alt={homepageContent.footer.content.leftSide.appStore.alt}
+                fallbackSrc={
+                  homepageContent.footer.content.leftSide.appStore.fallbacksrc
+                }
               />
             </Link>
           </div>
@@ -94,7 +102,8 @@ const Footer = (props: {
                   return (
                     <div key={idx}>
                       <Link href={items.url} target="_blank">
-                        <Image
+                        <ImageFallback
+                          fallbackSrc={items.fallbackSrc}
                           width={40}
                           height={40}
                           className="lg:w-[calc(1.25*(1vw+1vh))] w-[20px]"
@@ -158,7 +167,11 @@ const Footer = (props: {
             <div className="text-right lg:text-[calc(0.55vw+0.55vh)] text-[10px] text-[#cacaca]">
               Developed At
               <div className="pt-[.4rem] sm:pt-0">
-                <Image
+                <ImageFallback
+                  fallbackSrc={
+                    homepageContent.footer.content.rightSide.developed_at
+                      .fallbacksrc
+                  }
                   width={100}
                   height={40}
                   className="lg:w-[calc(5.75*(1vw+1vh))] w-[100px]"

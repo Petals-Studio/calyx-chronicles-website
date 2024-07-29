@@ -38,7 +38,7 @@ const PageRender = (props: IPageRender) => {
     if (isInView) {
       setCurrentTab(component.label);
     }
-  }, [isInView]);
+  }, [isInView, setCurrentTab, component.label]);
 
   return (
     <div ref={targetRef}>

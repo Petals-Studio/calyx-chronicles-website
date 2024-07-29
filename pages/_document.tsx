@@ -7,10 +7,9 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta
-          name="Calyx Chronicles"
-          content="Welcome to Petals Studio (Formerly Rivea World Private Limited), the creative force behind the captivating app, Calyx Chronicle. As a pioneering gaming company, we specialize in developing seasonal games and engaging multiplayer experiences that connect players from all corners of the world."
+          name="description"
+          content="Join the adventure in Calyx Chronicles, the ultimate mobile arcade multiplayer seasional game! Experience captivating storylines, fresh arcade games, and quick, exciting gameplay. Compete globally, customize your character, and unravel the mysteries of planet Calyx. Download now and conquer the world of Calyx Chronicles!"
         />
-
         <link
           id="light-scheme-icon"
           rel="shortcut icon"

@@ -5,6 +5,7 @@ import { inter } from "@/fonts";
 import EventBus from "@/EventBus";
 import { SidebarToggleEvent } from "./Sidebar";
 import Link from "next/link";
+import ImageFallback from "./ImageWithFallback";
 interface NavbarProps {
   noItems?: boolean;
   noFixed?: boolean;
@@ -21,7 +22,13 @@ export default function Navbar(props: NavbarProps) {
     <div className="flex w-full fixed justify-end bg-[#fff] z-[9999] px-[1rem] py-[0.5rem]">
       <Link href={"/"}>
         {" "}
-        <Image width={40} height={40} src={"/petalIcon.png"} alt="logo" />
+        <ImageFallback
+          fallbackSrc=""
+          width={40}
+          height={40}
+          src={"/petalIcon.png"}
+          alt="logo"
+        />
       </Link>
     </div>
   ) : (
@@ -39,7 +46,8 @@ export default function Navbar(props: NavbarProps) {
             <div className="lg:flex logo">
               <Link href={"/"}>
                 {" "}
-                <Image
+                <ImageFallback
+                  fallbackSrc=""
                   width={35}
                   height={35}
                   className="w-[calc(2*(0.75vw+0.75vh))]"
@@ -79,11 +87,12 @@ export default function Navbar(props: NavbarProps) {
             {currentTab?.toLocaleLowerCase() === "home" ? (
               <Link href={"/"}>
                 {" "}
-                <Image
+                <ImageFallback
                   width={35}
                   height={35}
                   src={"/petalIcon.png"}
                   alt="logo"
+                  fallbackSrc=""
                 />
               </Link>
             ) : (
@@ -96,12 +105,17 @@ export default function Navbar(props: NavbarProps) {
                 EventBus.getInstance().fireEvent(SidebarToggleEvent);
               }}
             >
-              <Image
-                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
-                src={
+              <ImageFallback
+                fallbackSrc={
                   currentTab !== "Community" && currentTab !== "ABOUT US"
                     ? "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/hamburgerdark.png"
                     : "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/hamburger.png"
+                }
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
+                src={
+                  currentTab !== "Community" && currentTab !== "ABOUT US"
+                    ? "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/hamburgerdark.avif"
+                    : "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/hamburger.avif"
                 }
                 alt={"Menu"}
                 width={27}

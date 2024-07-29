@@ -51,16 +51,23 @@ const homepageContent = {
       icon: { src: "/images/ICON.png", alt: "Icon image" },
       logo: { src: "/images/LOGO.png", alt: "logo image" },
       blacklogo: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Petals_logo_low_res.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Petals_logo_low_res.avif",
+        fallbackSrc:
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Petals_logo_low_res.png",
         alt: "logo image",
       },
       playstore: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.avif",
+        fallbackSrc:
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.png",
         alt: "play store",
         url: "https://play.google.com/store/apps/details?id=studio.petals.game.cc",
       },
       appStore: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.png",
+        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.avif",
+        fallbackSrc:
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.png",
+
         alt: "google image",
         url: "",
       },
@@ -75,8 +82,13 @@ const homepageContent = {
       {
         image: {
           colored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1color.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1color.avif",
+
           uncolored:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1Uncolor.avif",
+          coloredFallback:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1color.png",
+          uncoloredFallback:
             "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1Uncolor.png",
         },
         title: "Chapter 1",
@@ -96,10 +108,16 @@ const homepageContent = {
       {
         image: {
           colored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Color.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Color.avif",
           uncolored:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Uncolor.avif",
+
+          coloredFallback:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Color.png",
+          uncoloredFallback:
             "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Uncolor.png",
         },
+
         title: "Chapter 2",
         videoLink: "",
         id: "Chapter_2",
@@ -117,10 +135,15 @@ const homepageContent = {
       {
         image: {
           colored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Colored.png",
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Colored.avif",
           uncolored:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Uncolored.avif",
+          coloredFallback:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Colored.png",
+          uncoloredFallback:
             "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Uncolored.png",
         },
+
         isActive: false,
         videoLink: "",
         title: "Chapter 3",
@@ -142,17 +165,23 @@ const homepageContent = {
     content: {
       followIcons: [
         {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.avif",
+          fallbackSrc:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.png",
           alt: "instagram",
           url: "https://www.instagram.com/calyxchronicles",
         },
         {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.avif",
+          fallbackSrc:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.png",
           alt: "discord",
           url: "https://discord.gg/Q7CAJ3eT",
         },
         {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.avif",
+          fallbackSrc:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.png",
           alt: "reddit",
           url: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
         },
@@ -165,6 +194,8 @@ const homepageContent = {
       images: [
         {
           image:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord.avif",
+          fallbackImages:
             "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord.png",
           title: "Discord",
           Zindex: "1",
@@ -180,8 +211,10 @@ const homepageContent = {
           },
         },
         {
-          image:
+          fallbackImages:
             "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit.png",
+          image:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit.avif",
           title: "Reddit",
           action: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
 
@@ -195,8 +228,10 @@ const homepageContent = {
           Zindex: "1",
         },
         {
-          image:
+          fallbackImages:
             "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta.png",
+          image:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta.avif",
           title: "Instagram",
           action: "https://www.instagram.com/calyxchronicles",
           Zindex: "3",
@@ -241,6 +276,8 @@ const homepageContent = {
       images: [
         {
           image:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/about.avif",
+          fallbackImage:
             "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/about.png",
           title: "about-us",
           Zindex: "1",
@@ -463,45 +500,45 @@ const homepageContent = {
 <p>Below follows a summary of the Agreement. Please note that the summary is only there to help you read the Agreement while the long version actually governs your use of the Services.</p>
 <h2>Summary</h2>
 <ol>
-	<li>
-		<p>Using our services means you&rsquo;ve accepted this agreement. Contact your retailer if you want to refund a Service.</p>
-	</li>
-	<li>
-		<p>The Services are licensed to you for non-commercial use and Petals Studio reserves all rights to those Services.</p>
-	</li>
-	<li>
-		<p>You may need a Petals Studio Account to get the full experience of a Service.</p>
-	</li>
-	<li>
-		<p>Violating this Agreement can lead to suspension or termination of a Service!</p>
-	</li>
-	<li>
-		<p>Although we try our best, we don&rsquo;t always get it right the first time, so you agree that the Services may be modified.</p>
-	</li>
-	<li>
-		<p>Unfortunately, stuff happens and our Services may not always be available or receive updates and actions may be taken to protect you or anyone else.</p>
-	</li>
-	<li>
-		<p>UGCs are cool but remember that you&rsquo;re responsible for your UGC, which you give us rights to use. The UGC shall be provided free of charge and only contain materials you are allowed to use.</p>
-	</li>
-	<li>
-		<p>Please go ahead and stream our officially released Games but be aware that some music cannot be included. We hope you make it big!</p>
-	</li>
-	<li>
-		<p>Follow the law and these rules, be nice, and respect our Services and the community.</p>
-	</li>
-	<li>
-		<p>The Agreement is in effect until terminated.</p>
-	</li>
-	<li>
-		<p>The Services will have the features and functionality described in relevant product documentation and we are only liable for direct damages no greater than what you&rsquo;ve paid for the Service.</p>
-	</li>
-	<li>
-		<p>Let&rsquo;s first try to solve disputes informally. If that doesn&rsquo;t work, arbitration or the courts in Stockholm will settle it.</p>
-	</li>
-	<li>
-		<p>The world changes and so will this Agreement when we post updated versions on our website and/or Service.</p>
-	</li>
+  <li>
+    <p>Using our services means you&rsquo;ve accepted this agreement. Contact your retailer if you want to refund a Service.</p>
+  </li>
+  <li>
+    <p>The Services are licensed to you for non-commercial use and Petals Studio reserves all rights to those Services.</p>
+  </li>
+  <li>
+    <p>You may need a Petals Studio Account to get the full experience of a Service.</p>
+  </li>
+  <li>
+    <p>Violating this Agreement can lead to suspension or termination of a Service!</p>
+  </li>
+  <li>
+    <p>Although we try our best, we don&rsquo;t always get it right the first time, so you agree that the Services may be modified.</p>
+  </li>
+  <li>
+    <p>Unfortunately, stuff happens and our Services may not always be available or receive updates and actions may be taken to protect you or anyone else.</p>
+  </li>
+  <li>
+    <p>UGCs are cool but remember that you&rsquo;re responsible for your UGC, which you give us rights to use. The UGC shall be provided free of charge and only contain materials you are allowed to use.</p>
+  </li>
+  <li>
+    <p>Please go ahead and stream our officially released Games but be aware that some music cannot be included. We hope you make it big!</p>
+  </li>
+  <li>
+    <p>Follow the law and these rules, be nice, and respect our Services and the community.</p>
+  </li>
+  <li>
+    <p>The Agreement is in effect until terminated.</p>
+  </li>
+  <li>
+    <p>The Services will have the features and functionality described in relevant product documentation and we are only liable for direct damages no greater than what you&rsquo;ve paid for the Service.</p>
+  </li>
+  <li>
+    <p>Let&rsquo;s first try to solve disputes informally. If that doesn&rsquo;t work, arbitration or the courts in Stockholm will settle it.</p>
+  </li>
+  <li>
+    <p>The world changes and so will this Agreement when we post updated versions on our website and/or Service.</p>
+  </li>
 </ol>
 <h2>Long Version</h2>
 <h3>1. License</h3>
@@ -528,19 +565,19 @@ const homepageContent = {
 <p>You must include your own creative input and commentary in Petals Studio Game Content. It is not permitted to make videos and images that just contain mere copies of Petals Studio Game Content without any of your creative input.</p>
 <p>If you want to use the intellectual property of a third party (for example music) together with Petals Studio Game Content, you are responsible for obtaining any necessary third-party permissions. Please note that some Game soundtracks or songs included in our Services may not be owned by us. As this varies from Game to Game, be aware that music may trigger content flags and potential removal of the video. In addition, Game soundtracks may never be posted or distributed separately and apart from Game footage. Also, music from the following soundtracks/channels cannot be used:</p>
 <ul>
-	<li>&ldquo;Europa Universalis IV: Sabaton Soundtrack&rdquo;</li>
-	<li>&ldquo;Hearts of Iron IV: Sabaton Soundtrack&rdquo;</li>
-	<li>&ldquo;Hearts of Iron IV: Sabaton Soundtrack Vol. II&rdquo;</li>
-	<li>Cities: Skylines in-game radio channel &ldquo;Gold FM&rdquo;</li>
+  <li>&ldquo;Europa Universalis IV: Sabaton Soundtrack&rdquo;</li>
+  <li>&ldquo;Hearts of Iron IV: Sabaton Soundtrack&rdquo;</li>
+  <li>&ldquo;Hearts of Iron IV: Sabaton Soundtrack Vol. II&rdquo;</li>
+  <li>Cities: Skylines in-game radio channel &ldquo;Gold FM&rdquo;</li>
 </ul>
 <p>You are not permitted to imply or state that your videos are officially affiliated with, sponsored, endorsed, or approved by us (unless you have been directed to do so).</p>
 <h3>7. Rules of Conduct</h3>
 <p>When using the Services you agree that you accept and agree to our Code of Conduct, which in short states that you may not:</p>
 <ul>
-	<li>break the law (for example commit any intellectual property infringement);</li>
-	<li>misuse or take any actions that can harm the Service(s) (for example disrupt or interfere with any service, server or use, develop, distribute, or sell cheats, etc);</li>
-	<li>take any actions that negatively affect Petals Studio, your fellow, or anyone else (for example spam the forums, share personal data, harass, troll, necropost, post any NSFW content or any Nazi propaganda or symbols, or disturb the peace); or</li>
-	<li>promote, encourage or take part in any prohibited activity described above.</li>
+  <li>break the law (for example commit any intellectual property infringement);</li>
+  <li>misuse or take any actions that can harm the Service(s) (for example disrupt or interfere with any service, server or use, develop, distribute, or sell cheats, etc);</li>
+  <li>take any actions that negatively affect Petals Studio, your fellow, or anyone else (for example spam the forums, share personal data, harass, troll, necropost, post any NSFW content or any Nazi propaganda or symbols, or disturb the peace); or</li>
+  <li>promote, encourage or take part in any prohibited activity described above.</li>
 </ul>
 <h3>8. Term and Termination</h3>
 <p>This Agreement is effective until terminated by you or Petals Studio. Petals Studio may terminate this Agreement if Petals Studio determines that you have failed to comply with the terms and conditions of the Agreement. Petals Studio will, if practical, notify you of its decision to terminate. You shall then immediately cease all use of the Service(s). The termination may result in you losing your Petals Studio Account name, username, achievements, forum badges, and other content associated with your Petals Studio Account or use of the Service.</p>
@@ -566,38 +603,54 @@ const homepageContent = {
         title: "Contact Us",
         subHeading: "Want to help shape the future of Calyx Chronicles?",
         playstore: {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.avif",
+          fallbacksrc:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.png",
           alt: "google image",
           url: "https://play.google.com/store/apps/details?id=studio.petals.game.cc",
         },
         appStore: {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.avif",
+          fallbacksrc:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.png",
           alt: "google image",
           url: "",
         },
       },
       rightSide: {
-        logo: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/CalxLogo.png",
+        logo: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/CalxLogo.avif",
+        fallbackLogo:
+          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/CalxLogo.png",
+
         address: "85, First Floor, Street 10, Alaknanda, New Delhi, India",
         followIcons: [
           {
-            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.png",
+            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.avif",
+            fallbackSrc:
+              "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.png",
+
             alt: "instagram",
             url: "https://www.instagram.com/calyxchronicles",
           },
           {
-            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.png",
+            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.avif",
+            fallbackSrc:
+              "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.png",
             alt: "discord",
             url: "https://discord.gg/Q7CAJ3eT",
           },
           {
-            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.png",
+            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.avif",
+            fallbackSrc:
+              "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.png",
             alt: "reddit",
             url: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
           },
         ],
         developed_at: {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/petalStudioLogo.png",
+          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/petalStudioLogo.avif",
+          fallbacksrc:
+            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/petalStudioLogo.png",
           alt: "google image",
           url: "",
         },

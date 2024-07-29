@@ -16,6 +16,7 @@ import useInView from "@/hooks/useInView";
 import Lottie from "lottie-react";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Image from "next/image";
+import ImageFallback from "./ImageWithFallback";
 
 interface IStoreSection {}
 const StoreSection = (props: { isInView?: boolean }) => {
@@ -41,9 +42,10 @@ const StoreSection = (props: { isInView?: boolean }) => {
         </div>
         <div className="hidden w-[100%] sm:flex justify-center items-center relative">
           <div className="absolute z-[2] w-[100%] h-[100%] flex justify-center items-end bottom-0 left-0 object-contain">
-            <Image
+            <ImageFallback
+              fallbackSrc="https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Clouds.png"
               alt="bg-bottomm"
-              src="https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Clouds.png"
+              src="https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Clouds.avif"
               width={100}
               height={100}
               className="w-[100%] h-[auto] mb-[-5%]"

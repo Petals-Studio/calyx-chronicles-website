@@ -19,6 +19,7 @@ import StayConnected from "@/components/StayConnected";
 import Footer from "@/components/Footer";
 import DynamicModal from "@/components/Modal";
 import { useDeviceType } from "@/hooks/useDeviceType";
+import Head from "next/head";
 export const ShowRegisterModalEvent = "ShowRegisterModal";
 
 export default function Home() {
@@ -70,123 +71,138 @@ export default function Home() {
   const { isDesktop } = useDeviceType();
 
   return (
-    <main
-      onClick={() => {
-        EventBus.getInstance().fireEvent(SidebarCloseEvent);
-      }}
-    >
-      <DynamicModal
-        width="400px"
-        child={
-          termsData && (
+    <>
+      <Head>
+        <meta
+          name="description"
+          content="Join the adventure in Calyx Chronicles, the ultimate mobile arcade multiplayer seasional game! Experience captivating storylines, fresh arcade games, and quick, exciting gameplay. Compete globally, customize your character, and unravel the mysteries of planet Calyx. Download now and conquer the world of Calyx Chronicles!"
+        />
+        <link
+          id="light-scheme-icon"
+          rel="shortcut icon"
+          href="/petalIcon.png"
+        />
+        <title>Calyx Chronicles</title>
+        {/* <link id="dark-scheme-icon" rel="shortcut icon" href="/petals-favicon-black.png" /> */}
+      </Head>
+      <main
+        onClick={() => {
+          EventBus.getInstance().fireEvent(SidebarCloseEvent);
+        }}
+      >
+        <DynamicModal
+          width="400px"
+          child={
+            termsData && (
+              <div
+                className={`${inter.variable} roboto-regular  dangerous-content lg:text-[calc(0.75vw+0.75vh)]  text-[14px]`}
+                dangerouslySetInnerHTML={{ __html: termsData }}
+              ></div>
+            )
+          }
+          type="center"
+          closeClickOutside
+          title={
             <div
-              className={`${inter.variable} roboto-regular  dangerous-content lg:text-[calc(0.75vw+0.75vh)]  text-[14px]`}
-              dangerouslySetInnerHTML={{ __html: termsData }}
-            ></div>
-          )
-        }
-        type="center"
-        closeClickOutside
-        title={
-          <div
-            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[24px]`}
-          >
-            {" "}
-            Terms & Conditions
-          </div>
-        }
-        isCloseIcon
-        position={""}
-        showCloseIcon={isDesktop ? false : true}
-        isOpen={termsData ? true : false}
-        dynamicCloser={() => {
-          setTermsData("");
-        }}
-      />
+              className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[24px]`}
+            >
+              {" "}
+              Terms & Conditions
+            </div>
+          }
+          isCloseIcon
+          position={""}
+          showCloseIcon={isDesktop ? false : true}
+          isOpen={termsData ? true : false}
+          dynamicCloser={() => {
+            setTermsData("");
+          }}
+        />
 
-      <DynamicModal
-        width="400px"
-        child={
-          videoData && (
-            <div style={{ height: "100%" }}>
-              <iframe
-                width="100%"
-                height="100%"
-                src={videoData.chapterLink}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-              ></iframe>
-            </div>
-          )
-        }
-        type="center"
-        background={videoData && videoData?.chapterColor}
-        closeClickOutside
-        title={
-          <div
-            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[30px] text-center`}
-          >
-            {videoData && videoData.chaptername}
-            <div className="lg:text-[calc(1*(0.75vw+0.75vh))] text-[20px]">
-              {videoData && videoData.chapterDiscription}
-            </div>
-          </div>
-        }
-        isCloseIcon
-        position={""}
-        showCloseIcon={isDesktop ? false : true}
-        isOpen={videoData ? true : false}
-        dynamicCloser={() => {
-          setVideoData(undefined);
-        }}
-      />
-      <DynamicModal
-        closeClickOutside
-        child={
-          privacyData && (
+        <DynamicModal
+          width="400px"
+          child={
+            videoData && (
+              <div style={{ height: "100%" }}>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={videoData.chapterLink}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                ></iframe>
+              </div>
+            )
+          }
+          type="center"
+          background={videoData && videoData?.chapterColor}
+          closeClickOutside
+          title={
             <div
-              className={`${inter.variable} roboto-regular dangerous-content lg:text-[calc(0.75vw+0.75vh)]  text-[14px]`}
-              dangerouslySetInnerHTML={{ __html: privacyData }}
-            ></div>
-          )
-        }
-        type="center"
-        title={
-          <div
-            className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[24px]`}
-          >
-            Privacy Policy
-          </div>
-        }
-        isCloseIcon
-        showCloseIcon={isDesktop ? false : true}
-        position={""}
-        isOpen={privacyData ? true : false}
-        dynamicCloser={() => {
-          setPrivacyData("");
-        }}
-      />
+              className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[30px] text-center`}
+            >
+              {videoData && videoData.chaptername}
+              <div className="lg:text-[calc(1*(0.75vw+0.75vh))] text-[20px]">
+                {videoData && videoData.chapterDiscription}
+              </div>
+            </div>
+          }
+          isCloseIcon
+          position={""}
+          showCloseIcon={isDesktop ? false : true}
+          isOpen={videoData ? true : false}
+          dynamicCloser={() => {
+            setVideoData(undefined);
+          }}
+        />
+        <DynamicModal
+          closeClickOutside
+          child={
+            privacyData && (
+              <div
+                className={`${inter.variable} roboto-regular dangerous-content lg:text-[calc(0.75vw+0.75vh)]  text-[14px]`}
+                dangerouslySetInnerHTML={{ __html: privacyData }}
+              ></div>
+            )
+          }
+          type="center"
+          title={
+            <div
+              className={`${inter.className} lg:text-[calc(2*(0.75vw+0.75vh))] text-[24px]`}
+            >
+              Privacy Policy
+            </div>
+          }
+          isCloseIcon
+          showCloseIcon={isDesktop ? false : true}
+          position={""}
+          isOpen={privacyData ? true : false}
+          dynamicCloser={() => {
+            setPrivacyData("");
+          }}
+        />
 
-      <div className="scroll-body">
-        <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
-        {renderComponent.map((component, idx) => {
-          return (
-            <PageRender
-              setPrivacyData={setPrivacyData}
-              setVideoData={setVideoData}
-              setTermsData={setTermsData}
-              setCurrentTab={setCurrentTab}
-              component={component}
-              key={idx}
-            />
-          );
-        })}
+        <div className="scroll-body">
+          <Navbar currentTab={currentTab} setCurrentTab={setCurrentTab} />
+          {renderComponent.map((component, idx) => {
+            return (
+              <PageRender
+                setPrivacyData={setPrivacyData}
+                setVideoData={setVideoData}
+                setTermsData={setTermsData}
+                setCurrentTab={setCurrentTab}
+                component={component}
+                key={idx}
+              />
+            );
+          })}
 
-        <RegisterModal />
-        <Sidebar />
-      </div>
-    </main>
+          <RegisterModal />
+          <Sidebar />
+        </div>
+      </main>
+    </>
   );
 }

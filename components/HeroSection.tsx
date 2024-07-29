@@ -121,7 +121,7 @@ const HeroSection = (props: IHeroSection) => {
                   href={homepageContent.landingPage.content.playstore.url}
                   target="_blank"
                 >
-                  <Image
+                  <ImageFallback
                     width={240}
                     alt="ss"
                     height={240}
@@ -131,6 +131,9 @@ const HeroSection = (props: IHeroSection) => {
                       objectFit: "contain",
                       position: "relative",
                     }}
+                    fallbackSrc={
+                      homepageContent.landingPage.content.playstore.fallbackSrc
+                    }
                   />
                 </Link>
                 <Link
@@ -150,7 +153,7 @@ const HeroSection = (props: IHeroSection) => {
                       : "_self"
                   }
                 >
-                  <Image
+                  <ImageFallback
                     width={240}
                     alt="ss"
                     height={240}
@@ -160,6 +163,9 @@ const HeroSection = (props: IHeroSection) => {
                       objectFit: "contain",
                       position: "relative",
                     }}
+                    fallbackSrc={
+                      homepageContent.landingPage.content.appStore.fallbackSrc
+                    }
                   />
                 </Link>
               </div>
@@ -177,14 +183,15 @@ const HeroSection = (props: IHeroSection) => {
                 <div className="border-b-[1px] border-[#565252]">
                   Begin Adventure
                 </div>
-                <Image
+                <ImageFallback
                   src={
-                    "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/BeginArrow.png"
+                    "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/BeginArrow.avif"
                   }
-                  alt=""
+                  alt="arrow"
                   width={20}
                   height={20}
                   className="w-[18px] md:w-[12px] sm:w-[12px]"
+                  fallbackSrc="https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/BeginArrow.png"
                 />
               </div>
               {/* </Link> */}

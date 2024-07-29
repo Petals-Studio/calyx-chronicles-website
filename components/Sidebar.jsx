@@ -6,6 +6,7 @@ import { ShowRegisterModalEvent } from "@/pages";
 import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import Image from "next/image";
+import ImageFallback from "./ImageWithFallback";
 
 export const SidebarToggleEvent = "ToggleSidebar";
 export const SidebarCloseEvent = "CloseSidebar";
@@ -47,13 +48,15 @@ export default function Sidebar() {
       }`}
     >
       {/* <Logo /> */}
-      <Image
+      <ImageFallback
+        fallbackSrc={homepageContent.footer.content.rightSide.fallbackLogo}
         width={200}
         height={10}
         className="lg:w-[calc(8*(1vw+1vh))] w-[200px] sm:w-[150px]"
         src={homepageContent.footer.content.rightSide.logo}
         alt={homepageContent.footer.content.rightSide.logo}
       />
+
       <div className="flex flex-col space-y-5 mt-10">
         {homepageContent.menu.links.map((link, idx) => (
           <a

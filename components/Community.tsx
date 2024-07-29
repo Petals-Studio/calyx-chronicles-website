@@ -10,6 +10,7 @@ import React, {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import ImageFallback from "./ImageWithFallback";
 interface ICommunity {
   isInView?: boolean;
 }
@@ -51,11 +52,12 @@ const Community = (props: ICommunity) => {
                     return (
                       <div key={idx}>
                         <Link href={items.url} target="_blank">
-                          <Image
+                          <ImageFallback
                             width={40}
                             height={40}
                             className="lg:w-[calc(1.55*(1vw+1vh))] w-[40px]"
                             src={items.src}
+                            fallbackSrc={items.fallbackSrc}
                             alt={items.alt}
                           />
                         </Link>
@@ -81,7 +83,8 @@ const Community = (props: ICommunity) => {
                   }] hover:z-[9] lg:mx-[-3rem] md:mx-[-1rem] sm:mx-[-1rem] translate-z-[-200px]`}
                 >
                   <Link href={item.action} target="_blank">
-                    <Image
+                    <ImageFallback
+                      fallbackSrc={item.fallbackImages}
                       width={100}
                       height={100}
                       style={{

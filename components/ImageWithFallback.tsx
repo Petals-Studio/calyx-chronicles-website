@@ -14,9 +14,6 @@ export default function ImageFallback(props: ImageFallbackProps) {
 
   return (
     <Image
-      {...rest}
-      width={10}
-      height={10}
       src={imgSrc}
       onLoadingComplete={(result) => {
         if (result.naturalWidth === 0) {
@@ -27,6 +24,7 @@ export default function ImageFallback(props: ImageFallbackProps) {
       onError={() => {
         set_imgSrc(fallbackSrc);
       }}
+      {...rest}
     />
   );
 }

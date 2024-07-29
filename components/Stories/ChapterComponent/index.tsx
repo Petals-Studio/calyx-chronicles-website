@@ -4,12 +4,16 @@ import Image from "next/image";
 import { useDeviceType } from "@/hooks/useDeviceType";
 import useInView from "@/hooks/useInView";
 import Link from "next/link";
+import ImageFallback from "@/components/ImageWithFallback";
 interface IChapterComponent {
   chapterData: {
     image: {
       colored: string;
       uncolored: string;
+      coloredFallback: string;
+      uncoloredFallback: string;
     };
+
     color: string;
     videoLink?: string;
     title: string;
@@ -55,7 +59,13 @@ const ChapterComponents = (props: IChapterComponent) => {
     if (!isDesktop && isInView && isChapterInView) {
       setActiveChapter(chapterData.title);
     }
-  }, [isInView, isChapterInView]);
+  }, [
+    isInView,
+    isChapterInView,
+    isDesktop,
+    setActiveChapter,
+    chapterData.title,
+  ]);
 
   return (
     <div
@@ -136,19 +146,21 @@ const ChapterComponents = (props: IChapterComponent) => {
                         });
                     }}
                   >
-                    <Image
+                    <ImageFallback
+                      fallbackSrc="https://assets.calyxchronicles.com/website/playIcon.png"
                       width={25}
                       height={25}
                       src={
-                        "https://assets.calyxchronicles.com/website/playIcon.png"
+                        "https://assets.calyxchronicles.com/website/playIcon.avif"
                       }
                       alt="play_icon"
                     />
+
                     <div>Trailer</div>
                   </div>
                 </div>
               )}
-              <Image
+              <ImageFallback
                 width={100}
                 height={100}
                 className="image"
@@ -183,7 +195,13 @@ const ChapterComponents = (props: IChapterComponent) => {
                   position: "absolute",
                   ...chapterData?.style,
                 }}
+                fallbackSrc={
+                  isActive && chapterData?.title === activeChapter
+                    ? chapterData?.image?.colored
+                    : chapterData?.image?.uncolored
+                }
               />
+
               {(chapterData?.title !== activeChapter || !isActive) && (
                 <div
                   className="absolute uppercase lg:text-[calc(.75*(1vh+1vw))] text-[20px]  right-[50%] mr-[-.4rem] translate-x-[50%] bottom-[3rem] text-[#ccc] roboto-medium"

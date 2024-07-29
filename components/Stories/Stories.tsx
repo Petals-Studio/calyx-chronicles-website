@@ -47,7 +47,7 @@ const Stories = (props: IStories) => {
     } else {
       setActiveChapter("");
     }
-  }, []);
+  }, [isInView]);
   // useEffect(() => {
   //   activeChapter &&
   //     setTimeout(() => {
@@ -96,27 +96,6 @@ const Stories = (props: IStories) => {
           );
         })}
       </div>
-      {/* <div className="w-full h-[0] sm:h-full sm:block bg-[#fff]">
-        <div
-          id={homepageContent.showcaseSection.sectionId}
-          className="w-full grid grid-cols-1 overflow-hidden grid-rows-3 h-full text-[#000]"
-        >
-          {homepageContent.showcaseSection.content.map((item, idx) => {
-            return (
-              <>
-                <MobileCharecterComp
-                  isInView={isInView}
-                  chapterData={item}
-                  key={item.title}
-                  id={idx + 1}
-                  activeChapter={activeChapter}
-                  setActiveChapter={setActiveChapter}
-                />
-              </>
-            );
-          })}
-        </div>
-      </div> */}
     </>
   );
 };
