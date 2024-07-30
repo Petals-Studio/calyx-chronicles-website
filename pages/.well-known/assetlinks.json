@@ -1,0 +1,18 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "studio.petals.game.cc.dev",
+    "sha256_cert_fingerprints":
+    ["83:65:6C:BB:D5:51:27:FC:7E:27:AC:FC:85:EC:1B:03:7F:57:90:C8:57:04:EE:F0:E0:22:85:7D:62:82:E0:1A"]
+  }
+  },
+  {
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "studio.petals.game.cc",
+    "sha256_cert_fingerprints":
+    ["00:DD:13:FE:4B:B2:76:DF:FF:91:8A:FE:4D:5D:E7:78:62:41:51:68:1E:AE:DC:13:47:86:71:59:10:67:2D:6B"]
+  }
+}]
