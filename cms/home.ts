@@ -33,40 +33,40 @@ const homepageContent = {
     sectionId: "landingPage",
     content: {
       images: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/calyx.png",
+        src: "https://assets.calyxchronicles.com/website/calyx.png",
         alt: "landing image",
       },
       backgroundL: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR1.avif",
+        src: "https://assets.calyxchronicles.com/website/FR1.avif",
         fallbackSrc:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR1.png",
+          "https://assets.calyxchronicles.com/website/FR1.png",
         alt: "robot bg image",
       },
       backgroundR: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR2.avif",
+        src: "https://assets.calyxchronicles.com/website/FR2.avif",
         fallbackSrc:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FR2.png",
+          "https://assets.calyxchronicles.com/website/FR2.png",
         alt: "left bg image",
       },
       icon: { src: "/images/ICON.png", alt: "Icon image" },
       logo: { src: "/images/LOGO.png", alt: "logo image" },
       blacklogo: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Petals_logo_low_res.avif",
+        src: "https://assets.calyxchronicles.com/website/Petals_logo_low_res.avif",
         fallbackSrc:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Petals_logo_low_res.png",
+          "https://assets.calyxchronicles.com/website/Petals_logo_low_res.png",
         alt: "logo image",
       },
       playstore: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.avif",
+        src: "https://assets.calyxchronicles.com/website/playstore.avif",
         fallbackSrc:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.png",
+          "https://assets.calyxchronicles.com/website/playstore.png",
         alt: "play store",
         url: "https://play.google.com/store/apps/details?id=studio.petals.game.cc",
       },
       appStore: {
-        src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.avif",
+        src: "https://assets.calyxchronicles.com/website/appstore_comingsoon.avif",
         fallbackSrc:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.png",
+          "https://assets.calyxchronicles.com/website/appstore_comingsoon.png",
 
         alt: "google image",
         url: "",
@@ -82,14 +82,14 @@ const homepageContent = {
       {
         image: {
           colored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1color.avif",
+            "https://assets.calyxchronicles.com/website/chapter1color.avif",
 
           uncolored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1Uncolor.avif",
+            "https://assets.calyxchronicles.com/website/chapter1Uncolor.avif",
           coloredFallback:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1color.png",
+            "https://assets.calyxchronicles.com/website/chapter1color.png",
           uncoloredFallback:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter1Uncolor.png",
+            "https://assets.calyxchronicles.com/website/chapter1Uncolor.png",
         },
         title: "Chapter 1",
         id: "Chapter_1",
@@ -103,21 +103,21 @@ const homepageContent = {
         subText:
           "Just  days before the Vos attack, The Warlock Tower at the heart of Tannara is being assaulted by someone from within the city. Who is it and what is their objective?",
         background:
-          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Yellow.avif)]",
+          "bg-[url(https://assets.calyxchronicles.com/website/Yellow.avif)]",
         backgroundFallback:
-          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Yellow.png)]",
+          "bg-[url(https://assets.calyxchronicles.com/website/Yellow.png)]",
       },
       {
         image: {
           colored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Color.avif",
+            "https://assets.calyxchronicles.com/website/chapter2Color.avif",
           uncolored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Uncolor.avif",
+            "https://assets.calyxchronicles.com/website/chapter2Uncolor.avif",
 
           coloredFallback:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Color.png",
+            "https://assets.calyxchronicles.com/website/chapter2Color.png",
           uncoloredFallback:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter2Uncolor.png",
+            "https://assets.calyxchronicles.com/website/chapter2Uncolor.png",
         },
 
         title: "Chapter 2",
@@ -132,20 +132,20 @@ const homepageContent = {
         subText:
           "As the battle with Vos rages on, the Warlock Tribunal decides to send in a group of brave warriors to harvest as much mana as possible before the portals close for once and for all.",
         background:
-          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/pink.avif)]",
+          "bg-[url(https://assets.calyxchronicles.com/website/pink.avif)]",
         backgroundFallback:
-          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/pink.png)]",
+          "bg-[url(https://assets.calyxchronicles.com/website/pink.png)]",
       },
       {
         image: {
           colored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Colored.avif",
+            "https://assets.calyxchronicles.com/website/chapter3Colored.avif",
           uncolored:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Uncolored.avif",
+            "https://assets.calyxchronicles.com/website/chapter3Uncolored.avif",
           coloredFallback:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Colored.png",
+            "https://assets.calyxchronicles.com/website/chapter3Colored.png",
           uncoloredFallback:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/chapter3Uncolored.png",
+            "https://assets.calyxchronicles.com/website/chapter3Uncolored.png",
         },
 
         isActive: false,
@@ -156,9 +156,9 @@ const homepageContent = {
         style: { width: "400px", height: "400px", right: 0 },
         styleResp: { width: "500px", height: "500px", right: 0 },
         background:
-          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Blue.avif)]",
+          "bg-[url(https://assets.calyxchronicles.com/website/Blue.avif)]",
         backgroundFallback:
-          "bg-[url(https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Blue.png)]",
+          "bg-[url(https://assets.calyxchronicles.com/website/Blue.png)]",
         heading: "Attack on Tannara",
         subText:
           "Warriors of Vos have unleashed a full blown attack on the capital city of Tannara. Will the mechanised defenders of Sanctum Order be able to push back these invaders?",
@@ -171,23 +171,23 @@ const homepageContent = {
     content: {
       followIcons: [
         {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.avif",
+          src: "https://assets.calyxchronicles.com/website/insta_mini.avif",
           fallbackSrc:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.png",
+            "https://assets.calyxchronicles.com/website/insta_mini.png",
           alt: "instagram",
           url: "https://www.instagram.com/calyxchronicles",
         },
         {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.avif",
+          src: "https://assets.calyxchronicles.com/website/discord_mini.avif",
           fallbackSrc:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.png",
+            "https://assets.calyxchronicles.com/website/discord_mini.png",
           alt: "discord",
           url: "https://discord.gg/Q7CAJ3eT",
         },
         {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.avif",
+          src: "https://assets.calyxchronicles.com/website/reddit_mini.avif",
           fallbackSrc:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.png",
+            "https://assets.calyxchronicles.com/website/reddit_mini.png",
           alt: "reddit",
           url: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
         },
@@ -200,9 +200,9 @@ const homepageContent = {
       images: [
         {
           image:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord.avif",
+            "https://assets.calyxchronicles.com/website/discord.avif",
           fallbackImages:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord.png",
+            "https://assets.calyxchronicles.com/website/discord.png",
           title: "Discord",
           Zindex: "1",
           action: "https://discord.gg/Q7CAJ3eT",
@@ -218,9 +218,9 @@ const homepageContent = {
         },
         {
           fallbackImages:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit.png",
+            "https://assets.calyxchronicles.com/website/reddit.png",
           image:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit.avif",
+            "https://assets.calyxchronicles.com/website/reddit.avif",
           title: "Reddit",
           action: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
 
@@ -235,9 +235,9 @@ const homepageContent = {
         },
         {
           fallbackImages:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta.png",
+            "https://assets.calyxchronicles.com/website/insta.png",
           image:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta.avif",
+            "https://assets.calyxchronicles.com/website/insta.avif",
           title: "Instagram",
           action: "https://www.instagram.com/calyxchronicles",
           Zindex: "3",
@@ -282,9 +282,9 @@ const homepageContent = {
       images: [
         {
           image:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/about.avif",
+            "https://assets.calyxchronicles.com/website/about.avif",
           fallbackImage:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/about.png",
+            "https://assets.calyxchronicles.com/website/about.png",
           title: "about-us",
           Zindex: "1",
           animation: {
@@ -609,54 +609,54 @@ const homepageContent = {
         title: "Contact Us",
         subHeading: "Want to help shape the future of Calyx Chronicles?",
         playstore: {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.avif",
+          src: "https://assets.calyxchronicles.com/website/playstore.avif",
           fallbacksrc:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/playstore.png",
+            "https://assets.calyxchronicles.com/website/playstore.png",
           alt: "google image",
           url: "https://play.google.com/store/apps/details?id=studio.petals.game.cc",
         },
         appStore: {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.avif",
+          src: "https://assets.calyxchronicles.com/website/appstore_comingsoon.avif",
           fallbacksrc:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/appstore_comingsoon.png",
+            "https://assets.calyxchronicles.com/website/appstore_comingsoon.png",
           alt: "google image",
           url: "",
         },
       },
       rightSide: {
-        logo: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/CalxLogo.avif",
+        logo: "https://assets.calyxchronicles.com/website/CalxLogo.avif",
         fallbackLogo:
-          "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/CalxLogo.png",
+          "https://assets.calyxchronicles.com/website/CalxLogo.png",
 
         address: "85, First Floor, Street 10, Alaknanda, New Delhi, India",
         followIcons: [
           {
-            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.avif",
+            src: "https://assets.calyxchronicles.com/website/insta_mini.avif",
             fallbackSrc:
-              "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/insta_mini.png",
+              "https://assets.calyxchronicles.com/website/insta_mini.png",
 
             alt: "instagram",
             url: "https://www.instagram.com/calyxchronicles",
           },
           {
-            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.avif",
+            src: "https://assets.calyxchronicles.com/website/discord_mini.avif",
             fallbackSrc:
-              "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/discord_mini.png",
+              "https://assets.calyxchronicles.com/website/discord_mini.png",
             alt: "discord",
             url: "https://discord.gg/Q7CAJ3eT",
           },
           {
-            src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.avif",
+            src: "https://assets.calyxchronicles.com/website/reddit_mini.avif",
             fallbackSrc:
-              "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/reddit_mini.png",
+              "https://assets.calyxchronicles.com/website/reddit_mini.png",
             alt: "reddit",
             url: "https://www.reddit.com/r/CalyxChronicles/s/LdrVAED3ol",
           },
         ],
         developed_at: {
-          src: "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/petalStudioLogo.avif",
+          src: "https://assets.calyxchronicles.com/website/petalStudioLogo.avif",
           fallbacksrc:
-            "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/petalStudioLogo.png",
+            "https://assets.calyxchronicles.com/website/petalStudioLogo.png",
           alt: "google image",
           url: "",
         },
@@ -676,7 +676,7 @@ const homepageContent = {
         ],
       },
       background:
-        "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/FooterBg.avif",
+        "https://assets.calyxchronicles.com/website/FooterBg.avif",
     },
   },
 };

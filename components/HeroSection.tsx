@@ -185,13 +185,13 @@ const HeroSection = (props: IHeroSection) => {
                 </div>
                 <ImageFallback
                   src={
-                    "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/BeginArrow.avif"
+                    "https://assets.calyxchronicles.com/website/BeginArrow.avif"
                   }
                   alt="arrow"
                   width={20}
                   height={20}
                   className="w-[18px] md:w-[12px] sm:w-[12px]"
-                  fallbackSrc="https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/BeginArrow.png"
+                  fallbackSrc="https://assets.calyxchronicles.com/website/BeginArrow.png"
                 />
               </div>
               {/* </Link> */}

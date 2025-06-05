@@ -108,14 +108,14 @@ export default function Navbar(props: NavbarProps) {
               <ImageFallback
                 fallbackSrc={
                   currentTab !== "Community" && currentTab !== "ABOUT US"
-                    ? "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/hamburgerdark.png"
-                    : "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/hamburger.png"
+                    ? "https://assets.calyxchronicles.com/website/hamburgerdark.png"
+                    : "https://assets.calyxchronicles.com/website/hamburger.png"
                 }
                 className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
                 src={
                   currentTab !== "Community" && currentTab !== "ABOUT US"
-                    ? "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/hamburgerdark.avif"
-                    : "https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/hamburger.avif"
+                    ? "https://assets.calyxchronicles.com/website/hamburgerdark.avif"
+                    : "https://assets.calyxchronicles.com/website/hamburger.avif"
                 }
                 alt={"Menu"}
                 width={27}

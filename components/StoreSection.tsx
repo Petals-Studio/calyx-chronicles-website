@@ -43,9 +43,9 @@ const StoreSection = (props: { isInView?: boolean }) => {
         <div className="hidden w-[100%] sm:flex justify-center items-center relative">
           <div className="absolute z-[2] w-[100%] h-[100%] flex justify-center items-end bottom-0 left-0 object-contain">
             <ImageFallback
-              fallbackSrc="https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Clouds.png"
+              fallbackSrc="https://assets.calyxchronicles.com/website/Clouds.png"
               alt="bg-bottomm"
-              src="https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/Clouds.avif"
+              src="https://assets.calyxchronicles.com/website/Clouds.avif"
               width={100}
               height={100}
               className="w-[100%] h-[auto] mb-[-5%]"

@@ -41,7 +41,7 @@ const StayConnected = (props: { isInView?: boolean }) => {
         // style={{ backgroundSize: "100% 100%" }}
         className={`h-[45dvh] sm:h-[40dvh]  w-[100%] p-[2rem] sm:p-[1rem] flex flex-col justify-end sm:justify-center items-end text-[#000] ${
           props.isInView
-            ? "bg-[url('https://ccx-assets.blr1.cdn.digitaloceanspaces.com/website/stay_connectd.avif')]"
+            ? "bg-[url('https://assets.calyxchronicles.com/website/stay_connectd.avif')]"
             : "bg-transparent"
         } bg-no-repeat bg-left-bottom bg-cover pt-[4rem] relative`}
       >
